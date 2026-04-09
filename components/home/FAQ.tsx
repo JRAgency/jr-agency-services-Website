@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const faqs = [
   {
     q: "Was kostet eine Website bei JR Agency?",
-    a: "Individuelle Websites starten bei 2.500 € — der genaue Umfang hängt von Ihren Anforderungen ab. Wir arbeiten mit transparenten Festpreisen, keine versteckten Gebühren. Fordern Sie zuerst Ihre Demo-Website an und überzeugen Sie sich von der Qualität, bevor Sie sich entscheiden.",
+    a: "Der Preis hängt vom Umfang und Ihren Anforderungen ab — wir erstellen Ihnen ein individuelles Angebot. Wir arbeiten mit transparenten Festpreisen, keine versteckten Gebühren. Fordern Sie zuerst Ihre kostenlose Demo an und überzeugen Sie sich von der Qualität, bevor Sie sich entscheiden.",
   },
   {
     q: "Wie lange dauert die Erstellung einer Website?",

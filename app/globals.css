@@ -19,8 +19,8 @@
 /* Fluid page container — grows proportionally with screen width */
 .page-container {
   width: 100%;
-  padding-left: clamp(16px, 5vw, 120px);
-  padding-right: clamp(16px, 5vw, 120px);
+  padding-left: clamp(20px, 7vw, 160px);
+  padding-right: clamp(20px, 7vw, 160px);
 }
 
 * {

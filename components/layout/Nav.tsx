@@ -158,22 +158,6 @@ export default function Nav() {
             </div>
           </li>
 
-          <li>
-            <Link
-              href="/#referenzen"
-              className="text-base font-semibold text-white/50 hover:text-white transition-colors duration-200 tracking-wide"
-            >
-              Referenzen
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/kontakt"
-              className="text-base font-semibold text-white/50 hover:text-white transition-colors duration-200 tracking-wide"
-            >
-              Kontakt
-            </Link>
-          </li>
         </ul>
 
         {/* Right side */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -43,8 +43,6 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileLeistungenOpen, setMobileLeistungenOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLLIElement>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -56,24 +54,12 @@ export default function Nav() {
   useEffect(() => {
     setMenuOpen(false);
     setMobileLeistungenOpen(false);
-    setDropdownOpen(false);
   }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
-
-  // Close dropdown on outside click
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
 
   return (
     <header
@@ -104,60 +90,18 @@ export default function Nav() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-10">
-
-          {/* Leistungen dropdown */}
-          <li ref={dropdownRef} className="relative">
-            <button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center gap-1.5 text-base font-semibold text-white/50 hover:text-white transition-colors duration-200 tracking-wide"
-            >
-              Leistungen
-              <svg
-                width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"
-                className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
+          {leistungen.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className={`text-base font-semibold transition-colors duration-200 tracking-wide ${
+                  pathname === item.href ? "text-white" : "text-white/50 hover:text-white"
+                }`}
               >
-                <path d="M4 6l4 4 4-4" />
-              </svg>
-            </button>
-
-            {/* Dropdown panel */}
-            <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 w-72 transition-all duration-200 ${
-              dropdownOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-2 pointer-events-none"
-            }`}>
-              {/* Arrow */}
-              <div className="flex justify-center mb-1">
-                <div className="w-3 h-3 bg-[#0D1526] border-l border-t border-white/[0.08] rotate-45 -mb-2" />
-              </div>
-              <div className="bg-[#0D1526] border border-white/[0.08] rounded-2xl p-2 shadow-[0_24px_60px_rgba(0,0,0,0.6)]">
-                {leistungen.map((item) => {
-                  const isActive = pathname === item.href;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`flex items-center gap-4 px-4 py-3.5 rounded-xl transition-all duration-150 group ${
-                        isActive
-                          ? "bg-[#2563EB]/15 text-white"
-                          : "hover:bg-white/[0.05] text-white/60 hover:text-white"
-                      }`}
-                    >
-                      <span className={`shrink-0 ${isActive ? "text-[#60A5FA]" : "text-white/30 group-hover:text-[#60A5FA]"} transition-colors duration-150`}>
-                        {item.icon}
-                      </span>
-                      <div>
-                        <p className="font-semibold text-sm leading-tight text-white">{item.label}</p>
-                        <p className="text-white/40 text-xs mt-0.5">{item.desc}</p>
-                      </div>
-                      {isActive && (
-                        <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0" />
-                      )}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-          </li>
-
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         {/* Right side */}

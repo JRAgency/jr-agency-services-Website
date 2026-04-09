@@ -74,7 +74,7 @@ const footerLinks: FooterSection[] = [
 
 export function FooterSection() {
   return (
-    <div className="bg-[#060A14] px-4 pb-6 md:px-8">
+    <div className="bg-[#020408] px-4 pb-6 md:px-8">
 
       <footer
         className="relative w-full max-w-[1440px] mx-auto rounded-3xl overflow-hidden border border-white/[0.07] px-6 py-14 sm:px-8 lg:px-14 lg:py-16"

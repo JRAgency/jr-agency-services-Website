@@ -11,11 +11,16 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "VECTURO_WEBHOOK_SECRET nicht konfiguriert" }, { status: 500 });
     }
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 9000);
+
     const res = await fetch(`${vecturoUrl}/api/webhook/anfrage`, {
       method:  "POST",
+      signal:  controller.signal,
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ ...body, secret }),
     });
+    clearTimeout(timeout);
 
     const data = await res.json();
 

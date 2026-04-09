@@ -196,8 +196,11 @@ export default function AnfragenPage() {
 
   const submitToVecturo = async (date: Date, time: string) => {
     try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
       await fetch("/api/submit-anfrage", {
         method: "POST",
+        signal: controller.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name:              answers.name,
@@ -216,8 +219,10 @@ export default function AnfragenPage() {
           appointmentTime:   time,
         }),
       });
+      clearTimeout(timeout);
     } catch (err) {
       console.error("Anfrage konnte nicht an Vecturo übermittelt werden:", err);
+      // Fehler ignorieren — User wird trotzdem zur Erfolgsseite weitergeleitet
     }
   };
   const next = () => go(step + 1);

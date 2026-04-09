@@ -168,6 +168,8 @@ export default function BrandingPage() {
                   width={620}
                   height={350}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                   priority
                 />
               </div>
@@ -210,6 +212,8 @@ export default function BrandingPage() {
                   width={600}
                   height={440}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>
@@ -338,6 +342,8 @@ export default function BrandingPage() {
                     width={560}
                     height={320}
                     className="w-full rounded-2xl drop-shadow-2xl"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={90}
                   />
                   <Image
                     src="/images/branding/branding-colors-backgrounds.png"
@@ -345,6 +351,8 @@ export default function BrandingPage() {
                     width={560}
                     height={240}
                     className="w-full rounded-2xl drop-shadow-2xl"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    quality={90}
                   />
                 </div>
               </div>

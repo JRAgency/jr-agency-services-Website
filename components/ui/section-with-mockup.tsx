@@ -124,7 +124,8 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                 alt=""
                 fill
                 className="object-cover object-top"
-                sizes="40vw"
+                sizes="(max-width: 768px) 75vw, 40vw"
+                quality={90}
               />
             </motion.div>
 
@@ -150,7 +151,8 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                 alt=""
                 fill
                 className="object-cover object-top"
-                sizes="50vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={90}
               />
             </motion.div>
           </motion.div>

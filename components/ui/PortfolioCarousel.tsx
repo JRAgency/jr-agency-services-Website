@@ -110,7 +110,8 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
                 alt={projekte[prev].name}
                 fill
                 className="object-cover object-top"
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 80vw"
+                quality={90}
                 style={{ animation: "none" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -125,7 +126,8 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
               alt={projekte[current].name}
               fill
               className="object-cover object-top"
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 80vw"
+              quality={90}
               style={{ animation: !animating ? "kenburns 6s ease-in-out alternate infinite" : "none" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

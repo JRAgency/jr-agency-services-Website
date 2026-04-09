@@ -219,6 +219,7 @@ export default function SocialMediaPage() {
                   width={290}
                   height={580}
                   className="relative rounded-3xl drop-shadow-2xl"
+                  quality={90}
                   priority
                 />
                 <Image
@@ -227,6 +228,7 @@ export default function SocialMediaPage() {
                   width={290}
                   height={580}
                   className="relative rounded-3xl drop-shadow-2xl mb-10"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>
@@ -301,6 +303,8 @@ export default function SocialMediaPage() {
                   width={600}
                   height={440}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>
@@ -430,6 +434,7 @@ export default function SocialMediaPage() {
                   width={300}
                   height={600}
                   className="relative rounded-3xl drop-shadow-2xl"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>

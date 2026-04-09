@@ -208,6 +208,8 @@ export default function WebdesignPage() {
                   width={660}
                   height={460}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                   priority
                 />
               </div>
@@ -249,6 +251,8 @@ export default function WebdesignPage() {
                   width={600}
                   height={420}
                   className="w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>
@@ -505,6 +509,8 @@ export default function WebdesignPage() {
                   width={600}
                   height={420}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>
@@ -614,6 +620,7 @@ export default function WebdesignPage() {
                   width={300}
                   height={600}
                   className="rounded-2xl drop-shadow-2xl"
+                  quality={90}
                 />
                 <Image
                   src="/images/M001T1427 K iPhone Mockup 19Jul25 Kimchi.png"
@@ -621,6 +628,7 @@ export default function WebdesignPage() {
                   width={300}
                   height={600}
                   className="rounded-2xl drop-shadow-2xl mb-10"
+                  quality={90}
                 />
               </div>
             </AnimatedSection>

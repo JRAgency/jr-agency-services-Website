@@ -630,7 +630,7 @@ export default function BrandingPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-28 bg-[#0D1526]">
+      <section className="py-28 bg-[#020408]">
         <div className="page-container">
           <div className="bg-gradient-to-br from-[#121D35] to-[#0D1526] border border-[#2563EB]/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">

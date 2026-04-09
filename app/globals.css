@@ -16,14 +16,11 @@
   --font-display: var(--font-plus-jakarta);
 }
 
-/* Responsive page container — wider on large/ultrawide screens */
+/* Fluid page container — grows proportionally with screen width */
 .page-container {
   width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: clamp(16px, 4vw, 64px);
-  padding-right: clamp(16px, 4vw, 64px);
+  padding-left: clamp(16px, 5vw, 120px);
+  padding-right: clamp(16px, 5vw, 120px);
 }
 
 * {

@@ -3,7 +3,7 @@ import { NeonButton } from "@/components/ui/neon-button";
 
 export default function FreeDemo() {
   return (
-    <section id="demo" className="py-44 bg-[#020408]">
+    <section id="demo" className="py-24 md:py-44 bg-[#020408]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Animated gradient border wrapper */}
@@ -26,7 +26,7 @@ export default function FreeDemo() {
           >
             {/* Big radial glow from top */}
             <div
-              className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] pointer-events-none"
+              className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[700px] h-[400px] pointer-events-none"
               style={{
                 background:
                   "radial-gradient(ellipse at top, rgba(37,99,235,0.18) 0%, rgba(37,99,235,0.06) 40%, transparent 70%)",
@@ -43,7 +43,7 @@ export default function FreeDemo() {
               }}
             />
 
-            <div className="relative px-10 md:px-24 py-20 md:py-32 text-center">
+            <div className="relative px-6 sm:px-10 md:px-20 lg:px-32 py-14 sm:py-20 md:py-32 text-center">
 
               <AnimatedSection delay={0}>
                 <div className="inline-flex items-center gap-2.5 mb-8 px-4 py-2 rounded-full border border-[#3B82F6]/25 bg-[#3B82F6]/08">

@@ -51,7 +51,7 @@ function Stars() {
 
 function Card({ t }: { t: typeof testimonials[0] }) {
   return (
-    <div className="flex-none w-[340px] md:w-[420px] bg-[#0A0F1E] border border-white/[0.07] rounded-2xl p-10 flex flex-col select-none">
+    <div className="flex-none w-[280px] sm:w-[340px] md:w-[400px] bg-[#0A0F1E] border border-white/[0.07] rounded-2xl p-6 sm:p-10 flex flex-col select-none">
       <Stars />
       <span className="text-[#2563EB]/20 text-7xl font-serif leading-none mb-2 select-none" aria-hidden>
         "
@@ -82,7 +82,7 @@ const doubled = [...testimonials, ...testimonials];
 
 export default function Testimonials() {
   return (
-    <section className="py-44 bg-[#020408] overflow-hidden">
+    <section className="py-24 md:py-44 bg-[#020408] overflow-hidden">
       <style>{`
         @keyframes marquee {
           from { transform: translateX(0); }
@@ -98,7 +98,7 @@ export default function Testimonials() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="flex items-end justify-between mb-16">
+        <div className="flex items-end justify-between mb-10 md:mb-16">
           <div>
             <AnimatedSection delay={0}>
               <span className="text-white/45 text-xs uppercase tracking-[0.22em] font-medium mb-4 block">
@@ -139,8 +139,8 @@ export default function Testimonials() {
           <div className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
             style={{ background: "linear-gradient(to left, #020408, transparent)" }} />
 
-          <div className="overflow-hidden px-6">
-            <div className="marquee-track flex gap-7" style={{ width: "max-content" }}>
+          <div className="overflow-hidden px-4 md:px-6">
+            <div className="marquee-track flex gap-4 md:gap-7" style={{ width: "max-content" }}>
               {doubled.map((t, i) => (
                 <Card key={i} t={t} />
               ))}

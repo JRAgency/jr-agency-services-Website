@@ -38,10 +38,10 @@ export default function Services() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-44 bg-[#020408]">
+    <section className="py-24 md:py-44 bg-[#020408]">
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-20 lg:gap-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 lg:gap-32">
 
           {/* LEFT — sticky label */}
           <div className="lg:pt-3">
@@ -69,7 +69,7 @@ export default function Services() {
               </h2>
             </AnimatedSection>
             <AnimatedSection delay={0.1}>
-              <p className="mt-6 text-white/35 text-base leading-relaxed max-w-[280px]">
+              <p className="mt-6 text-white/35 text-base leading-relaxed max-w-full lg:max-w-[280px]">
                 Alles aus einer Hand — persönlich betreut, vom ersten Gespräch bis zum Launch.
               </p>
             </AnimatedSection>

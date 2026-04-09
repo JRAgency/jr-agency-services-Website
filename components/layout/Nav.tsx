@@ -42,7 +42,6 @@ const leistungen = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileLeistungenOpen, setMobileLeistungenOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -53,7 +52,6 @@ export default function Nav() {
 
   useEffect(() => {
     setMenuOpen(false);
-    setMobileLeistungenOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -136,40 +134,15 @@ export default function Nav() {
       <div className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="px-6 pb-8 pt-4 border-t border-white/[0.06]">
 
-          {/* Leistungen accordion */}
-          <button
-            onClick={() => setMobileLeistungenOpen(!mobileLeistungenOpen)}
-            className="w-full flex items-center justify-between py-3.5 text-white/40 hover:text-white text-base transition-colors duration-200"
-          >
-            Leistungen
-            <svg
-              width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"
-              className={`transition-transform duration-200 ${mobileLeistungenOpen ? "rotate-180" : ""}`}
+          {leistungen.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`block py-3.5 text-base transition-colors duration-200 ${pathname === item.href ? "text-white" : "text-white/40 hover:text-white"}`}
             >
-              <path d="M4 6l4 4 4-4" />
-            </svg>
-          </button>
-          <div className={`overflow-hidden transition-all duration-300 ${mobileLeistungenOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
-            <div className="pl-4 pb-2 space-y-1">
-              {leistungen.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="flex items-center gap-3 py-2.5 text-white/40 hover:text-white text-sm transition-colors duration-200"
-                >
-                  <span className="text-white/25">{item.icon}</span>
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <Link href="/#referenzen" className="block py-3.5 text-white/40 hover:text-white text-base transition-colors duration-200">
-            Referenzen
-          </Link>
-          <Link href="/kontakt" className="block py-3.5 text-white/40 hover:text-white text-base transition-colors duration-200">
-            Kontakt
-          </Link>
+              {item.label}
+            </Link>
+          ))}
 
           <div className="pt-4">
             <Link

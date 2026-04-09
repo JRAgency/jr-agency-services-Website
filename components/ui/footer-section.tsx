@@ -101,7 +101,7 @@ export function FooterSection() {
           }}
         />
 
-        <div className="grid w-full gap-10 xl:grid-cols-3 xl:gap-8">
+        <div className="grid w-full gap-10 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
 
           {/* Brand column */}
           <AnimatedContainer className="space-y-5">

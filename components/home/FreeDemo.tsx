@@ -105,19 +105,16 @@ export default function FreeDemo() {
 
               {/* CTAs */}
               <AnimatedSection delay={0.24}>
-                <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <NeonButton href="/kontakt#demo" variant="solid" size="lg" className="hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                <div className="mt-10 flex items-center justify-center">
+                  <NeonButton href="/anfragen" variant="solid" size="lg" className="hover:shadow-[0_0_40px_rgba(255,255,255,0.2)]">
                     Demo anfordern
                     <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5"
                       className="group-hover:translate-x-0.5 transition-transform duration-200">
                       <path d="M3 8h10M9 4l4 4-4 4" />
                     </svg>
                   </NeonButton>
-                  <NeonButton href="/kontakt" variant="ghost" size="lg">
-                    Projekt starten
-                  </NeonButton>
                 </div>
-                <p className="mt-6 text-white/35 text-xs">Unverbindlich · Für qualifizierte Projekte ab 2.500 €</p>
+                <p className="mt-6 text-white/35 text-xs">Kostenlos & unverbindlich</p>
               </AnimatedSection>
 
             </div>

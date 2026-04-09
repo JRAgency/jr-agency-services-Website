@@ -98,7 +98,7 @@ export default function Nav() {
             className="font-extrabold text-white text-base tracking-wider uppercase"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
-            JR Agency
+            JR Agency Services
           </span>
         </Link>
 

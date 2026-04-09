@@ -48,8 +48,18 @@ const GOALS = [
 ];
 
 const COMMON_PAGES = [
-  "Startseite", "Über uns", "Leistungen", "Portfolio", "Referenzen",
-  "Blog", "Shop", "Kontakt", "Impressum", "Datenschutz", "FAQ", "Karriere",
+  { value: "startseite",  label: "Startseite"  },
+  { value: "ueber_uns",   label: "Über uns"    },
+  { value: "leistungen",  label: "Leistungen"  },
+  { value: "portfolio",   label: "Portfolio"   },
+  { value: "referenzen",  label: "Referenzen"  },
+  { value: "blog",        label: "Blog"        },
+  { value: "shop",        label: "Shop"        },
+  { value: "kontakt",     label: "Kontakt"     },
+  { value: "impressum",   label: "Impressum"   },
+  { value: "datenschutz", label: "Datenschutz" },
+  { value: "faq",         label: "FAQ"         },
+  { value: "karriere",    label: "Karriere"    },
 ];
 
 const TIMELINE_OPTIONS = [
@@ -94,8 +104,8 @@ export default function AnfragenPage() {
   const back = () => go(step - 1);
   const progress = step < 0 ? 0 : Math.min((step + 1) / TOTAL_STEPS, 1);
 
-  const togglePage = (p: string) =>
-    setPages(prev => prev.includes(p) ? prev.filter(x => x !== p) : [...prev, p]);
+  const togglePage = (v: string) =>
+    setPages(prev => prev.includes(v) ? prev.filter(x => x !== v) : [...prev, v]);
 
   const submitToVecturo = async (date: Date, time: string) => {
     try {
@@ -112,11 +122,11 @@ export default function AnfragenPage() {
           companyName,
           contactPerson,
           industry,
-          hasWebsite: hasWebsite ? "Ja" : "Nein",
+          hasWebsite: hasWebsite === true ? "Ja" : hasWebsite === false ? "Nein" : "",
           websiteUrl: websiteUrl || "",
-          projectTypeLabel: PROJECT_TYPES.find(t => t.value === projectType)?.label ?? projectType,
-          goalLabel: GOALS.find(g => g.value === goal)?.label ?? goal,
-          pages: pages.join(", "),
+          projectType,
+          goal,
+          pages,
           firstNotes,
           timelineLabel: TIMELINE_OPTIONS.find(t => t.value === timeline)?.label ?? timeline,
           appointmentDate: formatDate(date),
@@ -321,9 +331,9 @@ export default function AnfragenPage() {
                       <p className="text-white/30 text-[11px] uppercase tracking-widest mb-3">Gewünschte Seiten</p>
                       <div className="flex flex-wrap gap-2">
                         {COMMON_PAGES.map(p => (
-                          <button key={p} onClick={() => togglePage(p)}
-                            className={`px-4 py-2 rounded-full border text-xs font-semibold transition-all duration-200 ${pages.includes(p) ? "bg-[#2563EB]/15 border-[#2563EB]/50 text-[#60A5FA]" : "bg-white/[0.03] border-white/[0.08] text-white/40 hover:border-white/20 hover:text-white/60"}`}>
-                            {p}
+                          <button key={p.value} onClick={() => togglePage(p.value)}
+                            className={`px-4 py-2 rounded-full border text-xs font-semibold transition-all duration-200 ${pages.includes(p.value) ? "bg-[#2563EB]/15 border-[#2563EB]/50 text-[#60A5FA]" : "bg-white/[0.03] border-white/[0.08] text-white/40 hover:border-white/20 hover:text-white/60"}`}>
+                            {p.label}
                           </button>
                         ))}
                       </div>

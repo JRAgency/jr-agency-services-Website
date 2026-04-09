@@ -1,7 +1,6 @@
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/home/Marquee";
 import StatsBar from "@/components/home/StatsBar";
-import ClientLogos from "@/components/home/ClientLogos";
 import Services from "@/components/home/Services";
 import Portfolio from "@/components/home/Portfolio";
 import FeaturedWork from "@/components/home/FeaturedWork";
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <Marquee />
       <StatsBar />
-      <ClientLogos />
       <Services />
       <Portfolio />
       <FeaturedWork />

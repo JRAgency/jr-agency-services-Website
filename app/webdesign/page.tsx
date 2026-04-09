@@ -181,7 +181,7 @@ export default function WebdesignPage() {
               <AnimatedSection delay={0.15}>
                 <div className="mt-9 flex gap-4 flex-wrap">
                   <Link
-                    href="/kontakt"
+                    href="/anfragen"
                     className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)] text-base"
                   >
                     Projekt starten

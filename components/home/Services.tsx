@@ -39,7 +39,7 @@ export default function Services() {
 
   return (
     <section className="py-24 md:py-44 bg-[#020408]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.6fr] gap-10 md:gap-16 lg:gap-32">
 

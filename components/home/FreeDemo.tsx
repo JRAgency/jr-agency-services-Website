@@ -4,7 +4,7 @@ import { NeonButton } from "@/components/ui/neon-button";
 export default function FreeDemo() {
   return (
     <section id="demo" className="py-24 md:py-44 bg-[#020408]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
 
         {/* Animated gradient border wrapper */}
         <div className="relative p-px rounded-3xl overflow-hidden">

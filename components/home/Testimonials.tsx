@@ -96,7 +96,7 @@ export default function Testimonials() {
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
         {/* Header */}
         <div className="flex items-end justify-between mb-10 md:mb-16">
           <div>

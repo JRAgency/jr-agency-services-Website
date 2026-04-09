@@ -161,8 +161,8 @@ export default function SocialMediaPage() {
           <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#2563EB]/10 rounded-full blur-[150px]" />
           <div className="absolute bottom-1/4 left-1/6 w-72 h-72 bg-[#7C3AED]/8 rounded-full blur-[100px]" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
@@ -236,7 +236,7 @@ export default function SocialMediaPage() {
 
       {/* ── Stats ── */}
       <section className="py-14 bg-[#0D1526] border-y border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s, i) => (
               <AnimatedSection key={s.label} delay={i * 0.07}>
@@ -257,7 +257,7 @@ export default function SocialMediaPage() {
 
       {/* ── Plattformen ── */}
       <section className="py-32 bg-[#070C18]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <SectionHeading
             label="Unsere Plattformen"
             title="Überall wo Ihre Kunden sind"
@@ -290,8 +290,8 @@ export default function SocialMediaPage() {
 
       {/* ── Was wir tun — Content Showcase ── */}
       <section className="py-28 bg-[#0D1526] border-y border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <AnimatedSection>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
@@ -362,7 +362,7 @@ export default function SocialMediaPage() {
 
       {/* ── Leistungen ── */}
       <section id="leistungen" className="py-32 bg-[#070C18]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <SectionHeading
             label="Leistungen im Detail"
             title="Alles aus einer Hand"
@@ -380,8 +380,8 @@ export default function SocialMediaPage() {
 
       {/* ── Was ist immer inklusive ── */}
       <section className="py-28 bg-[#0D1526] border-y border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-3">
@@ -569,7 +569,7 @@ export default function SocialMediaPage() {
 
       {/* ── Warum Social Media ── */}
       <section className="py-28 bg-[#0D1526] border-t border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <SectionHeading
             label="Warum es wichtig ist"
             title="Social Media ist kein Trend — es ist Ihr Vertrieb"
@@ -624,7 +624,7 @@ export default function SocialMediaPage() {
 
       {/* ── CTA ── */}
       <section className="py-28 bg-[#070C18]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <div className="bg-gradient-to-br from-[#121D35] to-[#0D1526] border border-[#2563EB]/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#2563EB]/10 rounded-full blur-[100px]" />

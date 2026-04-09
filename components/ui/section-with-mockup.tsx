@@ -41,7 +41,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
         }}
       />
 
-      <div className="max-w-[1220px] w-full px-6 md:px-10 mx-auto relative z-10">
+      <div className="page-container relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24 lg:gap-32">
 
           {/* ── Text ─────────────────────────────── */}

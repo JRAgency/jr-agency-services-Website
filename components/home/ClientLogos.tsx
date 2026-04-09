@@ -12,7 +12,7 @@ const clients = [
 export default function ClientLogos() {
   return (
     <section className="py-16 bg-[#020408]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
         <AnimatedSection delay={0}>
           <p className="text-center text-white/35 text-xs uppercase tracking-[0.22em] font-medium mb-9">
             Vertraut von Unternehmen in der Region

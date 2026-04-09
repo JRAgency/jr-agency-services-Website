@@ -110,8 +110,8 @@ export default function BrandingPage() {
           <div className="absolute top-1/3 left-1/3 w-[600px] h-[500px] bg-[#2563EB]/10 rounded-full blur-[160px]" />
           <div className="absolute bottom-1/4 right-1/5 w-72 h-72 bg-[#C9A96E]/5 rounded-full blur-[100px]" />
         </div>
-        <div className="max-w-7xl mx-auto px-6 py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
@@ -178,7 +178,7 @@ export default function BrandingPage() {
 
       {/* ── Stats ── */}
       <section className="py-14 bg-[#0D1526] border-y border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s, i) => (
               <AnimatedSection key={s.label} delay={i * 0.07}>
@@ -199,8 +199,8 @@ export default function BrandingPage() {
 
       {/* ── Warum Branding zählt ── */}
       <section className="py-32 bg-[#070C18]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <AnimatedSection>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/15 to-[#C9A96E]/5 rounded-3xl blur-2xl" />
@@ -269,7 +269,7 @@ export default function BrandingPage() {
 
       {/* ── Leistungen ── */}
       <section className="py-32 bg-[#0D1526]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <SectionHeading
             label="Was wir bieten"
             title="Branding-Leistungen"
@@ -287,8 +287,8 @@ export default function BrandingPage() {
 
       {/* ── Was ist inklusive ── */}
       <section className="py-28 bg-[#070C18] border-y border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-3">
@@ -576,7 +576,7 @@ export default function BrandingPage() {
 
       {/* ── Warum gutes Branding ── */}
       <section className="py-28 bg-[#070C18] border-t border-[#94A3B8]/10">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <SectionHeading
             label="Der Unterschied"
             title="Branding ist Ihre stärkste Waffe"
@@ -631,7 +631,7 @@ export default function BrandingPage() {
 
       {/* ── CTA ── */}
       <section className="py-28 bg-[#0D1526]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="page-container">
           <div className="bg-gradient-to-br from-[#121D35] to-[#0D1526] border border-[#2563EB]/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#2563EB]/10 rounded-full blur-[100px]" />

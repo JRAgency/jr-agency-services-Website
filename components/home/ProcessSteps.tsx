@@ -30,7 +30,7 @@ export default function ProcessSteps() {
 
   return (
     <section className="py-44 bg-[#020408]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
 
         <div className="text-center mb-24">
           <AnimatedSection delay={0}>

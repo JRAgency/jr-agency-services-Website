@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 export default function AboutUs() {
   return (
     <section className="py-44 bg-[#020408]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
 
           {/* Image */}

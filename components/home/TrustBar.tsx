@@ -35,7 +35,7 @@ const items = [
 export default function TrustBar() {
   return (
     <section className="py-16 bg-[#070C18]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="page-container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {items.map((item, i) => (
             <AnimatedSection key={item.title} delay={i * 0.1}>

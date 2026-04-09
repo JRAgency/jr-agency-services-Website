@@ -25,7 +25,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
   tag,
   accentColor = "rgba(37,99,235,0.5)",
 }) => {
-  const ease = [0.22, 1, 0.36, 1];
+  const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
   return (
     <section className="relative py-32 md:py-48 bg-[#020408] overflow-hidden">

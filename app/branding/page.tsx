@@ -140,7 +140,7 @@ export default function BrandingPage() {
               <AnimatedSection delay={0.15}>
                 <div className="mt-9 flex gap-4 flex-wrap">
                   <Link
-                    href="/kontakt"
+                    href="/anfragen/branding"
                     className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)] text-base"
                   >
                     Branding anfragen
@@ -660,7 +660,7 @@ export default function BrandingPage() {
               <AnimatedSection delay={0.15}>
                 <div className="mt-9 flex justify-center gap-4 flex-wrap">
                   <Link
-                    href="/kontakt"
+                    href="/anfragen/branding"
                     className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] text-base"
                   >
                     Jetzt anfragen
@@ -669,7 +669,7 @@ export default function BrandingPage() {
                     </svg>
                   </Link>
                   <Link
-                    href="/kontakt"
+                    href="/anfragen/branding"
                     className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
                   >
                     Kostenloses Erstgespräch

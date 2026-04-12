@@ -47,6 +47,7 @@ export default function WebdesignStats() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
+                  filter: "drop-shadow(0 0 18px rgba(96,165,250,0.45)) drop-shadow(0 2px 8px rgba(37,99,235,0.3))",
                 }}
               >
                 {s.value}

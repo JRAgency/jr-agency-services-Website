@@ -174,10 +174,8 @@ export default function WebdesignPage() {
                 <div className="mt-9 flex gap-3.5 flex-wrap">
                   <Link
                     href="/anfragen"
-                    className="inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-all duration-200"
-                    style={{ background: C, boxShadow: `0 0 0 0 ${C}40` }}
-                    onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 0 32px ${C}55`}
-                    onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.boxShadow = `0 0 0 0 ${C}40`}
+                    className="inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-all duration-200 hover:opacity-90 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)]"
+                    style={{ background: C }}
                   >
                     Projekt starten
                     <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
@@ -307,10 +305,8 @@ export default function WebdesignPage() {
             {leistungen.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.07}>
                 <div
-                  className="group relative rounded-2xl p-7 h-full overflow-hidden transition-all duration-300 cursor-default"
+                  className="group relative rounded-2xl p-7 h-full overflow-hidden transition-all duration-300 cursor-default hover:border-white/[0.18]"
                   style={{ background: "#08111f", border: "1px solid rgba(255,255,255,0.06)" }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = item.color + "35"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.06)"; }}
                 >
                   {/* Hover glow */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" style={{ background: `radial-gradient(ellipse at 0% 0%, ${item.color}0c 0%, transparent 55%)` }} />
@@ -532,10 +528,7 @@ export default function WebdesignPage() {
               </AnimatedSection>
             </div>
             <AnimatedSection delay={0.1}>
-              <Link href="/kontakt" className="hidden md:inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group" style={{ color: "rgba(255,255,255,0.35)" }}
-                onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.85)"}
-                onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,0.35)"}
-              >
+              <Link href="/kontakt" className="hidden md:inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group text-white/35 hover:text-white/85">
                 Projekt anfragen
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-0.5 transition-transform duration-200"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
               </Link>
@@ -639,10 +632,8 @@ export default function WebdesignPage() {
             ].map((tech, i) => (
               <AnimatedSection key={tech.name} delay={i * 0.07}>
                 <div
-                  className="group relative rounded-2xl p-6 flex items-center gap-5 overflow-hidden transition-all duration-300"
+                  className="group relative rounded-2xl p-6 flex items-center gap-5 overflow-hidden transition-all duration-300 hover:border-white/[0.15]"
                   style={{ background: "#08111f", border: "1px solid rgba(255,255,255,0.06)" }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = tech.color + "30"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.06)"; }}
                 >
                   <div className="absolute top-0 left-0 right-0 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `linear-gradient(90deg, transparent, ${tech.color}50, transparent)` }} />
                   <div className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: tech.color + "12", border: `1px solid ${tech.color}22` }}>

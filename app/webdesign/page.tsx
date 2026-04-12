@@ -275,21 +275,25 @@ export default function WebdesignPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {leistungen.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.07}>
+                {/* Gradient border wrapper */}
                 <div
-                  className="group relative rounded-2xl p-7 h-full overflow-hidden transition-all duration-300 cursor-default hover:border-white/[0.18]"
-                  style={{ background: "#08111f", border: "1px solid rgba(255,255,255,0.06)" }}
+                  className="rounded-2xl p-[1px] h-full transition-all duration-300"
+                  style={{
+                    background: `linear-gradient(135deg, rgba(255,255,255,0.04) 0%, ${item.color}55 50%, rgba(255,255,255,0.03) 100%)`,
+                  }}
                 >
-                  {/* Hover glow */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" style={{ background: `radial-gradient(ellipse at 0% 0%, ${item.color}0c 0%, transparent 55%)` }} />
-                  {/* Top accent line */}
-                  <div className="absolute top-0 left-6 right-6 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: `linear-gradient(90deg, transparent, ${item.color}60, transparent)` }} />
-
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110" style={{ background: item.color + "14", border: `1px solid ${item.color}28`, color: item.color }}>
+                  <div
+                    className="group rounded-[15px] p-6 h-full transition-colors duration-300 cursor-default"
+                    style={{ background: "#060D1C" }}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                      style={{ background: item.color + "15", color: item.color }}
+                    >
                       {item.icon}
                     </div>
-                    <h3 className="text-white font-bold text-[16px] mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                    <p className="text-[#4E6080] text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-white font-bold text-[15px] mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
+                    <p className="text-[#4E6080] text-[13px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>

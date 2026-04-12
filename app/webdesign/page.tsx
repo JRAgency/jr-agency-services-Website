@@ -5,6 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
 import WebdesignStats from "@/components/webdesign/WebdesignStats";
 import TypewriterSection from "@/components/webdesign/TypewriterSection";
+import ScrollToButton from "@/components/ui/ScrollToButton";
 
 export const metadata: Metadata = {
   title: "Webdesign – JR Agency Services",
@@ -171,12 +172,12 @@ export default function WebdesignPage() {
                       <path d="M3 8h10M9 4l4 4-4 4" />
                     </svg>
                   </Link>
-                  <Link
-                    href="#portfolio"
+                  <ScrollToButton
+                    targetId="portfolio"
                     className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
                   >
                     Referenzen ansehen
-                  </Link>
+                  </ScrollToButton>
                 </div>
               </AnimatedSection>
             </div>

@@ -3,6 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
+import WebdesignHero from "@/components/webdesign/WebdesignHero";
+import WebdesignStats from "@/components/webdesign/WebdesignStats";
+import TypewriterSection from "@/components/webdesign/TypewriterSection";
 
 export const metadata: Metadata = {
   title: "Webdesign – JR Agency Services",
@@ -124,112 +127,9 @@ const faq = [
 export default function WebdesignPage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#020408] pt-20">
-        {/* Background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 right-0 w-[800px] h-[700px] rounded-full blur-[180px]" style={{ background: `radial-gradient(ellipse, ${C}0a 0%, transparent 70%)` }} />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-[130px]" style={{ background: `radial-gradient(ellipse, ${CD}07 0%, transparent 70%)` }} />
-          {/* Subtle grid */}
-          <div className="absolute inset-0" style={{ backgroundImage: `linear-gradient(${C}08 1px, transparent 1px), linear-gradient(90deg, ${C}08 1px, transparent 1px)`, backgroundSize: "72px 72px" }} />
-        </div>
-
-        <div className="page-container py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-14 lg:gap-20 items-center">
-            <AnimatedSection>
-              <div>
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-7 border" style={{ background: `${C}10`, borderColor: `${C}28`, color: CL }}>
-                  <span className="w-1.5 h-1.5 rounded-full" style={{ background: C }} />
-                  <span className="text-[11px] font-bold uppercase tracking-[0.18em]">Webdesign</span>
-                </div>
-
-                {/* Headline */}
-                <h1
-                  className="font-extrabold text-white leading-[1.04]"
-                  style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(40px, 5vw, 72px)", letterSpacing: "-0.02em" }}
-                >
-                  Websites die<br />
-                  <span style={{ background: `linear-gradient(135deg, ${C} 0%, ${CL} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-                    begeistern
-                  </span>
-                  {" "}&amp; wirken.
-                </h1>
-
-                <p className="mt-6 text-[#94A3B8] text-[15px] md:text-base leading-relaxed max-w-[460px]">
-                  Individuell gestaltet, technisch einwandfrei und perfekt auf Ihre Marke abgestimmt — von der ersten Zeile Code bis zum Go-Live.
-                </p>
-
-                {/* Feature pills */}
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {["Responsive", "SEO-optimiert", "Blitzschnell", "30 Tage Support"].map((f) => (
-                    <span key={f} className="inline-flex items-center gap-1.5 text-xs text-white/50 border border-white/[0.08] bg-white/[0.03] rounded-full px-3 py-1.5">
-                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      {f}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTAs */}
-                <div className="mt-9 flex gap-3.5 flex-wrap">
-                  <Link
-                    href="/anfragen"
-                    className="inline-flex items-center gap-2.5 text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-all duration-200 hover:opacity-90 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)]"
-                    style={{ background: C }}
-                  >
-                    Projekt starten
-                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-                  </Link>
-                  <Link
-                    href="#portfolio"
-                    className="inline-flex items-center gap-2 text-white/60 hover:text-white font-medium px-7 py-3.5 rounded-full border border-white/[0.1] hover:border-white/[0.2] bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-200 text-sm"
-                  >
-                    Referenzen ansehen
-                  </Link>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.18} direction="right">
-              <div className="relative">
-                <div className="absolute -inset-6 rounded-3xl blur-3xl pointer-events-none" style={{ background: `radial-gradient(ellipse, ${C}14 0%, transparent 70%)` }} />
-                <Image
-                  src="/images/mockup 14 inch.png"
-                  alt="Webdesign Mockup"
-                  width={700}
-                  height={490}
-                  className="relative w-full rounded-2xl"
-                  style={{ filter: "drop-shadow(0 30px 60px rgba(0,0,0,0.6))" }}
-                  sizes="(max-width: 1024px) 100vw, 55vw"
-                  quality={90}
-                  priority
-                />
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Stats ── */}
-      <section className="py-14 border-y" style={{ background: "#050c1a", borderColor: "rgba(255,255,255,0.05)" }}>
-        <div className="page-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.05] overflow-hidden rounded-2xl">
-            {stats.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.06}>
-                <div className="text-center py-8 px-4 bg-[#050c1a]">
-                  <p
-                    className="font-extrabold text-white"
-                    style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(28px, 3.5vw, 42px)", background: `linear-gradient(135deg, #fff 40%, ${CL})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
-                  >
-                    {s.value}
-                  </p>
-                  <p className="text-[#64748B] text-xs mt-1.5 font-medium uppercase tracking-wide">{s.label}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WebdesignHero />
+      <WebdesignStats />
+      <TypewriterSection />
 
       {/* ── Was bedeutet gutes Webdesign ── */}
       <section className="py-28 md:py-36 bg-[#020408]">

@@ -275,25 +275,43 @@ export default function WebdesignPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {leistungen.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.07}>
-                {/* Gradient border wrapper */}
                 <div
-                  className="rounded-2xl p-[1px] h-full transition-all duration-300"
+                  className="group relative rounded-2xl p-[1px] h-full transition-all duration-300 hover:-translate-y-[3px] cursor-default"
                   style={{
                     background: `linear-gradient(135deg, rgba(255,255,255,0.04) 0%, ${item.color}55 50%, rgba(255,255,255,0.03) 100%)`,
                   }}
                 >
+                  {/* Border brightens on hover */}
                   <div
-                    className="group rounded-[15px] p-6 h-full transition-colors duration-300 cursor-default"
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: `linear-gradient(135deg, ${item.color}20 0%, ${item.color}99 50%, ${item.color}18 100%)` }}
+                  />
+                  {/* Outer glow behind card */}
+                  <div
+                    className="absolute -inset-[2px] rounded-[18px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-md"
+                    style={{ background: `linear-gradient(135deg, transparent, ${item.color}35, transparent)` }}
+                  />
+
+                  {/* Inner card */}
+                  <div
+                    className="relative rounded-[15px] p-6 h-full overflow-hidden"
                     style={{ background: "#060D1C" }}
                   >
+                    {/* Ambient top glow on hover */}
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: item.color + "15", color: item.color }}
-                    >
-                      {item.icon}
+                      className="absolute top-0 left-0 right-0 h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                      style={{ background: `radial-gradient(ellipse at 50% 0%, ${item.color}14 0%, transparent 70%)` }}
+                    />
+                    <div className="relative">
+                      <div
+                        className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                        style={{ background: item.color + "15", color: item.color }}
+                      >
+                        {item.icon}
+                      </div>
+                      <h3 className="text-white font-bold text-[15px] mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
+                      <p className="text-[#4E6080] text-[13px] leading-relaxed">{item.desc}</p>
                     </div>
-                    <h3 className="text-white font-bold text-[15px] mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                    <p className="text-[#4E6080] text-[13px] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>

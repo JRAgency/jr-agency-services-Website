@@ -4,7 +4,6 @@ import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
 import WebdesignStats from "@/components/webdesign/WebdesignStats";
-import TypewriterSection from "@/components/webdesign/TypewriterSection";
 import ScrollToButton from "@/components/ui/ScrollToButton";
 
 export const metadata: Metadata = {
@@ -202,7 +201,6 @@ export default function WebdesignPage() {
       </section>
 
       <WebdesignStats />
-      <TypewriterSection />
 
       {/* ── Was bedeutet gutes Webdesign ── */}
       <section className="py-28 md:py-36 bg-[#020408]">

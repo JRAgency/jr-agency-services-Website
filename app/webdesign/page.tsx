@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
-import WebdesignHero from "@/components/webdesign/WebdesignHero";
 import WebdesignStats from "@/components/webdesign/WebdesignStats";
 import TypewriterSection from "@/components/webdesign/TypewriterSection";
 
@@ -127,7 +126,80 @@ const faq = [
 export default function WebdesignPage() {
   return (
     <>
-      <WebdesignHero />
+      {/* ── Hero ── */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#070C18] pt-20">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#2563EB]/12 rounded-full blur-[140px]" />
+          <div className="absolute bottom-1/4 left-1/5 w-72 h-72 bg-[#1D4ED8]/10 rounded-full blur-[100px]" />
+        </div>
+        <div className="page-container py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
+            <div>
+              <AnimatedSection>
+                <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
+                  Leistung
+                </span>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <h1
+                  className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05]"
+                  style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                >
+                  Web
+                  <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
+                    design
+                  </span>
+                  <br />
+                  das wirkt.
+                </h1>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <p className="mt-6 text-[#94A3B8] text-lg leading-relaxed max-w-lg">
+                  Websites die begeistern, überzeugen und konvertieren.
+                  Individuell gestaltet, technisch einwandfrei und perfekt auf
+                  Ihre Marke abgestimmt — von der ersten Zeile Code bis zum Go-Live.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="mt-9 flex gap-4 flex-wrap">
+                  <Link
+                    href="/anfragen"
+                    className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)] text-base"
+                  >
+                    Projekt starten
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M3 8h10M9 4l4 4-4 4" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="#portfolio"
+                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
+                  >
+                    Referenzen ansehen
+                  </Link>
+                </div>
+              </AnimatedSection>
+            </div>
+
+            <AnimatedSection delay={0.2} direction="right">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/20 to-transparent rounded-3xl blur-2xl" />
+                <Image
+                  src="/images/mockup 14 inch.png"
+                  alt="Webdesign Mockup"
+                  width={660}
+                  height={460}
+                  className="relative w-full rounded-2xl drop-shadow-2xl"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
+                  priority
+                />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       <WebdesignStats />
       <TypewriterSection />
 

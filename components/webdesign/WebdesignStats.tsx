@@ -3,54 +3,50 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-const C = "#2563EB";
-const CL = "#93C5FD";
-
 const stats = [
   {
     value: "30+",
-    label: "Projekte abgeschlossen",
-    desc: "Von der Landing Page bis zum komplexen Online-Shop",
+    label: "Projekte",
+    desc: "Landing Pages, Shops & Corporate Sites",
+    color: "#3B82F6",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
-    color: "#3B82F6",
   },
   {
     value: "95+",
-    label: "Lighthouse Score",
-    desc: "Technische Perfektion als Standard, nicht als Ausnahme",
+    label: "Lighthouse",
+    desc: "Performance Score — jedes Mal",
+    color: "#F59E0B",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
       </svg>
     ),
-    color: "#F59E0B",
   },
   {
     value: "100%",
-    label: "Kundenzufriedenheit",
-    desc: "Kein Projekt ohne positives Kundenfeedback",
+    label: "Zufriedenheit",
+    desc: "Kein Projekt ohne positives Feedback",
+    color: "#34D399",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="20 6 9 17 4 12" />
       </svg>
     ),
-    color: "#10B981",
   },
   {
     value: "48h",
-    label: "Erste Demo-Version",
-    desc: "Schneller als jede andere Agentur — und kostenlos",
+    label: "Erste Demo",
+    desc: "Sehen Sie Ihre Website — kostenlos",
+    color: "#A78BFA",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
       </svg>
     ),
-    color: "#8B5CF6",
   },
 ];
 
@@ -61,98 +57,109 @@ function StatCard({ s, i }: { s: typeof stats[0]; i: number }) {
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative rounded-2xl p-7 overflow-hidden transition-all duration-300 hover:border-white/[0.14]"
-      style={{ background: "#07101e", border: "1px solid rgba(255,255,255,0.07)" }}
+      initial={{ opacity: 0, y: 20, scale: 0.96 }}
+      animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+      transition={{ duration: 0.7, delay: i * 0.09, ease: [0.22, 1, 0.36, 1] }}
+      className="relative flex flex-col"
+      style={{
+        background: "#111118",
+        borderRadius: "22px",
+        border: "1px solid rgba(255,255,255,0.055)",
+        padding: "clamp(20px, 2.5vw, 32px)",
+        overflow: "hidden",
+      }}
     >
-      {/* Corner glow on hover */}
+      {/* Ultra-thin top accent line */}
       <div
-        className="absolute top-0 right-0 w-32 h-32 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-        style={{ background: `radial-gradient(ellipse, ${s.color}12 0%, transparent 65%)`, transform: "translate(30%, -30%)" }}
-      />
-      {/* Top line */}
-      <div
-        className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl"
-        style={{ background: `linear-gradient(90deg, transparent 0%, ${s.color}60 50%, transparent 100%)` }}
+        className="absolute top-0 left-6 right-6 h-px"
+        style={{ background: `linear-gradient(90deg, transparent, ${s.color}55, transparent)` }}
       />
 
-      <div className="relative flex items-start gap-5">
-        {/* Icon badge */}
-        <div
-          className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center mt-0.5"
-          style={{ background: s.color + "15", border: `1px solid ${s.color}28`, color: s.color }}
-        >
-          {s.icon}
-        </div>
-
-        <div className="flex-1 min-w-0">
-          {/* Big number */}
-          <p
-            className="font-extrabold text-white leading-none mb-1.5"
-            style={{
-              fontFamily: "var(--font-plus-jakarta)",
-              fontSize: "clamp(30px, 3vw, 42px)",
-              background: `linear-gradient(135deg, #fff 30%, ${s.color})`,
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            {s.value}
-          </p>
-          <p className="text-white font-semibold text-[14px] mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
-            {s.label}
-          </p>
-          <p className="text-[#4E6080] text-xs leading-relaxed">{s.desc}</p>
-        </div>
+      {/* Icon */}
+      <div
+        className="flex items-center justify-center mb-5 shrink-0"
+        style={{
+          width: 30,
+          height: 30,
+          borderRadius: 10,
+          background: `${s.color}18`,
+          color: s.color,
+        }}
+      >
+        {s.icon}
       </div>
+
+      {/* Big number */}
+      <p
+        className="text-white leading-none mb-2 font-black"
+        style={{
+          fontFamily: "var(--font-plus-jakarta)",
+          fontSize: "clamp(38px, 4vw, 52px)",
+          letterSpacing: "-0.045em",
+        }}
+      >
+        {s.value}
+      </p>
+
+      {/* Label */}
+      <p
+        className="font-semibold text-[13px] mb-1.5"
+        style={{ color: "rgba(255,255,255,0.85)", fontFamily: "var(--font-plus-jakarta)", letterSpacing: "-0.01em" }}
+      >
+        {s.label}
+      </p>
+
+      {/* Desc */}
+      <p
+        className="text-[11px] leading-snug"
+        style={{ color: "rgba(255,255,255,0.26)" }}
+      >
+        {s.desc}
+      </p>
     </motion.div>
   );
 }
 
 export default function WebdesignStats() {
   return (
-    <section className="py-16 bg-[#020408]" style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+    <section
+      className="py-16"
+      style={{
+        background: "#000000",
+        borderBottom: "1px solid rgba(255,255,255,0.05)",
+      }}
+    >
       <div className="page-container">
-        {/* Label */}
-        <div className="text-center mb-10">
-          <span
-            className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] mb-3"
-            style={{ color: C }}
-          >
-            Zahlen die überzeugen
-          </span>
-          <div className="flex items-center justify-center gap-3">
-            <div className="h-px w-16" style={{ background: `linear-gradient(90deg, transparent, ${C}40)` }} />
-            <span className="text-[#4E6080] text-xs">JR Agency Services</span>
-            <div className="h-px w-16" style={{ background: `linear-gradient(90deg, ${C}40, transparent)` }} />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
           {stats.map((s, i) => (
             <StatCard key={s.label} s={s} i={i} />
           ))}
         </div>
 
-        {/* Bottom social proof strip */}
+        {/* Bottom proof strip */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-6"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-5 flex flex-wrap items-center justify-center gap-7"
         >
           {[
-            { icon: "⭐", text: "5.0 / 5.0 Bewertung" },
-            { icon: "🚀", text: "Durchschnittlich 3× mehr Anfragen" },
-            { icon: "🔒", text: "Kostenlose Erstberatung" },
+            { dot: "#F59E0B", text: "5.0 / 5.0 Kundenbewertung" },
+            { dot: "#3B82F6", text: "Ø 3× mehr Anfragen" },
+            { dot: "#34D399", text: "Kostenlose Erstberatung" },
           ].map((item) => (
-            <div key={item.text} className="flex items-center gap-2 text-[#4E6080] text-xs">
-              <span>{item.icon}</span>
-              <span>{item.text}</span>
+            <div key={item.text} className="flex items-center gap-2">
+              <span
+                className="block w-1 h-1 rounded-full shrink-0"
+                style={{ background: item.dot }}
+              />
+              <span
+                className="text-[11px] font-medium"
+                style={{ color: "rgba(255,255,255,0.22)", letterSpacing: "0.01em" }}
+              >
+                {item.text}
+              </span>
             </div>
           ))}
         </motion.div>

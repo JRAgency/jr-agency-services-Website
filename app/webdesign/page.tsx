@@ -257,6 +257,59 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      {/* ── Was ist immer inklusive ── */}
+      <section className="py-28 md:py-36" style={{ background: "#060d1c", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="page-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+            <div>
+              <AnimatedSection>
+                <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4" style={{ color: C }}>Immer dabei</span>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <h2 className="font-extrabold text-white leading-tight" style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(26px, 3.5vw, 48px)", letterSpacing: "-0.02em" }}>
+                  Was bei jeder<br />
+                  <span style={{ background: `linear-gradient(135deg, ${C} 0%, ${CL} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Website inklusive</span>
+                  {" "}ist.
+                </h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <p className="mt-5 text-[#64748B] text-[15px] leading-relaxed max-w-md mb-8">
+                  Kein versteckter Mehraufwand — diese Features sind in jedem Webdesign-Projekt selbstverständlich enthalten.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {inbegriffen.map((f) => (
+                    <div key={f} className="flex items-start gap-3 rounded-xl px-4 py-3" style={{ background: "#08111f", border: "1px solid rgba(255,255,255,0.05)" }}>
+                      <span className="mt-0.5 w-4 h-4 rounded-full flex items-center justify-center shrink-0" style={{ background: `${C}18`, border: `1px solid ${C}30` }}>
+                        <svg width="7" height="7" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                      </span>
+                      <span className="text-[#94A3B8] text-sm leading-snug">{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </AnimatedSection>
+            </div>
+
+            <AnimatedSection delay={0.2} direction="right">
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-3xl blur-2xl pointer-events-none" style={{ background: `radial-gradient(ellipse, ${C}0e 0%, transparent 70%)` }} />
+                <Image
+                  src="/images/mockup 14 inch mana.png"
+                  alt="Webdesign Details"
+                  width={600}
+                  height={420}
+                  className="relative w-full rounded-2xl"
+                  style={{ filter: "drop-shadow(0 24px 48px rgba(0,0,0,0.55))" }}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={90}
+                />
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* ── Leistungen — Features that matter ── */}
       <section className="py-28 md:py-36" style={{ background: "#060d1c" }}>
         <div className="page-container">
@@ -449,59 +502,6 @@ export default function WebdesignPage() {
                 );
               })}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Was ist immer inklusive ── */}
-      <section className="py-28 md:py-36" style={{ background: "#060d1c", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center">
-            <div>
-              <AnimatedSection>
-                <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-4" style={{ color: C }}>Immer dabei</span>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <h2 className="font-extrabold text-white leading-tight" style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(26px, 3.5vw, 48px)", letterSpacing: "-0.02em" }}>
-                  Was bei jeder<br />
-                  <span style={{ background: `linear-gradient(135deg, ${C} 0%, ${CL} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Website inklusive</span>
-                  {" "}ist.
-                </h2>
-              </AnimatedSection>
-              <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-[#64748B] text-[15px] leading-relaxed max-w-md mb-8">
-                  Kein versteckter Mehraufwand — diese Features sind in jedem Webdesign-Projekt selbstverständlich enthalten.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection delay={0.15}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {inbegriffen.map((f) => (
-                    <div key={f} className="flex items-start gap-3 rounded-xl px-4 py-3" style={{ background: "#08111f", border: "1px solid rgba(255,255,255,0.05)" }}>
-                      <span className="mt-0.5 w-4 h-4 rounded-full flex items-center justify-center shrink-0" style={{ background: `${C}18`, border: `1px solid ${C}30` }}>
-                        <svg width="7" height="7" viewBox="0 0 8 8" fill="none"><path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                      </span>
-                      <span className="text-[#94A3B8] text-sm leading-snug">{f}</span>
-                    </div>
-                  ))}
-                </div>
-              </AnimatedSection>
-            </div>
-
-            <AnimatedSection delay={0.2} direction="right">
-              <div className="relative">
-                <div className="absolute -inset-4 rounded-3xl blur-2xl pointer-events-none" style={{ background: `radial-gradient(ellipse, ${C}0e 0%, transparent 70%)` }} />
-                <Image
-                  src="/images/mockup 14 inch mana.png"
-                  alt="Webdesign Details"
-                  width={600}
-                  height={420}
-                  className="relative w-full rounded-2xl"
-                  style={{ filter: "drop-shadow(0 24px 48px rgba(0,0,0,0.55))" }}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  quality={90}
-                />
-              </div>
-            </AnimatedSection>
           </div>
         </div>
       </section>

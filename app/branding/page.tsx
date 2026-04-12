@@ -336,6 +336,26 @@ export default function BrandingPage() {
               <div className="relative">
                 <div className="absolute -inset-6 bg-gradient-to-br from-[#2563EB]/15 to-[#C9A96E]/8 rounded-3xl blur-3xl" />
                 <div className="relative grid grid-cols-1 gap-5">
+                  <div className="grid grid-cols-2 gap-4">
+                    <Image
+                      src="/images/branding/icon-mockup-blue.png"
+                      alt="App Icon Mockup Blue"
+                      width={270}
+                      height={270}
+                      className="w-full rounded-2xl drop-shadow-2xl"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={90}
+                    />
+                    <Image
+                      src="/images/branding/icon-mockup-rainbow.png"
+                      alt="App Icon Mockup Rainbow"
+                      width={270}
+                      height={270}
+                      className="w-full rounded-2xl drop-shadow-2xl"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      quality={90}
+                    />
+                  </div>
                   <Image
                     src="/images/branding/branding-horizontal-logo.png"
                     alt="Construction Horizontal Logo"

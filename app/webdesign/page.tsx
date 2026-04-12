@@ -276,14 +276,14 @@ export default function WebdesignPage() {
             {leistungen.map((item, i) => (
               <AnimatedSection key={item.title} delay={i * 0.07}>
                 <div
-                  className="group relative rounded-2xl p-[1px] h-full transition-all duration-300 hover:-translate-y-[3px] cursor-default"
+                  className="group relative rounded-2xl p-[2px] h-full transition-all duration-300 hover:-translate-y-[3px] cursor-default"
                   style={{
                     background: `linear-gradient(135deg, rgba(255,255,255,0.04) 0%, ${item.color}55 50%, rgba(255,255,255,0.03) 100%)`,
                   }}
                 >
                   {/* Border brightens on hover */}
                   <div
-                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 rounded-[17px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{ background: `linear-gradient(135deg, ${item.color}20 0%, ${item.color}99 50%, ${item.color}18 100%)` }}
                   />
                   {/* Outer glow behind card */}
@@ -294,7 +294,7 @@ export default function WebdesignPage() {
 
                   {/* Inner card */}
                   <div
-                    className="relative rounded-[15px] p-6 h-full overflow-hidden"
+                    className="relative rounded-[14px] p-6 h-full overflow-hidden"
                     style={{ background: "#060D1C" }}
                   >
                     {/* Ambient top glow on hover */}

@@ -214,7 +214,7 @@ export default function SocialMediaPage() {
               <div className="relative flex justify-center gap-5 items-end">
                 <div className="absolute -inset-8 bg-gradient-to-br from-[#2563EB]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
-                  src="/images/712shots_so.png"
+                  src="/images/social-media/social-instagram-showcase.png"
                   alt="Social Media Management"
                   width={290}
                   height={580}
@@ -223,7 +223,7 @@ export default function SocialMediaPage() {
                   priority
                 />
                 <Image
-                  src="/images/678shots_so.png"
+                  src="/images/social-media/social-glass-instagram.png"
                   alt="Social Media Content"
                   width={290}
                   height={580}
@@ -298,7 +298,7 @@ export default function SocialMediaPage() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
                 <Image
-                  src="/images/827shots_so.png"
+                  src="/images/social-media/social-carousel-phones.png"
                   alt="Social Media Content Erstellung"
                   width={600}
                   height={440}
@@ -429,11 +429,11 @@ export default function SocialMediaPage() {
               <div className="relative flex justify-center">
                 <div className="absolute -inset-6 bg-gradient-to-br from-[#2563EB]/15 to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
-                  src="/images/M001T1427 I iPhone Mockup 19Jul25.png"
+                  src="/images/social-media/social-artboard-carousel.png"
                   alt="Social Media App"
                   width={300}
                   height={600}
-                  className="relative rounded-3xl drop-shadow-2xl"
+                  className="relative w-full rounded-2xl drop-shadow-2xl"
                   quality={90}
                 />
               </div>

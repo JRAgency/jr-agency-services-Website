@@ -5,7 +5,6 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
 import WebdesignStats from "@/components/webdesign/WebdesignStats";
 import ScrollToButton from "@/components/ui/ScrollToButton";
-import WebdesignProzess from "@/components/webdesign/WebdesignProzess";
 
 export const metadata: Metadata = {
   title: "Webdesign – JR Agency Services",
@@ -65,6 +64,39 @@ const inbegriffen = [
   "Datenschutz & Impressum",
   "30 Tage kostenloses Support nach Launch",
   "Schnelle Ladezeiten & Core Web Vitals",
+];
+
+const prozess = [
+  {
+    step: "01",
+    title: "Briefing & Strategie",
+    desc: "Wir lernen Ihr Unternehmen, Ihre Zielgruppe und Ihre Ziele kennen. Daraus entwickeln wir gemeinsam eine klare Website-Strategie — bevor auch nur ein Pixel gesetzt wird.",
+    deliverables: ["Briefing-Dokument", "Zielgruppen-Analyse", "Website-Strategie & Seitenstruktur"],
+  },
+  {
+    step: "02",
+    title: "Konzept & Wireframe",
+    desc: "Wir erstellen ein Seitenkonzept und Wireframes — so sehen Sie die vollständige Struktur Ihrer Website, bevor ein einziges Design-Element existiert.",
+    deliverables: ["Seitenstruktur-Konzept", "Wireframes aller Seiten", "Feedback-Runde vor dem Design"],
+  },
+  {
+    step: "03",
+    title: "Design & Prototyping",
+    desc: "Ihr individuelles Design entsteht — abgestimmt auf Ihre Marke, Farben und Persönlichkeit. Sie sehen einen klickbaren Prototyp, bevor wir eine Zeile Code schreiben.",
+    deliverables: ["Vollständiges UI-Design", "Klickbarer Prototyp", "Mobile & Desktop Ansicht"],
+  },
+  {
+    step: "04",
+    title: "Entwicklung",
+    desc: "Wir setzen das freigegebene Design in sauberen, schnellen Code um — responsiv, barrierefrei und für Suchmaschinen optimiert.",
+    deliverables: ["Vollständige Umsetzung", "Responsive auf allen Geräten", "SEO-Grundoptimierung"],
+  },
+  {
+    step: "05",
+    title: "Launch & Support",
+    desc: "Ihre Website geht live. Wir kümmern uns um Domain, Hosting-Setup und stehen 30 Tage für Anpassungen zur Verfügung — ohne extra Kosten.",
+    deliverables: ["Live-Schaltung & Hosting-Setup", "30 Tage kostenloser Support", "Einweisung & Übergabe"],
+  },
 ];
 
 const projekte = [
@@ -263,10 +295,10 @@ export default function WebdesignPage() {
               <div className="relative">
                 <div className="absolute -inset-4 rounded-3xl blur-2xl pointer-events-none" style={{ background: `radial-gradient(ellipse, ${C}0e 0%, transparent 70%)` }} />
                 <Image
-                  src="/images/17.png"
+                  src="/images/mockup 14 inch mana.png"
                   alt="Webdesign Details"
                   width={600}
-                  height={800}
+                  height={420}
                   className="relative w-full rounded-2xl"
                   style={{ filter: "drop-shadow(0 24px 48px rgba(0,0,0,0.55))" }}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -341,7 +373,138 @@ export default function WebdesignPage() {
         </div>
       </section>
 
-      <WebdesignProzess />
+      {/* ── Prozess ── */}
+      <section id="prozess" className="py-28 md:py-36 bg-[#020408] relative overflow-hidden">
+        <div
+          className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[800px] pointer-events-none"
+          style={{ background: `radial-gradient(ellipse 400px 100% at 50% 50%, ${C}07 0%, transparent 70%)` }}
+        />
+        <div className="max-w-5xl mx-auto px-6 relative">
+          <AnimatedSection>
+            <div className="text-center mb-20">
+              <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] mb-5" style={{ color: C }}>Wie wir arbeiten</span>
+              <h2 className="font-extrabold text-white leading-tight mb-5" style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(28px, 4vw, 52px)", letterSpacing: "-0.02em" }}>
+                Von der Idee zum{" "}
+                <span style={{ background: `linear-gradient(135deg, ${C} 0%, ${CL} 100%)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>fertigen Produkt.</span>
+              </h2>
+              <p className="text-[#64748B] text-[15px] leading-relaxed max-w-md mx-auto">
+                Unser bewährter Prozess bringt Ihre Website strukturiert, termingerecht und ohne böse Überraschungen ans Ziel.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="relative">
+            {/* Center line desktop */}
+            <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
+              style={{ background: `linear-gradient(to bottom, transparent 0%, ${C}90 6%, ${CL}55 40%, ${C}55 60%, ${CL}30 94%, transparent 100%)`, boxShadow: `0 0 16px 2px ${C}30` }} />
+            {/* Left line mobile */}
+            <div className="lg:hidden absolute left-[27px] top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
+              style={{ background: `linear-gradient(to bottom, transparent, ${C}85 5%, ${C}40 95%, transparent)`, boxShadow: `0 0 10px ${C}30` }} />
+
+            <div className="space-y-0">
+              {prozess.map((item, i) => {
+                const isLeft = i % 2 === 0;
+                return (
+                  <AnimatedSection key={item.step} delay={i * 0.13}>
+                    {/* Mobile */}
+                    <div className="lg:hidden flex items-start gap-5 pb-10 last:pb-0">
+                      <div className="relative shrink-0 z-10 mt-1">
+                        <div className="absolute inset-0 rounded-full blur-lg scale-[2.2]" style={{ background: `${C}18` }} />
+                        <div className="absolute inset-[-5px] rounded-full border" style={{ borderColor: `${C}15` }} />
+                        <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #08111E 100%)", border: `1.5px solid ${C}65`, boxShadow: `0 0 20px ${C}45, inset 0 0 12px ${C}08` }}>
+                          <span className="text-white font-black text-base" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
+                        </div>
+                      </div>
+                      <div className="flex-1 rounded-2xl p-px" style={{ background: `linear-gradient(135deg, ${C}28 0%, ${C}05 60%, ${CL}10 100%)` }}>
+                        <div className="relative bg-[#08111E] rounded-2xl p-6 overflow-hidden">
+                          <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: `${C}06` }}>{item.step}</span>
+                          <h3 className="text-white font-bold text-lg mb-2.5 relative" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
+                          <p className="text-[#64748B] text-sm leading-relaxed mb-5 relative">{item.desc}</p>
+                          <div className="relative border-t border-white/[0.05] pt-4">
+                            <ul className="space-y-2">
+                              {item.deliverables.map((d) => (
+                                <li key={d} className="flex items-center gap-2.5 text-white/50 text-sm">
+                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0" style={{ color: C }}><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                  {d}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Desktop */}
+                    <div className="hidden lg:grid grid-cols-[1fr_96px_1fr] items-center pb-10 last:pb-0">
+                      <div className={`flex justify-end pr-8 ${isLeft ? "" : "opacity-0 pointer-events-none"}`}>
+                        {isLeft && (
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: `linear-gradient(135deg, ${C}35 0%, ${C}06 60%, ${CL}12 100%)` }}>
+                            <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: `${C}07` }}>{item.step}</span>
+                              <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl pointer-events-none" style={{ background: `${C}07` }} />
+                              <div className="relative">
+                                <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
+                                <p className="text-[#64748B] text-sm leading-relaxed mb-6">{item.desc}</p>
+                                <div className="border-t border-white/[0.05] pt-5">
+                                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.18em] mb-3">Sie erhalten</p>
+                                  <ul className="space-y-2">
+                                    {item.deliverables.map((d) => (
+                                      <li key={d} className="flex items-center gap-2.5 text-white/50 text-sm">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0" style={{ color: CL }}><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.3" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        {d}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                              <div className="absolute right-0 top-8 bottom-8 w-[2px] rounded-full" style={{ background: `linear-gradient(to bottom, transparent, ${C}35, transparent)` }} />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex justify-center items-center relative z-10">
+                        <div className="absolute w-20 h-20 rounded-full blur-2xl" style={{ background: `${C}12` }} />
+                        <div className="absolute w-16 h-16 rounded-full border" style={{ borderColor: `${C}14` }} />
+                        <div className="relative w-[60px] h-[60px] rounded-full flex items-center justify-center"
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: `2px solid ${C}75`, boxShadow: `0 0 28px ${C}55, 0 0 60px ${C}18, inset 0 0 18px ${C}10` }}>
+                          <span className="text-white font-black text-[15px]" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
+                        </div>
+                      </div>
+                      <div className={`flex justify-start pl-8 ${!isLeft ? "" : "opacity-0 pointer-events-none"}`}>
+                        {!isLeft && (
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: `linear-gradient(225deg, ${C}35 0%, ${C}06 60%, ${CL}12 100%)` }}>
+                            <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: `${C}07` }}>{item.step}</span>
+                              <div className="absolute top-0 left-0 w-32 h-32 rounded-full blur-3xl pointer-events-none" style={{ background: `${C}07` }} />
+                              <div className="relative">
+                                <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
+                                <p className="text-[#64748B] text-sm leading-relaxed mb-6">{item.desc}</p>
+                                <div className="border-t border-white/[0.05] pt-5">
+                                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.18em] mb-3">Sie erhalten</p>
+                                  <ul className="space-y-2">
+                                    {item.deliverables.map((d) => (
+                                      <li key={d} className="flex items-center gap-2.5 text-white/50 text-sm">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0" style={{ color: CL }}><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.3" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        {d}
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                              <div className="absolute left-0 top-8 bottom-8 w-[2px] rounded-full" style={{ background: `linear-gradient(to bottom, transparent, ${C}35, transparent)` }} />
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </AnimatedSection>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── Portfolio ── */}
       <section id="portfolio" className="py-28 md:py-36 bg-[#020408]">

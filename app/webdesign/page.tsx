@@ -35,12 +35,12 @@ const inbegriffen = [
 ];
 
 const projekte = [
-  { img: "01 - Apple Devices Mockup lombare.png",        name: "Lombare Parfum",        cat: "Webdesign & Branding",  tags: ["E-Commerce", "Branding"] },
-  { img: "01 - Apple Devices Mockup kimchi.png",         name: "Kimchi Korean Kitchen", cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
-  { img: "01 - Apple Devices Mockup Mana.png",           name: "Mana Café",             cat: "Gastronomie",           tags: ["Webdesign", "CMS"] },
-  { img: "01 - Apple Devices Mockup Peter schmid GMBH.png", name: "Peter Schmid GmbH", cat: "Unternehmenswebsite",   tags: ["B2B", "Corporate"] },
-  { img: "02 - Apple Devices Mockup.png",                name: "Business Class",        cat: "Webdesign",             tags: ["Landing Page", "Conversion"] },
-  { img: "03 - Apple Devices Mockup.png",                name: "YAMYAM",                cat: "Food & Gastronomie",    tags: ["Responsive", "Webdesign"] },
+  { img: "01 - Apple Devices Mockup lombare.png",           name: "Lombare Parfum",        cat: "Webdesign & Branding",  tags: ["E-Commerce", "Branding"] },
+  { img: "01 - Apple Devices Mockup kimchi.png",            name: "Kimchi Korean Kitchen", cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
+  { img: "01 - Apple Devices Mockup Mana.png",              name: "Mana Café",             cat: "Gastronomie",           tags: ["Webdesign", "CMS"] },
+  { img: "01 - Apple Devices Mockup Peter schmid GMBH.png", name: "Peter Schmid GmbH",     cat: "Unternehmenswebsite",   tags: ["B2B", "Corporate"] },
+  { img: "02 - Apple Devices Mockup.png",                   name: "Business Class",        cat: "Webdesign",             tags: ["Landing Page", "Conversion"] },
+  { img: "03 - Apple Devices Mockup.png",                   name: "YAMYAM",                cat: "Food & Gastronomie",    tags: ["Responsive", "Webdesign"] },
 ];
 
 const leistungen = [
@@ -115,17 +115,37 @@ const prozess = [
   },
 ];
 
+// ─── Divider ─────────────────────────────────────────────────────────────────
+
+function SectionDivider() {
+  return (
+    <div className="relative h-px mx-auto max-w-4xl">
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to right, transparent, rgba(37,99,235,0.25) 30%, rgba(96,165,250,0.18) 50%, rgba(37,99,235,0.25) 70%, transparent)",
+        }}
+      />
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-[6px] h-[6px] rounded-full"
+        style={{ background: "rgba(96,165,250,0.6)", boxShadow: "0 0 8px 2px rgba(37,99,235,0.5)" }}
+      />
+    </div>
+  );
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function WebdesignPage() {
   return (
-    <>
+    <div className="bg-[#070C18]">
 
       {/* ── 1. HERO ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#070C18] pt-20">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+        {/* Background glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#2563EB]/12 rounded-full blur-[140px]" />
-          <div className="absolute bottom-1/4 left-1/5 w-72 h-72 bg-[#1D4ED8]/10 rounded-full blur-[100px]" />
+          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#2563EB]/10 rounded-full blur-[150px]" />
+          <div className="absolute bottom-1/4 left-1/5 w-80 h-80 bg-[#1D4ED8]/08 rounded-full blur-[110px]" />
         </div>
         <div className="page-container py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
@@ -188,25 +208,38 @@ export default function WebdesignPage() {
       </section>
 
       {/* ── 2. STATS ── */}
-      <section className="py-14 bg-[#0D1526] border-y border-[#94A3B8]/10">
+      <section className="py-14">
         <div className="page-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.07}>
-                <div className="text-center">
-                  <p className="text-4xl font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
-                    {s.value}
-                  </p>
-                  <p className="text-[#94A3B8] text-sm mt-1">{s.label}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+          {/* Stats card — leicht erhöht, kein eigener Section-Hintergrund */}
+          <div
+            className="rounded-2xl px-10 py-10"
+            style={{
+              background: "linear-gradient(135deg, rgba(37,99,235,0.07) 0%, rgba(15,23,42,0.6) 100%)",
+              border: "1px solid rgba(37,99,235,0.15)",
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((s, i) => (
+                <AnimatedSection key={s.label} delay={i * 0.07}>
+                  <div className="text-center">
+                    <p className="text-4xl font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
+                      {s.value}
+                    </p>
+                    <p className="text-[#94A3B8] text-sm mt-1">{s.label}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 3. DESIGN DAS KONVERTIERT ── */}
-      <section className="py-32 bg-[#070C18]">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#2563EB]/06 rounded-full blur-[130px] pointer-events-none" />
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <AnimatedSection>
@@ -233,7 +266,7 @@ export default function WebdesignPage() {
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
-                <p className="mt-5 text-white text-base leading-relaxed">
+                <p className="mt-5 text-[#94A3B8] text-base leading-relaxed">
                   Gutes Webdesign ist mehr als Ästhetik — es ist Psychologie. Jedes Element wird
                   strategisch platziert um Besucher zu führen und zu überzeugen.
                 </p>
@@ -255,8 +288,11 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 4. WAS INKLUSIVE IST ── */}
-      <section className="py-28 bg-[#0D1526] border-y border-[#94A3B8]/10">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/06 rounded-full blur-[130px] pointer-events-none" />
         <div className="page-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
@@ -274,7 +310,7 @@ export default function WebdesignPage() {
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-white text-base leading-relaxed max-w-md">
+                <p className="mt-5 text-[#94A3B8] text-base leading-relaxed max-w-md">
                   Kein versteckter Mehraufwand — diese Features sind in jedem
                   Webdesign-Projekt selbstverständlich enthalten.
                 </p>
@@ -312,13 +348,17 @@ export default function WebdesignPage() {
         </div>
       </section>
 
-      {/* ── 5. PORTFOLIO / DEMOS ── direkt nach inklusive ── */}
-      <section id="portfolio" className="py-32 bg-[#020408]">
-        <div className="max-w-5xl mx-auto px-6">
+      <SectionDivider />
+
+      {/* ── 5. PORTFOLIO ── */}
+      <section id="portfolio" className="py-32 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(37,99,235,0.05) 0%, transparent 70%)" }} />
+        <div className="max-w-5xl mx-auto px-6 relative">
           <div className="flex items-end justify-between mb-12">
             <div>
               <AnimatedSection>
-                <span className="text-white/45 text-xs uppercase tracking-[0.22em] font-medium mb-4 block">
+                <span className="text-[#94A3B8]/50 text-xs uppercase tracking-[0.22em] font-medium mb-4 block">
                   Referenzen
                 </span>
               </AnimatedSection>
@@ -334,7 +374,7 @@ export default function WebdesignPage() {
             <AnimatedSection delay={0.1}>
               <Link
                 href="/kontakt"
-                className="hidden md:inline-flex items-center gap-2 text-white/35 hover:text-white text-sm transition-colors duration-200 group"
+                className="hidden md:inline-flex items-center gap-2 text-[#94A3B8]/40 hover:text-white text-sm transition-colors duration-200 group"
               >
                 Projekt anfragen
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-0.5 transition-transform duration-200">
@@ -349,11 +389,13 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 6. PROZESS ── */}
-      <section id="prozess" className="py-32 bg-[#0D1526] relative overflow-hidden">
+      <section id="prozess" className="py-32 relative overflow-hidden">
         <div
           className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[800px] pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(37,99,235,0.05) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(37,99,235,0.04) 0%, transparent 70%)" }}
         />
         <div className="max-w-5xl mx-auto px-6 relative">
           <AnimatedSection>
@@ -363,7 +405,7 @@ export default function WebdesignPage() {
                 Von der Idee zum{" "}
                 <span className="bg-gradient-to-r from-[#2563EB] via-[#60A5FA] to-[#93C5FD] bg-clip-text text-transparent">fertigen Produkt</span>
               </h2>
-              <p className="text-white/70 text-base leading-relaxed max-w-xl mx-auto">
+              <p className="text-[#94A3B8] text-base leading-relaxed max-w-xl mx-auto">
                 Unser bewährter Prozess bringt Ihre Website strukturiert, termingerecht und ohne böse Überraschungen ans Ziel.
               </p>
             </div>
@@ -458,9 +500,12 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 7. LEISTUNGEN ── */}
-      <section className="py-32 bg-[#070C18]">
-        <div className="page-container">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#2563EB]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="page-container relative">
           <SectionHeading
             label="Was wir bieten"
             title="Unsere Webdesign-Leistungen"
@@ -476,9 +521,12 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 8. MOBILE FIRST ── */}
-      <section className="py-24 bg-[#0D1526] border-t border-[#94A3B8]/10">
-        <div className="page-container">
+      <section className="py-32 relative overflow-hidden">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#1D4ED8]/06 rounded-full blur-[130px] pointer-events-none" />
+        <div className="page-container relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
@@ -493,7 +541,7 @@ export default function WebdesignPage() {
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-white text-base leading-relaxed max-w-md">
+                <p className="mt-5 text-[#94A3B8] text-base leading-relaxed max-w-md">
                   Über 60% aller Website-Besuche kommen von Smartphones. Deshalb entwickeln wir
                   jede Website Mobile First.
                 </p>
@@ -540,16 +588,20 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 9. TECHNOLOGIEN ── */}
-      <section className="py-28 bg-[#070C18]">
-        <div className="max-w-5xl mx-auto px-6">
+      <section className="py-28 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 50% 60% at 50% 50%, rgba(37,99,235,0.04) 0%, transparent 70%)" }} />
+        <div className="max-w-5xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-16">
               <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Technologie</span>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 Womit wir bauen
               </h2>
-              <p className="text-white/60 text-base max-w-md mx-auto leading-relaxed">
+              <p className="text-[#94A3B8] text-base max-w-md mx-auto leading-relaxed">
                 Moderne, zukunftssichere Technologien — schnell, skalierbar und wartbar.
               </p>
             </div>
@@ -564,14 +616,14 @@ export default function WebdesignPage() {
               { name: "Figma",         desc: "UI/UX Design",           color: "#F24E1E" },
             ].map((tech, i) => (
               <AnimatedSection key={tech.name} delay={i * 0.07}>
-                <div className="group bg-[#0B1220] border border-white/[0.06] rounded-2xl p-7 flex items-center gap-5 hover:border-white/[0.14] hover:bg-[#0D1526] transition-all duration-300">
+                <div className="group bg-white/[0.03] border border-white/[0.07] rounded-2xl p-7 flex items-center gap-5 hover:border-white/[0.14] hover:bg-white/[0.05] transition-all duration-300">
                   <div className="shrink-0 w-14 h-14 rounded-xl flex items-center justify-center"
                     style={{ background: tech.color + "12", border: `1px solid ${tech.color}25` }}>
                     <span className="text-white font-bold text-xs">{tech.name[0]}</span>
                   </div>
                   <div>
                     <p className="text-white font-bold text-base" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{tech.name}</p>
-                    <p className="text-white/40 text-sm mt-0.5">{tech.desc}</p>
+                    <p className="text-[#94A3B8]/60 text-sm mt-0.5">{tech.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -580,11 +632,20 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       {/* ── 10. CTA ── */}
-      <section className="py-28 bg-[#020408]">
-        <div className="page-container">
-          <div className="bg-gradient-to-br from-[#121D35] to-[#0D1526] border border-[#2563EB]/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#2563EB]/10 rounded-full blur-[100px] pointer-events-none" />
+      <section className="py-28 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#2563EB]/08 rounded-full blur-[120px] pointer-events-none" />
+        <div className="page-container relative">
+          <div
+            className="rounded-3xl p-12 md:p-16 text-center relative overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(15,23,42,0.5) 60%, rgba(29,78,216,0.08) 100%)",
+              border: "1px solid rgba(37,99,235,0.2)",
+            }}
+          >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[200px] bg-[#2563EB]/08 rounded-full blur-[80px] pointer-events-none" />
             <div className="relative">
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
@@ -624,6 +685,6 @@ export default function WebdesignPage() {
         </div>
       </section>
 
-    </>
+    </div>
   );
 }

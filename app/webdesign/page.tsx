@@ -310,6 +310,33 @@ export default function WebdesignPage() {
         </div>
       </section>
 
+      {/* ── Portfolio / Demos ── */}
+      <section id="portfolio" className="py-28 md:py-36 bg-[#020408]">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <AnimatedSection>
+                <span className="text-xs font-bold uppercase tracking-[0.2em] mb-4 block" style={{ color: C }}>Referenzen</span>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <h2 className="font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(26px, 4vw, 48px)", lineHeight: 1.06, letterSpacing: "-0.025em" }}>
+                  Webdesign-Projekte.
+                </h2>
+              </AnimatedSection>
+            </div>
+            <AnimatedSection delay={0.1}>
+              <Link href="/kontakt" className="hidden md:inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group text-white/35 hover:text-white/85">
+                Projekt anfragen
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-0.5 transition-transform duration-200"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+              </Link>
+            </AnimatedSection>
+          </div>
+          <AnimatedSection delay={0.1}>
+            <PortfolioCarousel projekte={projekte} />
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── Leistungen — Features that matter ── */}
       <section className="py-28 md:py-36" style={{ background: "#060d1c" }}>
         <div className="page-container">
@@ -503,33 +530,6 @@ export default function WebdesignPage() {
               })}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── Portfolio ── */}
-      <section id="portfolio" className="py-28 md:py-36 bg-[#020408]">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <AnimatedSection>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] mb-4 block" style={{ color: C }}>Referenzen</span>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <h2 className="font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)", fontSize: "clamp(26px, 4vw, 48px)", lineHeight: 1.06, letterSpacing: "-0.025em" }}>
-                  Webdesign-Projekte.
-                </h2>
-              </AnimatedSection>
-            </div>
-            <AnimatedSection delay={0.1}>
-              <Link href="/kontakt" className="hidden md:inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group text-white/35 hover:text-white/85">
-                Projekt anfragen
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="group-hover:translate-x-0.5 transition-transform duration-200"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-              </Link>
-            </AnimatedSection>
-          </div>
-          <AnimatedSection delay={0.1}>
-            <PortfolioCarousel projekte={projekte} />
-          </AnimatedSection>
         </div>
       </section>
 

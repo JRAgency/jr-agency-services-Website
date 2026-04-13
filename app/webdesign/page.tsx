@@ -674,7 +674,7 @@ export default function WebdesignPage() {
                 >
                   <div className="relative h-44 overflow-hidden bg-[#0B1220]">
                     <Image
-                      src={`/images/portfolio/${ref.img}`}
+                      src={`/images/${ref.img}`}
                       alt={ref.name}
                       fill
                       className="object-cover object-top opacity-80"

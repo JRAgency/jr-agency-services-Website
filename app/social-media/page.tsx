@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import SectionHeading from "@/components/ui/SectionHeading";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import LeistungenCard from "@/components/ui/LeistungenCard";
+import { FaqAccordion, FaqAccordionItem, FaqAccordionTrigger, FaqAccordionContent } from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Social Media Management – JR Agency Services",
   description:
-    "Strategisches Social Media Management für Instagram, TikTok, Facebook & LinkedIn. Mehr Reichweite, mehr Engagement, mehr Kunden.",
+    "Professionelles Social Media Management für Instagram, TikTok, Facebook & LinkedIn. Strategisch, konsistent, messbar.",
 };
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const stats = [
   { value: "Ø +340%", label: "Follower-Wachstum" },
@@ -18,10 +20,68 @@ const stats = [
   { value: "100%", label: "Transparentes Reporting" },
 ];
 
+const probleme = [
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    ),
+    title: "Kein Wachstum trotz Posting",
+    desc: "Sie posten regelmäßig — aber die Follower stagnieren, das Engagement bleibt aus und Anfragen kommen keine.",
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    ),
+    title: "Kein Zeit für Beständigkeit",
+    desc: "Social Media kostet täglich Stunden. Zwischen Meetings, Kundenprojekten und Alltag bleibt kaum Zeit für konsistente Beiträge.",
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+    title: "Inkonsistenter Auftritt",
+    desc: "Mal ein Foto, mal ein Zitat, mal gar nichts. Ohne klare Linie wirkt Ihr Profil unprofessionell — und Kunden springen ab.",
+  },
+  {
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+      </svg>
+    ),
+    title: "Keine messbaren Ergebnisse",
+    desc: "Was bringt Social Media eigentlich? Ohne Strategie und Reporting ist Social Media ein Zeitfresser ohne klares Ergebnis.",
+  },
+];
+
+const loesungPunkte = [
+  {
+    t: "Strategischer Contentplan",
+    d: "Monatlicher Plan abgestimmt auf Ihre Ziele, Zielgruppe und Plattform-Algorithmen.",
+  },
+  {
+    t: "Professionelle Content-Erstellung",
+    d: "Grafiken, Texte, Reels und Stories — konsistent mit Ihrer Markenidentität.",
+  },
+  {
+    t: "Community Management",
+    d: "Kommentare, DMs und Interaktionen werden aktiv betreut. Echte Beziehungen entstehen.",
+  },
+  {
+    t: "Monatliches Reporting",
+    d: "Transparente KPI-Berichte mit konkreten Optimierungsmaßnahmen für den nächsten Monat.",
+  },
+];
+
 const plattformen = [
   {
     name: "Instagram",
-    desc: "Feed, Stories, Reels — visuelle Inhalte die begeistern und Follower gewinnen.",
+    desc: "Feed, Stories, Reels — visuell ansprechend und reichweitenstark.",
     gradient: "from-[#F58529]/20 via-[#DD2A7B]/20 to-[#8134AF]/20",
     border: "border-[#DD2A7B]/25",
     dot: "bg-[#DD2A7B]",
@@ -72,7 +132,7 @@ const plattformen = [
 const leistungen = [
   {
     title: "Content-Strategie",
-    desc: "Wir entwickeln einen maßgeschneiderten Content-Plan — abgestimmt auf Ihre Zielgruppe, Branche und Ziele. Kein Raten, sondern Daten.",
+    desc: "Maßgeschneiderter Contentplan abgestimmt auf Ihre Zielgruppe, Branche und Ziele. Kein Raten, sondern Daten.",
     color: "#3B82F6",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>,
   },
@@ -102,7 +162,7 @@ const leistungen = [
   },
   {
     title: "Analytics & Reporting",
-    desc: "Monatliche Reports mit allen wichtigen KPIs — Reichweite, Engagement, Follower-Wachstum und Conversions. Immer transparent.",
+    desc: "Monatliche Reports mit allen wichtigen KPIs — Reichweite, Engagement, Follower-Wachstum und Conversions.",
     color: "#10B981",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>,
   },
@@ -141,52 +201,111 @@ const prozess = [
   },
 ];
 
-const inbegriffen = [
-  "Individueller Contentplan pro Monat",
-  "Professionell gestaltete Posts & Stories",
-  "Reels / Kurzvideos (plattformspezifisch)",
-  "Community Management & DM-Betreuung",
-  "Algorithmisch optimierte Posting-Zeiten",
-  "Hashtag-Recherche & -Strategie",
-  "Monatliches Reporting & KPI-Analyse",
-  "Regelmäßige Strategie-Abstimmung",
+const zielgruppen = [
+  {
+    title: "Selbstständige & Unternehmer",
+    desc: "Sie haben ein Unternehmen zu führen — keine Zeit für tägliches Posten, Content-Planung und Community-Pflege. Wir übernehmen das vollständig.",
+    highlight: true,
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>,
+  },
+  {
+    title: "Unternehmen mit stagnierenden Kanälen",
+    desc: "Sie sind schon aktiv, aber das Wachstum stagniert. Wir bringen neue Strategie, frischen Content und messbares Wachstum.",
+    highlight: true,
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>,
+  },
+  {
+    title: "Neugründungen & Startups",
+    desc: "Von Anfang an professionell auftreten. Wir bauen Ihre Social-Media-Präsenz von Grund auf — mit Strategie, nicht mit Bauchgefühl.",
+    highlight: false,
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>,
+  },
+  {
+    title: "Alle weiteren Unternehmen",
+    desc: "Gastronomie, Dienstleister, E-Commerce, Handwerk — wer mehr Kunden über Social Media gewinnen will, ist bei uns richtig.",
+    highlight: false,
+    icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
+  },
 ];
+
+const faq = [
+  {
+    frage: "Wann sind erste Ergebnisse sichtbar?",
+    antwort: "In den ersten 4–6 Wochen sehen Sie erste Verbesserungen in Reichweite und Engagement. Nachhaltiges Follower-Wachstum und messbare Anfragen entstehen typischerweise ab Monat 2–3. Social Media ist ein langfristiger Kanal — aber mit unserer Strategie deutlich schneller.",
+  },
+  {
+    frage: "Was muss ich selbst liefern?",
+    antwort: "Zu Beginn brauchen wir ein Briefing zu Ihrem Unternehmen, Ihren Zielen und Ihrer Marke. Danach übernehmen wir den Rest vollständig — inklusive Ideen, Design und Texten. Bei Bedarf liefern Sie Fotos oder Videos aus Ihrem Betrieb, die wir professionell aufbereiten.",
+  },
+  {
+    frage: "Auf welchen Plattformen sind Sie aktiv?",
+    antwort: "Wir managen Instagram, TikTok, Facebook und LinkedIn — jeweils plattformspezifisch optimiert. Sie entscheiden welche Kanäle für Ihre Zielgruppe relevant sind. Empfehlung geben wir gerne im Erstgespräch.",
+  },
+  {
+    frage: "Wie lange laufen Verträge?",
+    antwort: "Unsere Pakete laufen monatlich kündbar. Wir glauben daran, durch Ergebnisse zu überzeugen — nicht durch lange Vertragslaufzeiten. Für beste Ergebnisse empfehlen wir jedoch mindestens 3 Monate Zusammenarbeit.",
+  },
+  {
+    frage: "Was unterscheidet Sie von anderen Agenturen?",
+    antwort: "Wir kombinieren Strategie, Design und echtes Community Management aus einer Hand. Kein generischer Content, kein Outsourcing ins Ausland. Alle Inhalte entstehen von uns, auf Ihre Marke abgestimmt — mit transparentem Reporting damit Sie immer wissen was Ihr Geld bringt.",
+  },
+];
+
+// ─── Divider ─────────────────────────────────────────────────────────────────
+
+function SectionDivider() {
+  return (
+    <div className="relative h-px mx-auto max-w-4xl px-6">
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(90deg, transparent 0%, rgba(37,99,235,0.25) 30%, rgba(96,165,250,0.35) 50%, rgba(37,99,235,0.25) 70%, transparent 100%)" }}
+      />
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-[6px] h-[6px] rounded-full"
+        style={{ background: "rgba(96,165,250,0.55)", boxShadow: "0 0 8px 2px rgba(37,99,235,0.45)" }}
+      />
+    </div>
+  );
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function SocialMediaPage() {
   return (
-    <>
-      {/* ── Hero ── */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#070C18] pt-20">
+    <div className="bg-[#070C18]">
+
+      {/* ══════════════════════════════════════════════════════════════
+          1. HERO
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20" aria-label="Hero">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-[#2563EB]/10 rounded-full blur-[150px]" />
-          <div className="absolute bottom-1/4 left-1/6 w-72 h-72 bg-[#7C3AED]/8 rounded-full blur-[100px]" />
+          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#2563EB]/10 rounded-full blur-[150px]" />
+          <div className="absolute bottom-1/4 left-[10%] w-80 h-80 bg-[#7C3AED]/07 rounded-full blur-[110px]" />
         </div>
         <div className="page-container py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
-                  Leistung
+                  Social Media Management
                 </span>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <h1
-                  className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05]"
+                  className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08]"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Social{" "}
+                  Social Media —<br />
                   <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
-                    Media
-                  </span>
-                  <br />
-                  das wächst.
+                    Mehr Reichweite
+                  </span>{" "}
+                  für Ihr Unternehmen
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="mt-6 text-[#94A3B8] text-lg leading-relaxed max-w-lg">
-                  Wir übernehmen Ihre komplette Social-Media-Präsenz — von der
-                  Strategie bis zum täglichen Management. Mehr Reichweite, mehr
-                  Engagement, mehr Kunden.
+                <p className="mt-6 text-white/60 text-lg leading-relaxed max-w-lg">
+                  Wir übernehmen Ihre komplette Social-Media-Präsenz — von der Strategie
+                  bis zum täglichen Management. Mehr Reichweite, mehr Engagement, mehr Kunden.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -195,18 +314,21 @@ export default function SocialMediaPage() {
                     href="/anfragen/social-media"
                     className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(37,99,235,0.5)] text-base"
                   >
-                    Jetzt starten
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M3 8h10M9 4l4 4-4 4" />
-                    </svg>
+                    Kostenloses Erstgespräch
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
                   </Link>
                   <Link
                     href="#leistungen"
-                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
+                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-white/10 transition-all duration-200 text-base"
                   >
                     Leistungen ansehen
                   </Link>
                 </div>
+              </AnimatedSection>
+              <AnimatedSection delay={0.2}>
+                <p className="mt-6 text-white/40 text-sm">
+                  <span className="text-white font-semibold">30+ Unternehmen</span> vertrauen bereits auf unser Social Media Management
+                </p>
               </AnimatedSection>
             </div>
 
@@ -236,52 +358,73 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── Stats ── */}
-      <section className="py-14 bg-[#0D1526] border-y border-[#94A3B8]/10">
+      {/* Stats */}
+      <section className="py-12" aria-label="Kennzahlen">
         <div className="page-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((s, i) => (
-              <AnimatedSection key={s.label} delay={i * 0.07}>
-                <div className="text-center">
-                  <p
-                    className="text-4xl font-extrabold text-white"
-                    style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                  >
-                    {s.value}
-                  </p>
-                  <p className="text-[#94A3B8] text-sm mt-1">{s.label}</p>
-                </div>
-              </AnimatedSection>
-            ))}
+          <div
+            className="rounded-2xl px-10 py-9"
+            style={{
+              background: "linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(15,23,42,0.5) 100%)",
+              border: "1px solid rgba(37,99,235,0.14)",
+            }}
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((s, i) => (
+                <AnimatedSection key={s.label} delay={i * 0.07}>
+                  <div className="text-center">
+                    <p className="text-4xl font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{s.value}</p>
+                    <p className="text-white/60 text-sm mt-1">{s.label}</p>
+                  </div>
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Plattformen ── */}
-      <section className="py-32 bg-[#070C18]">
-        <div className="page-container">
-          <SectionHeading
-            label="Unsere Plattformen"
-            title="Überall wo Ihre Kunden sind"
-            description="Wir managen Ihre Präsenz auf allen relevanten Plattformen — plattformspezifisch optimiert, nicht einfach kopiert."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {plattformen.map((p, i) => (
-              <AnimatedSection key={p.name} delay={i * 0.08}>
-                <div className={`group relative bg-gradient-to-br ${p.gradient} bg-[#0B1220] border ${p.border} rounded-2xl p-7 hover:scale-[1.02] transition-all duration-300 h-full`}>
-                  <div className={`w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-5`}>
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          2. PROBLEME
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="problem-heading">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#EF4444]/04 rounded-full blur-[130px] pointer-events-none" />
+        <div className="page-container relative">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <span className="inline-block text-[#F87171] text-xs font-bold uppercase tracking-[0.22em] mb-4">Das kennen viele</span>
+              <h2
+                id="problem-heading"
+                className="text-4xl md:text-5xl font-bold text-white"
+                style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              >
+                Kostet Social Media mehr{" "}
+                <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">Zeit als Ergebnisse?</span>
+              </h2>
+              <p className="mt-5 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
+                Viele Unternehmen investieren täglich Zeit in Social Media — und sehen kaum Rücklauf. Das muss nicht so sein.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {probleme.map((p, i) => (
+              <AnimatedSection key={p.title} delay={i * 0.08}>
+                <div
+                  className="flex gap-5 p-6 rounded-2xl"
+                  style={{
+                    background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
+                    border: "1px solid rgba(239,68,68,0.15)",
+                  }}
+                >
+                  <div
+                    className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-[#F87171]"
+                    style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)" }}
+                  >
                     {p.icon}
                   </div>
-                  <h3
-                    className="text-white font-bold text-lg mb-2"
-                    style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                  >
-                    {p.name}
-                  </h3>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed">{p.desc}</p>
-                  <div className={`mt-4 flex items-center gap-2`}>
-                    <span className={`w-1.5 h-1.5 rounded-full ${p.dot}`} />
-                    <span className="text-white/40 text-xs">Aktiv verwaltet</span>
+                  <div>
+                    <h3 className="text-white font-semibold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{p.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -290,12 +433,17 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── Was wir tun — Content Showcase ── */}
-      <section className="py-28 bg-[#0D1526] border-y border-[#94A3B8]/10">
-        <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          3. LÖSUNG
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="loesung-heading">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#2563EB]/06 rounded-full blur-[130px] pointer-events-none" />
+        <div className="page-container relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <AnimatedSection>
-              <div className="relative">
+              <div className="relative flex justify-center">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
                 <Image
                   src="/images/social-media/social-carousel-phones.png"
@@ -311,50 +459,38 @@ export default function SocialMediaPage() {
             <div>
               <AnimatedSection delay={0.05}>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-3">
-                  Was wir liefern
+                  Unser Ansatz
                 </span>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <h2
+                  id="loesung-heading"
                   className="text-4xl md:text-5xl font-bold text-white leading-tight"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Content der
-                  <br />
-                  <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
-                    wirklich performt
-                  </span>
+                  Social Media das<br />
+                  <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">Ergebnisse liefert</span>
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
-                <p className="mt-5 text-white text-base leading-relaxed">
-                  Guter Social-Media-Content ist kein Zufall — er entsteht durch
-                  Strategie, Kreativität und ein tiefes Verständnis der
-                  Plattform-Algorithmen.
-                </p>
-                <p className="mt-4 text-white text-base leading-relaxed">
-                  Wir kombinieren ansprechendes Design mit datengetriebenem
-                  Vorgehen. Das Ergebnis: Posts die nicht nur schön aussehen,
-                  sondern auch echte Reichweite und Engagement erzeugen.
+                <p className="mt-5 text-white/60 text-base leading-relaxed">
+                  Kein generischer Content, kein Copy-Paste von anderen Kanälen. Wir entwickeln eine Strategie
+                  die zu Ihrem Unternehmen passt — und setzen sie konsequent um.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
-                <div className="mt-8 grid grid-cols-2 gap-3">
-                  {[
-                    "Feed-Posts & Karussells",
-                    "Stories & Highlights",
-                    "Reels & Kurzvideos",
-                    "Captions & Hashtags",
-                    "Story-Designs",
-                    "Profiloptimierung",
-                  ].map((f) => (
-                    <div key={f} className="flex items-center gap-3">
-                      <span className="w-5 h-5 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/30 flex items-center justify-center shrink-0">
+                <div className="mt-8 space-y-4">
+                  {loesungPunkte.map((item) => (
+                    <div key={item.t} className="flex gap-4">
+                      <span className="mt-1 w-5 h-5 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/30 flex items-center justify-center shrink-0">
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                           <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
-                      <span className="text-[#94A3B8] text-sm">{f}</span>
+                      <div>
+                        <p className="text-white font-semibold text-sm">{item.t}</p>
+                        <p className="text-white/60 text-sm mt-0.5 leading-relaxed">{item.d}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -364,17 +500,117 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── Leistungen ── */}
-      <section id="leistungen" className="py-32 bg-[#070C18]">
-        <div className="page-container">
-          <SectionHeading
-            label="Leistungen im Detail"
-            title="Alles aus einer Hand"
-            description="Vom ersten Post bis zum monatlichen Report — wir übernehmen alle Aufgaben rund um Ihre Social-Media-Kanäle."
-          />
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          4. CTA / ANGEBOT
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="angebot-heading">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(37,99,235,0.07) 0%, transparent 70%)" }} />
+        <div className="page-container relative">
+          <div
+            className="rounded-3xl p-10 md:p-14 relative overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(8,17,30,0.9) 60%)",
+              border: "1px solid rgba(37,99,235,0.2)",
+            }}
+          >
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#2563EB]/08 rounded-full blur-[80px] pointer-events-none" />
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <AnimatedSection>
+                  <span className="inline-flex items-center gap-2 text-[#93C5FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
+                    Unser stärkstes Angebot
+                  </span>
+                </AnimatedSection>
+                <AnimatedSection delay={0.05}>
+                  <h2
+                    id="angebot-heading"
+                    className="text-4xl md:text-5xl font-bold text-white leading-tight"
+                    style={{ fontFamily: "var(--font-plus-jakarta)" }}
+                  >
+                    Kostenloses Erstgespräch —<br />
+                    <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
+                      unverbindlich & konkret
+                    </span>
+                  </h2>
+                </AnimatedSection>
+                <AnimatedSection delay={0.1}>
+                  <p className="mt-5 text-white/60 text-base leading-relaxed">
+                    In 30 Minuten analysieren wir Ihren aktuellen Social-Media-Auftritt und geben Ihnen konkrete,
+                    sofort umsetzbare Empfehlungen — kostenlos, ohne Vertrag, ohne Verpflichtung.
+                  </p>
+                </AnimatedSection>
+                <AnimatedSection delay={0.15}>
+                  <Link
+                    href="/anfragen/social-media"
+                    className="mt-8 inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(37,99,235,0.55)] text-base"
+                  >
+                    Jetzt Gespräch anfragen — kostenlos
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+                  </Link>
+                  <p className="mt-3 text-white/40 text-xs">
+                    Kein Risiko · Keine Vertragsbindung · Sofortige Antwort
+                  </p>
+                </AnimatedSection>
+              </div>
+
+              <AnimatedSection delay={0.15} direction="right">
+                <div className="space-y-4">
+                  {[
+                    { n: "01", t: "Kanal-Analyse", d: "Wir schauen uns Ihren aktuellen Auftritt an und identifizieren konkretes Verbesserungspotenzial." },
+                    { n: "02", t: "Strategie-Empfehlung", d: "Sie erhalten klare Empfehlungen — welche Plattformen, welche Formate, welche Frequenz für Ihre Zielgruppe." },
+                    { n: "03", t: "Kein Risiko", d: "Das Gespräch ist vollständig kostenlos. Entscheiden Sie danach in aller Ruhe." },
+                  ].map((item) => (
+                    <div
+                      key={item.n}
+                      className="flex gap-4 p-5 rounded-2xl"
+                      style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}
+                    >
+                      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#2563EB]/20 border border-[#2563EB]/30 flex items-center justify-center">
+                        <span className="text-[#60A5FA] font-bold text-xs">{item.n}</span>
+                      </div>
+                      <div>
+                        <p className="text-white font-semibold text-sm mb-1">{item.t}</p>
+                        <p className="text-white/60 text-sm leading-relaxed">{item.d}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          5. LEISTUNGEN
+      ══════════════════════════════════════════════════════════════ */}
+      <section id="leistungen" className="py-28 relative overflow-hidden" aria-labelledby="leistungen-heading">
+        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#2563EB]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="page-container relative">
+          <AnimatedSection>
+            <div className="text-center mb-14">
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Was wir bieten</span>
+              <h2
+                id="leistungen-heading"
+                className="text-4xl md:text-5xl font-bold text-white"
+                style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              >
+                Unsere Social-Media-Leistungen
+              </h2>
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
+                Alles aus einer Hand — von der Strategie bis zum monatlichen Report.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {leistungen.map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.08}>
+              <AnimatedSection key={item.title} delay={i * 0.07}>
                 <LeistungenCard title={item.title} desc={item.desc} color={item.color} icon={item.icon} />
               </AnimatedSection>
             ))}
@@ -382,68 +618,58 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── Was ist immer inklusive ── */}
-      <section className="py-28 bg-[#0D1526] border-y border-[#94A3B8]/10">
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          6. PLATTFORMEN
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="plattformen-heading">
         <div className="page-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
-            <div>
-              <AnimatedSection>
-                <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-3">
-                  Immer dabei
-                </span>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <h2
-                  className="text-4xl md:text-5xl font-bold text-white leading-tight"
-                  style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                >
-                  Was in jedem
-                  <br />
-                  <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
-                    Paket inklusive
-                  </span>{" "}ist
-                </h2>
-              </AnimatedSection>
-              <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-white text-base leading-relaxed max-w-md">
-                  Keine halben Sachen — diese Leistungen sind bei jeder
-                  Zusammenarbeit selbstverständlich dabei.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection delay={0.15}>
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {inbegriffen.map((f) => (
-                    <div key={f} className="flex items-start gap-3">
-                      <span className="mt-0.5 w-5 h-5 rounded-full bg-[#2563EB]/15 border border-[#2563EB]/30 flex items-center justify-center shrink-0">
-                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                          <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </span>
-                      <span className="text-[#94A3B8] text-sm leading-snug">{f}</span>
+          <AnimatedSection>
+            <div className="text-center mb-14">
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Überall präsent</span>
+              <h2
+                id="plattformen-heading"
+                className="text-4xl md:text-5xl font-bold text-white"
+                style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              >
+                Überall wo Ihre Kunden sind
+              </h2>
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
+                Wir managen Ihre Präsenz auf allen relevanten Plattformen — plattformspezifisch optimiert, nicht einfach kopiert.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {plattformen.map((p, i) => (
+              <AnimatedSection key={p.name} delay={i * 0.08}>
+                <div className={`group relative bg-gradient-to-br ${p.gradient} border ${p.border} rounded-2xl p-7 hover:scale-[1.02] transition-all duration-300 h-full`}
+                  style={{ background: undefined, backgroundColor: "rgba(11,18,32,0.8)" }}>
+                  <div className={`bg-gradient-to-br ${p.gradient} absolute inset-0 rounded-2xl opacity-100`} />
+                  <div className="relative">
+                    <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center mb-5">
+                      {p.icon}
                     </div>
-                  ))}
+                    <h3 className="text-white font-bold text-lg mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{p.name}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
+                    <div className="mt-4 flex items-center gap-2">
+                      <span className={`w-1.5 h-1.5 rounded-full ${p.dot}`} />
+                      <span className="text-white/40 text-xs">Aktiv verwaltet</span>
+                    </div>
+                  </div>
                 </div>
               </AnimatedSection>
-            </div>
-            <AnimatedSection delay={0.2} direction="right">
-              <div className="relative flex justify-center">
-                <div className="absolute -inset-6 bg-gradient-to-br from-[#2563EB]/15 to-[#7C3AED]/10 rounded-full blur-3xl" />
-                <Image
-                  src="/images/social-media/social-artboard-carousel.png"
-                  alt="Social Media App"
-                  width={300}
-                  height={600}
-                  className="relative w-full rounded-2xl drop-shadow-2xl"
-                  quality={90}
-                />
-              </div>
-            </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── Prozess ── */}
-      <section id="prozess" className="py-32 bg-[#070C18] relative overflow-hidden">
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          7. PROZESS
+      ══════════════════════════════════════════════════════════════ */}
+      <section id="prozess" className="py-28 relative overflow-hidden" aria-labelledby="prozess-heading">
         <div
           className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[800px] pointer-events-none"
           style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(37,99,235,0.055) 0%, transparent 70%)" }}
@@ -452,11 +678,11 @@ export default function SocialMediaPage() {
           <AnimatedSection>
             <div className="text-center mb-24">
               <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-5">Unser Ablauf</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
+              <h2 id="prozess-heading" className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 So arbeiten{" "}
                 <span className="bg-gradient-to-r from-[#2563EB] via-[#60A5FA] to-[#93C5FD] bg-clip-text text-transparent">wir zusammen</span>
               </h2>
-              <p className="text-white/70 text-base leading-relaxed max-w-xl mx-auto">
+              <p className="text-white/60 text-base leading-relaxed max-w-xl mx-auto">
                 Vom ersten Gespräch bis zum laufenden Betrieb — transparent, strukturiert und ohne Überraschungen.
               </p>
             </div>
@@ -487,7 +713,7 @@ export default function SocialMediaPage() {
                         <div className="relative bg-[#08111E] rounded-2xl p-6 overflow-hidden">
                           <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(37,99,235,0.06)" }}>{item.step}</span>
                           <h3 className="text-white font-bold text-lg mb-2.5 relative" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                          <p className="text-[#94A3B8] text-sm leading-relaxed mb-5 relative">{item.desc}</p>
+                          <p className="text-white/60 text-sm leading-relaxed mb-5 relative">{item.desc}</p>
                           <div className="relative border-t border-white/[0.05] pt-4">
                             <ul className="space-y-2">
                               {item.deliverables.map((d) => (
@@ -508,33 +734,30 @@ export default function SocialMediaPage() {
                           <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(37,99,235,0.35) 0%, rgba(37,99,235,0.06) 60%, rgba(96,165,250,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
                               <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(37,99,235,0.065)" }}>{item.step}</span>
-                              <div className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl pointer-events-none" style={{ background: "rgba(37,99,235,0.07)" }} />
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                                <p className="text-[#94A3B8] text-sm leading-relaxed mb-6">{item.desc}</p>
+                                <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
                                 <div className="border-t border-white/[0.05] pt-5">
                                   <p className="text-white/25 text-[10px] font-bold uppercase tracking-[0.18em] mb-3">Sie erhalten</p>
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#60A5FA]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.3" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#2563EB]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
                                   </ul>
                                 </div>
                               </div>
-                              <div className="absolute right-0 top-8 bottom-8 w-[2px] rounded-full" style={{ background: "linear-gradient(to bottom, transparent, rgba(37,99,235,0.35), transparent)" }} />
                             </div>
                           </div>
                         )}
                       </div>
                       <div className="flex justify-center items-center relative z-10">
-                        <div className="absolute w-20 h-20 rounded-full bg-[#2563EB]/12 blur-2xl" />
-                        <div className="absolute w-16 h-16 rounded-full border border-[#2563EB]/14" />
-                        <div className="relative w-[60px] h-[60px] rounded-full flex items-center justify-center"
-                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(37,99,235,0.75)", boxShadow: "0 0 28px rgba(37,99,235,0.55), 0 0 60px rgba(37,99,235,0.18), inset 0 0 18px rgba(37,99,235,0.1)" }}>
-                          <span className="text-white font-black text-[15px]" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
+                        <div className="absolute w-16 h-16 rounded-full bg-[#2563EB]/10 blur-xl" />
+                        <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(37,99,235,0.7)", boxShadow: "0 0 24px rgba(37,99,235,0.5)" }}>
+                          <span className="text-white font-black text-sm" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
                         </div>
                       </div>
                       <div className={`flex justify-start pl-8 ${!isLeft ? "" : "opacity-0 pointer-events-none"}`}>
@@ -542,23 +765,21 @@ export default function SocialMediaPage() {
                           <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(225deg, rgba(37,99,235,0.35) 0%, rgba(37,99,235,0.06) 60%, rgba(96,165,250,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
                               <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(37,99,235,0.065)" }}>{item.step}</span>
-                              <div className="absolute top-0 left-0 w-32 h-32 rounded-full blur-3xl pointer-events-none" style={{ background: "rgba(37,99,235,0.07)" }} />
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                                <p className="text-[#94A3B8] text-sm leading-relaxed mb-6">{item.desc}</p>
+                                <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
                                 <div className="border-t border-white/[0.05] pt-5">
                                   <p className="text-white/25 text-[10px] font-bold uppercase tracking-[0.18em] mb-3">Sie erhalten</p>
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#60A5FA]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.3" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#2563EB]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
                                   </ul>
                                 </div>
                               </div>
-                              <div className="absolute left-0 top-8 bottom-8 w-[2px] rounded-full" style={{ background: "linear-gradient(to bottom, transparent, rgba(37,99,235,0.35), transparent)" }} />
                             </div>
                           </div>
                         )}
@@ -572,54 +793,66 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── Warum Social Media ── */}
-      <section className="py-28 bg-[#0D1526] border-t border-[#94A3B8]/10">
-        <div className="page-container">
-          <SectionHeading
-            label="Warum es wichtig ist"
-            title="Social Media ist kein Trend — es ist Ihr Vertrieb"
-            description="Über 4 Milliarden Menschen nutzen täglich Social Media. Ihre Kunden sind dort — die Frage ist nur, ob Sie auch da sind."
-            center
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Sichtbarkeit aufbauen",
-                desc: "Wer nicht sichtbar ist, existiert nicht. Eine konsistente Social-Media-Präsenz sorgt dafür, dass potenzielle Kunden Sie kennenlernen — bevor sie aktiv suchen.",
-                stat: "4 Mrd.",
-                statLabel: "Tägliche Nutzer weltweit",
-              },
-              {
-                title: "Vertrauen schaffen",
-                desc: "Echte Einblicke, Kundenstimmen und regelmäßiger Content bauen Vertrauen auf. Menschen kaufen von Menschen — nicht von anonymen Marken.",
-                stat: "78%",
-                statLabel: "Kaufentscheidungen durch Social Media beeinflusst",
-              },
-              {
-                title: "Kunden gewinnen",
-                desc: "Social Media ist einer der günstigsten und effektivsten Akquise-Kanäle. Mit der richtigen Strategie werden Follower zu Käufern.",
-                stat: "3×",
-                statLabel: "Mehr Leads gegenüber klassischer Werbung",
-              },
-            ].map((item, i) => (
-              <AnimatedSection key={item.title} delay={i * 0.1}>
-                <div className="group bg-[#0B1220] border border-[#94A3B8]/10 rounded-2xl p-8 hover:border-[#2563EB]/25 transition-all duration-300 h-full">
-                  <div className="mb-6">
-                    <p
-                      className="text-5xl font-extrabold text-white"
-                      style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                    >
-                      {item.stat}
-                    </p>
-                    <p className="text-[#94A3B8]/60 text-xs mt-1">{item.statLabel}</p>
-                  </div>
-                  <h3
-                    className="text-white font-bold text-lg mb-3"
-                    style={{ fontFamily: "var(--font-plus-jakarta)" }}
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          8. ZIELGRUPPE
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="zielgruppe-heading">
+        <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-[#2563EB]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="page-container relative">
+          <AnimatedSection>
+            <div className="text-center mb-14">
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Zielgruppe</span>
+              <h2
+                id="zielgruppe-heading"
+                className="text-4xl md:text-5xl font-bold text-white"
+                style={{ fontFamily: "var(--font-plus-jakarta)" }}
+              >
+                Für welche Unternehmen<br />
+                <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
+                  ist Social Media Management geeignet?
+                </span>
+              </h2>
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
+                Grundsätzlich für jedes Unternehmen — aber besonders für diese Gruppen bringt es den größten Mehrwert.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {zielgruppen.map((z, i) => (
+              <AnimatedSection key={z.title} delay={i * 0.08}>
+                <div
+                  className="flex gap-5 p-6 rounded-2xl h-full"
+                  style={{
+                    background: z.highlight
+                      ? "linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(15,23,42,0.5) 100%)"
+                      : "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
+                    border: z.highlight
+                      ? "1px solid rgba(37,99,235,0.22)"
+                      : "1px solid rgba(255,255,255,0.06)",
+                  }}
+                >
+                  <div
+                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#60A5FA]"
+                    style={{
+                      background: z.highlight ? "rgba(37,99,235,0.15)" : "rgba(255,255,255,0.05)",
+                      border: z.highlight ? "1px solid rgba(37,99,235,0.25)" : "1px solid rgba(255,255,255,0.08)",
+                    }}
                   >
-                    {item.title}
-                  </h3>
-                  <p className="text-[#94A3B8] text-sm leading-relaxed">{item.desc}</p>
+                    {z.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
+                      {z.title}
+                      {z.highlight && (
+                        <span className="ml-2 text-[10px] font-bold text-[#60A5FA] bg-[#2563EB]/15 border border-[#2563EB]/25 rounded-full px-2 py-0.5 uppercase tracking-wider">
+                          Schwerpunkt
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{z.desc}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -627,58 +860,84 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-28 bg-[#020408]">
-        <div className="page-container">
-          <div className="bg-gradient-to-br from-[#121D35] to-[#0D1526] border border-[#2563EB]/20 rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#2563EB]/10 rounded-full blur-[100px]" />
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          9. FAQ
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-labelledby="faq-heading">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#2563EB]/04 rounded-full blur-[130px] pointer-events-none" />
+        <div className="max-w-3xl mx-auto px-6 relative">
+          <AnimatedSection>
+            <div className="text-center mb-14">
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">FAQ</span>
+              <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
+                Häufige Fragen
+              </h2>
+              <p className="mt-4 text-white/60 text-base leading-relaxed">
+                Antworten auf die Fragen, die wir am häufigsten hören.
+              </p>
             </div>
-            <div className="relative">
-              <AnimatedSection>
-                <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
-                  Bereit?
-                </span>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <h2
-                  className="text-4xl md:text-5xl font-bold text-white"
-                  style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                >
-                  Ihr Social Media
-                  <br />in professionellen Händen
-                </h2>
-              </AnimatedSection>
-              <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-[#94A3B8] text-lg max-w-xl mx-auto leading-relaxed">
-                  Wir übernehmen — Sie wachsen. Lassen Sie uns in einem
-                  kostenlosen Erstgespräch herausfinden wie wir Ihre Kanäle
-                  auf das nächste Level bringen.
-                </p>
-              </AnimatedSection>
-              <AnimatedSection delay={0.15}>
-                <div className="mt-9 flex justify-center gap-4 flex-wrap">
-                  <Link
-                    href="/anfragen/social-media"
-                    className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] text-base"
-                  >
-                    Kostenloses Erstgespräch
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M3 8h10M9 4l4 4-4 4" />
-                    </svg>
-                  </Link>
-                  <Link
-                    href="/anfragen/social-media"
-                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
-                  >
-                    Anfrage senden
-                  </Link>
-                </div>
-              </AnimatedSection>
+          </AnimatedSection>
+          <AnimatedSection delay={0.08}>
+            <div className="rounded-2xl overflow-hidden" style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
+              <FaqAccordion type="single" collapsible>
+                {faq.map((item, i) => (
+                  <FaqAccordionItem key={i} value={`faq-${i}`}>
+                    <FaqAccordionTrigger question={item.frage} />
+                    <FaqAccordionContent>{item.antwort}</FaqAccordionContent>
+                  </FaqAccordionItem>
+                ))}
+              </FaqAccordion>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
-    </>
+
+      <SectionDivider />
+
+      {/* ══════════════════════════════════════════════════════════════
+          10. FINAL CTA
+      ══════════════════════════════════════════════════════════════ */}
+      <section className="py-28 relative overflow-hidden" aria-label="Call to Action">
+        <div className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(37,99,235,0.08) 0%, transparent 70%)" }} />
+        <div className="page-container relative text-center">
+          <AnimatedSection>
+            <span className="inline-block text-[#93C5FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">Jetzt starten</span>
+            <h2
+              className="text-4xl md:text-5xl font-bold text-white mb-6"
+              style={{ fontFamily: "var(--font-plus-jakarta)" }}
+            >
+              Bereit für mehr{" "}
+              <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
+                Reichweite & Kunden?
+              </span>
+            </h2>
+            <p className="text-white/60 text-lg max-w-xl mx-auto leading-relaxed mb-10">
+              Lassen Sie uns in einem kostenlosen Gespräch herausfinden wie wir Ihren Social-Media-Auftritt
+              auf das nächste Level bringen können.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link
+                href="/anfragen/social-media"
+                className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-semibold px-10 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(37,99,235,0.5)] text-base"
+              >
+                Kostenloses Erstgespräch anfragen
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
+              </Link>
+              <Link
+                href="/termin"
+                className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-white/10 transition-all duration-200 text-base"
+              >
+                Termin buchen
+              </Link>
+            </div>
+            <p className="mt-5 text-white/40 text-sm">Kein Risiko · Keine Vertragsbindung · Antwort in 24h</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+    </div>
   );
 }

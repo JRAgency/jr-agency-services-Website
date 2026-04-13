@@ -124,6 +124,22 @@ body::after {
   animation: blue-pulse 8s ease-in-out infinite;
 }
 
+/* ─── Accordion (Radix UI) ────────────────────────────── */
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to   { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to   { height: 0; opacity: 0; }
+}
+.animate-accordion-down {
+  animation: accordion-down 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.animate-accordion-up {
+  animation: accordion-up 0.22s cubic-bezier(0.55, 0, 1, 0.45);
+}
+
 /* ─── Shimmer sweep ───────────────────────────────────── */
 @keyframes shimmer {
   0%   { transform: translateX(-100%); }

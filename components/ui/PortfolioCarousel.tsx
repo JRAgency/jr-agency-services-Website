@@ -114,7 +114,7 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
                 quality={90}
                 style={{ animation: "none" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             </div>
           )}
 

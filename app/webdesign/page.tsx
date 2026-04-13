@@ -4,13 +4,14 @@ import Link from "next/link";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import LeistungenCard from "@/components/ui/LeistungenCard";
 import PortfolioCarousel from "@/components/ui/PortfolioCarousel";
+import { FaqAccordion, FaqAccordionItem, FaqAccordionTrigger, FaqAccordionContent } from "@/components/ui/FaqAccordion";
 
 // ─── Metadata (SEO) ───────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Webdesign Stuttgart – Websites für Unternehmen | JR Agency",
+  title: "Webdesign Agentur – Professionelle Websites | JR Agency",
   description:
-    "Webdesign Agentur Stuttgart für B2B & Maschinenbau. Kostenlose Demo-Website in 48h. Professionelle Websites die Anfragen generieren.",
+    "Webdesign Agentur für B2B & Maschinenbau. Kostenlose Demo-Website in 48h. Professionelle Websites die Anfragen generieren.",
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -279,7 +280,7 @@ export default function WebdesignPage() {
             <div>
               <AnimatedSection>
                 <span className="inline-block text-[#93C5FD] text-sm font-semibold uppercase tracking-widest mb-4">
-                  Webdesign Agentur Stuttgart
+                  Webdesign Agentur
                 </span>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
@@ -288,7 +289,7 @@ export default function WebdesignPage() {
                   className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08]"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Webdesign Stuttgart —<br />
+                  Professionelles Webdesign —<br />
                   <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
                     Mehr Anfragen
                   </span>{" "}
@@ -340,7 +341,7 @@ export default function WebdesignPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#2563EB]/20 to-transparent rounded-3xl blur-2xl" />
                 <Image
                   src="/images/mockup 14 inch.png"
-                  alt="Webdesign Stuttgart – professionelle Unternehmenswebsite"
+                  alt="Professionelles Webdesign – Unternehmenswebsite"
                   width={660}
                   height={460}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
@@ -672,12 +673,12 @@ export default function WebdesignPage() {
                     border: "1px solid rgba(255,255,255,0.07)",
                   }}
                 >
-                  <div className="relative h-44 overflow-hidden bg-[#0B1220]">
+                  <div className="relative h-56 overflow-hidden bg-[#0B1220]">
                     <Image
                       src={`/images/${ref.img}`}
                       alt={ref.name}
                       fill
-                      className="object-cover object-top opacity-80"
+                      className="object-contain object-center"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-4">
@@ -929,34 +930,17 @@ export default function WebdesignPage() {
 
           <AnimatedSection delay={0.08}>
             <div
-              className="rounded-2xl overflow-hidden divide-y"
-              style={{
-                border: "1px solid rgba(255,255,255,0.07)",
-                divideColor: "rgba(255,255,255,0.07)",
-              }}
+              className="rounded-2xl overflow-hidden"
+              style={{ border: "1px solid rgba(255,255,255,0.07)" }}
             >
-              {faq.map((item, i) => (
-                <details key={i} className="group">
-                  <summary
-                    className="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer select-none list-none [&::-webkit-details-marker]:hidden hover:bg-white/[0.02] transition-colors duration-150"
-                    style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
-                  >
-                    <h3 className="text-white font-semibold text-base leading-snug" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
-                      {item.frage}
-                    </h3>
-                    <svg
-                      width="18" height="18" viewBox="0 0 24 24" fill="none"
-                      stroke="#60A5FA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                      className="shrink-0 transition-transform duration-200 group-open:rotate-180"
-                    >
-                      <polyline points="6 9 12 15 18 9" />
-                    </svg>
-                  </summary>
-                  <div className="px-7 py-5 bg-white/[0.015]">
-                    <p className="text-[#94A3B8] text-sm leading-relaxed">{item.antwort}</p>
-                  </div>
-                </details>
-              ))}
+              <FaqAccordion type="single" collapsible>
+                {faq.map((item, i) => (
+                  <FaqAccordionItem key={i} value={`faq-${i}`}>
+                    <FaqAccordionTrigger question={item.frage} />
+                    <FaqAccordionContent>{item.antwort}</FaqAccordionContent>
+                  </FaqAccordionItem>
+                ))}
+              </FaqAccordion>
             </div>
           </AnimatedSection>
         </div>
@@ -1017,7 +1001,7 @@ export default function WebdesignPage() {
                   </Link>
                 </div>
                 <p className="mt-4 text-[#94A3B8]/60 text-sm">
-                  Webdesign Stuttgart · Für B2B, Maschinenbau & alle Unternehmen
+                  Professionelles Webdesign · Für B2B, Maschinenbau & alle Unternehmen
                 </p>
               </AnimatedSection>
             </div>

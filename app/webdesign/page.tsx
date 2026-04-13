@@ -289,7 +289,7 @@ export default function WebdesignPage() {
                   className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08]"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Professionelles Webdesign —<br />
+                  Webdesign<br />
                   <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
                     Mehr Anfragen
                   </span>{" "}

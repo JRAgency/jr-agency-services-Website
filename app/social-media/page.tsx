@@ -333,24 +333,16 @@ export default function SocialMediaPage() {
             </div>
 
             <AnimatedSection delay={0.2} direction="right">
-              <div className="relative flex justify-center gap-5 items-end">
+              <div className="relative flex justify-center">
                 <div className="absolute -inset-8 bg-gradient-to-br from-[#2563EB]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
                   src="/images/social-media/social-instagram-showcase.png"
                   alt="Social Media Management"
-                  width={290}
-                  height={580}
-                  className="relative rounded-3xl drop-shadow-2xl"
+                  width={520}
+                  height={520}
+                  className="relative drop-shadow-2xl w-full max-w-[520px]"
                   quality={90}
                   priority
-                />
-                <Image
-                  src="/images/social-media/social-glass-instagram.png"
-                  alt="Social Media Content"
-                  width={290}
-                  height={580}
-                  className="relative rounded-3xl drop-shadow-2xl mb-10"
-                  quality={90}
                 />
               </div>
             </AnimatedSection>

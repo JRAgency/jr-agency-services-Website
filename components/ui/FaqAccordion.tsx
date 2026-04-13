@@ -52,7 +52,7 @@ const FaqAccordionContent = React.forwardRef<
     {...props}
   >
     <div className="px-7 pb-6 pt-1 bg-white/[0.015]">
-      <p className="text-[#94A3B8] text-sm leading-relaxed">{children}</p>
+      <p className="text-white/60 text-sm leading-relaxed">{children}</p>
     </div>
   </AccordionPrimitive.Content>
 ));

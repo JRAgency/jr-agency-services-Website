@@ -297,7 +297,7 @@ export default function WebdesignPage() {
                 </h1>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="mt-6 text-[#94A3B8] text-lg leading-relaxed max-w-lg">
+                <p className="mt-6 text-white/60 text-lg leading-relaxed max-w-lg">
                   Wir erstellen professionelle Websites für Maschinenbau, Industrie und
                   technische Dienstleister — aber auch für alle anderen Unternehmen, die digital
                   mehr erreichen wollen. Klar strukturiert, schnell und auf Anfragen ausgerichtet.
@@ -330,7 +330,7 @@ export default function WebdesignPage() {
                       </div>
                     ))}
                   </div>
-                  <p className="text-[#94A3B8] text-sm">
+                  <p className="text-white/60 text-sm">
                     <span className="text-white font-semibold">30+ Unternehmen</span> vertrauen bereits auf unsere Websites
                   </p>
                 </div>
@@ -372,7 +372,7 @@ export default function WebdesignPage() {
                     <p className="text-4xl font-extrabold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                       {s.value}
                     </p>
-                    <p className="text-[#94A3B8] text-sm mt-1">{s.label}</p>
+                    <p className="text-white/60 text-sm mt-1">{s.label}</p>
                   </div>
                 </AnimatedSection>
               ))}
@@ -400,7 +400,7 @@ export default function WebdesignPage() {
                 Ist Ihre Website noch<br />
                 <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">zeitgemäß?</span>
               </h2>
-              <p className="mt-5 text-[#94A3B8] text-base max-w-lg mx-auto leading-relaxed">
+              <p className="mt-5 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
                 Diese Probleme hören wir täglich von Unternehmen — und sie kosten echte Aufträge.
               </p>
             </div>
@@ -423,7 +423,7 @@ export default function WebdesignPage() {
                     <h3 className="text-white font-semibold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                       {p.title}
                     </h3>
-                    <p className="text-[#94A3B8] text-sm leading-relaxed">{p.desc}</p>
+                    <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -469,7 +469,7 @@ export default function WebdesignPage() {
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
-                <p className="mt-5 text-[#94A3B8] text-base leading-relaxed">
+                <p className="mt-5 text-white/60 text-base leading-relaxed">
                   Wir erstellen keine Websites um der Website willen. Jede Entscheidung —
                   Struktur, Text, Design — ist darauf ausgerichtet, dass Besucher zu Anfragen
                   werden. Das gilt besonders für B2B-Unternehmen wie Maschinenbauer oder
@@ -489,7 +489,7 @@ export default function WebdesignPage() {
                       </span>
                       <div>
                         <p className="text-white font-semibold text-sm">{item.t}</p>
-                        <p className="text-[#94A3B8] text-sm mt-0.5 leading-relaxed">{item.d}</p>
+                        <p className="text-white/60 text-sm mt-0.5 leading-relaxed">{item.d}</p>
                       </div>
                     </div>
                   ))}
@@ -540,7 +540,7 @@ export default function WebdesignPage() {
                   </h2>
                 </AnimatedSection>
                 <AnimatedSection delay={0.1}>
-                  <p className="mt-5 text-[#94A3B8] text-base leading-relaxed">
+                  <p className="mt-5 text-white/60 text-base leading-relaxed">
                     Sie müssen uns nicht blind vertrauen. Wir erstellen innerhalb von{" "}
                     <span className="text-white font-semibold">48 Stunden</span> eine vollständige
                     Demo Ihrer neuen Website — kostenlos, ohne Vertrag, ohne versteckte Kosten.
@@ -555,7 +555,7 @@ export default function WebdesignPage() {
                     Jetzt Demo anfordern — kostenlos
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
                   </Link>
-                  <p className="mt-3 text-[#94A3B8] text-xs">
+                  <p className="mt-3 text-white/60 text-xs">
                     Kein Risiko · Keine Vertragsbindung · Ergebnis in 48 Stunden
                   </p>
                 </AnimatedSection>
@@ -593,7 +593,7 @@ export default function WebdesignPage() {
                       </div>
                       <div>
                         <p className="text-white font-semibold text-sm mb-1">{item.t}</p>
-                        <p className="text-[#94A3B8] text-sm leading-relaxed">{item.d}</p>
+                        <p className="text-white/60 text-sm leading-relaxed">{item.d}</p>
                       </div>
                     </div>
                   ))}
@@ -622,7 +622,7 @@ export default function WebdesignPage() {
               >
                 Unsere Webdesign-Leistungen
               </h2>
-              <p className="mt-4 text-[#94A3B8] text-base max-w-lg mx-auto leading-relaxed">
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
                 Alles aus einer Hand — von der ersten Idee bis zur fertigen Website die Anfragen generiert.
               </p>
             </div>
@@ -656,7 +656,7 @@ export default function WebdesignPage() {
               >
                 Projekte die überzeugen
               </h2>
-              <p className="mt-4 text-[#94A3B8] text-base max-w-lg mx-auto leading-relaxed">
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
                 Konkrete Ergebnisse für echte Unternehmen — von B2B-Maschinenbau bis Gastronomie.
               </p>
             </div>
@@ -693,15 +693,15 @@ export default function WebdesignPage() {
                     </h3>
                     <div>
                       <p className="text-[#F87171] text-xs font-semibold uppercase tracking-widest mb-1">Problem</p>
-                      <p className="text-[#94A3B8] text-sm leading-relaxed">{ref.problem}</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{ref.problem}</p>
                     </div>
                     <div>
                       <p className="text-[#34D399] text-xs font-semibold uppercase tracking-widest mb-1">Ergebnis</p>
-                      <p className="text-[#94A3B8] text-sm leading-relaxed">{ref.ergebnis}</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{ref.ergebnis}</p>
                     </div>
                     <div className="mt-auto flex gap-2 flex-wrap">
                       {ref.tags.map((t) => (
-                        <span key={t} className="text-xs text-[#94A3B8]/70 bg-white/[0.04] border border-white/[0.07] rounded-full px-3 py-1">
+                        <span key={t} className="text-xs text-white/60/70 bg-white/[0.04] border border-white/[0.07] rounded-full px-3 py-1">
                           {t}
                         </span>
                       ))}
@@ -739,7 +739,7 @@ export default function WebdesignPage() {
                 Von der Anfrage zur<br />
                 <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">fertigen Website</span>
               </h2>
-              <p className="mt-5 text-[#94A3B8] text-base max-w-xl mx-auto leading-relaxed">
+              <p className="mt-5 text-white/60 text-base max-w-xl mx-auto leading-relaxed">
                 Strukturiert, transparent und ohne böse Überraschungen — von der ersten Analyse bis zum Launch.
               </p>
             </div>
@@ -781,7 +781,7 @@ export default function WebdesignPage() {
                       >
                         <div className="bg-[#08111E] rounded-2xl p-5">
                           <h3 className="text-white font-bold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                          <p className="text-[#94A3B8] text-sm leading-relaxed">{item.desc}</p>
+                          <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
                         </div>
                       </div>
                     </div>
@@ -796,7 +796,7 @@ export default function WebdesignPage() {
                           >
                             <div className="bg-[#08111E] rounded-2xl p-6">
                               <h3 className="text-white font-bold text-lg mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                              <p className="text-[#94A3B8] text-sm leading-relaxed">{item.desc}</p>
+                              <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
                             </div>
                           </div>
                         )}
@@ -822,7 +822,7 @@ export default function WebdesignPage() {
                           >
                             <div className="bg-[#08111E] rounded-2xl p-6">
                               <h3 className="text-white font-bold text-lg mb-2" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
-                              <p className="text-[#94A3B8] text-sm leading-relaxed">{item.desc}</p>
+                              <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
                             </div>
                           </div>
                         )}
@@ -857,7 +857,7 @@ export default function WebdesignPage() {
                   ist das Angebot geeignet?
                 </span>
               </h2>
-              <p className="mt-4 text-[#94A3B8] text-base max-w-lg mx-auto leading-relaxed">
+              <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
                 Unser Schwerpunkt liegt auf B2B — aber grundsätzlich helfen wir jedem Unternehmen,
                 das professionell im Web auftreten will.
               </p>
@@ -895,7 +895,7 @@ export default function WebdesignPage() {
                         </span>
                       )}
                     </h3>
-                    <p className="text-[#94A3B8] text-sm leading-relaxed">{z.desc}</p>
+                    <p className="text-white/60 text-sm leading-relaxed">{z.desc}</p>
                   </div>
                 </div>
               </AnimatedSection>
@@ -922,7 +922,7 @@ export default function WebdesignPage() {
               >
                 Häufige Fragen
               </h2>
-              <p className="mt-4 text-[#94A3B8] text-base leading-relaxed">
+              <p className="mt-4 text-white/60 text-base leading-relaxed">
                 Antworten auf die Fragen, die wir am häufigsten hören.
               </p>
             </div>
@@ -978,7 +978,7 @@ export default function WebdesignPage() {
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <p className="mt-5 text-[#94A3B8] text-lg max-w-xl mx-auto leading-relaxed">
+                <p className="mt-5 text-white/60 text-lg max-w-xl mx-auto leading-relaxed">
                   Wir schauen uns Ihre aktuelle Website an und zeigen Ihnen konkret, was fehlt
                   und wie eine neue Website mehr Anfragen für Ihr Unternehmen generiert.
                   Unverbindlich, ohne Kosten.
@@ -1000,7 +1000,7 @@ export default function WebdesignPage() {
                     Gespräch buchen
                   </Link>
                 </div>
-                <p className="mt-4 text-[#94A3B8]/60 text-sm">
+                <p className="mt-4 text-white/60/60 text-sm">
                   Professionelles Webdesign · Für B2B, Maschinenbau & alle Unternehmen
                 </p>
               </AnimatedSection>

@@ -32,7 +32,7 @@ export default function LeistungenCard({ title, desc, color, icon }: LeistungenC
       >
         {title}
       </h3>
-      <p className="text-[#94A3B8] text-sm leading-relaxed">{desc}</p>
+      <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
     </div>
   );
 }

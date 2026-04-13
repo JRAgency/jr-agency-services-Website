@@ -74,10 +74,10 @@ const footerLinks: FooterSection[] = [
 
 export function FooterSection() {
   return (
-    <div className="bg-[#020408] px-4 pb-6 md:px-8">
+    <div className="bg-[#070C18] pb-6" style={{ paddingLeft: 'clamp(20px, 7vw, 160px)', paddingRight: 'clamp(20px, 7vw, 160px)' }}>
 
       <footer
-        className="relative w-full max-w-[1440px] mx-auto rounded-3xl overflow-hidden border border-white/[0.07] px-6 py-14 sm:px-8 lg:px-14 lg:py-16"
+        className="relative w-full rounded-3xl overflow-hidden border border-white/[0.07] px-6 py-14 sm:px-8 lg:px-14 lg:py-16"
         style={{
           background:
             'radial-gradient(35% 140px at 50% 0%, rgba(37,99,235,0.14) 0%, transparent 100%), #080e1a',

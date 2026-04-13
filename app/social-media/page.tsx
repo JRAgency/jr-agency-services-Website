@@ -295,7 +295,7 @@ export default function SocialMediaPage() {
                   className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white leading-[1.08]"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Social Media —<br />
+                  Social Media<br />
                   <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">
                     Mehr Reichweite
                   </span>{" "}
@@ -338,9 +338,9 @@ export default function SocialMediaPage() {
                 <Image
                   src="/images/social-media/social-instagram-showcase.png"
                   alt="Social Media Management"
-                  width={520}
-                  height={520}
-                  className="relative drop-shadow-2xl w-full max-w-[520px]"
+                  width={700}
+                  height={700}
+                  className="relative drop-shadow-2xl w-full max-w-[700px]"
                   quality={90}
                   priority
                 />

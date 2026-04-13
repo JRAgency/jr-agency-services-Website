@@ -38,12 +38,12 @@ const leistungen = [
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>,
   },
   {
+    title: "SEO-Optimierung",
     desc: "Jede Website wird technisch für Google optimiert — schnelle Ladezeiten, saubere Struktur und starke Rankings.",
     color: "#10B981",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>,
   },
-  {    title: "SEO-Optimierung",
-
+  {
     title: "Performance",
     desc: "Blitzschnelle Ladezeiten durch modernes Web-Development. Lighthouse Score 95+ ist unser Standard.",
     color: "#F97316",

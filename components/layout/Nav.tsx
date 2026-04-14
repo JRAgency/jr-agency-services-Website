@@ -67,19 +67,19 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="page-container h-24 flex items-center justify-between">
+      <nav className="page-container h-24 grid grid-cols-3 items-center">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
+        <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"
-            width={104}
-            height={104}
-            className="w-[104px] h-[104px] object-contain"
+            width={88}
+            height={88}
+            className="w-[88px] h-[88px] object-contain"
           />
           <span
-            className="font-extrabold text-white text-base tracking-wider uppercase"
+            className="font-extrabold text-white text-base tracking-wider uppercase leading-none"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
             JR Agency Services
@@ -87,7 +87,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center justify-center gap-10">
           {leistungen.map((item) => (
             <li key={item.href}>
               <Link
@@ -103,7 +103,7 @@ export default function Nav() {
         </ul>
 
         {/* Right side */}
-        <div className="flex items-center gap-5">
+        <div className="flex items-center justify-end gap-5">
           <NeonButton href="/anfragen" variant="default" size="default" className="hidden md:inline-flex font-bold">
             Projekt starten
           </NeonButton>

@@ -316,7 +316,7 @@ export default function WebdesignPage() {
                     href="/kontakt"
                     className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
                   >
-                    Website analysieren lassen
+                    Gespräch buchen
                   </Link>
                 </div>
               </AnimatedSection>
@@ -974,14 +974,14 @@ export default function WebdesignPage() {
                   className="text-4xl md:text-5xl font-bold text-white"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
-                  Lassen Sie Ihre Website<br />analysieren — kostenlos
+                  Sehen Sie Ihre neue Website<br />— bevor Sie sich entscheiden
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <p className="mt-5 text-white/60 text-lg max-w-xl mx-auto leading-relaxed">
-                  Wir schauen uns Ihre aktuelle Website an und zeigen Ihnen konkret, was fehlt
-                  und wie eine neue Website mehr Anfragen für Ihr Unternehmen generiert.
-                  Unverbindlich, ohne Kosten.
+                  Innerhalb von 48 Stunden erstellen wir eine kostenlose Demo Ihrer neuen Website —
+                  individuell auf Ihr Unternehmen zugeschnitten. Sie sehen das Ergebnis,
+                  bevor Sie sich entscheiden. Unverbindlich, ohne Kosten.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>

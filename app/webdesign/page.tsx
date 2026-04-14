@@ -140,28 +140,28 @@ const projekte = [
 const prozess = [
   {
     step: "01",
-    title: "Analyse",
-    desc: "Wir analysieren Ihr Unternehmen, Ihre Zielgruppe und Ihre Mitbewerber. Was funktioniert? Was fehlt? Daraus entsteht eine klare Strategie.",
+    title: "Erstgespräch & Analyse",
+    desc: "Wir verstehen Ihr Unternehmen und Ihre Ziele. Im ersten Gespräch klären wir welche Leistungen Sie anbieten, wer Ihre Zielgruppe ist und was Ihre Website erreichen soll — die Grundlage für eine Website, die wirklich funktioniert.",
   },
   {
     step: "02",
     title: "Kostenlose Demo",
-    desc: "Innerhalb von 48 Stunden erstellen wir eine unverbindliche Demo-Version Ihrer neuen Website — Sie sehen das Ergebnis, bevor Sie sich entscheiden.",
+    desc: "Auf Basis des Gesprächs erstellen wir eine erste Demo Ihrer Website. Diese schauen wir uns gemeinsam an und besprechen Struktur, Inhalte und mögliche Verbesserungen. Sie bekommen einen realistischen Eindruck — ganz ohne Risiko.",
   },
   {
     step: "03",
-    title: "Umsetzung",
-    desc: "Nach Ihrer Freigabe setzen wir die Website vollständig um — responsiv, SEO-optimiert und mit allen besprochenen Inhalten und Funktionen.",
+    title: "Individuelle Umsetzung",
+    desc: "Wenn Sie sich für die Zusammenarbeit entscheiden, integrieren wir Ihre Inhalte, Bilder und Daten, passen Struktur und Design individuell an und berücksichtigen all Ihre Wünsche und Anforderungen.",
   },
   {
     step: "04",
     title: "Optimierung",
-    desc: "Wir testen, verfeinern und optimieren. Ladezeiten, Mobile-Darstellung und Conversion-Elemente werden geprüft und verbessert.",
+    desc: "Wir optimieren Ihre Website gezielt auf Ladegeschwindigkeit, mobile Darstellung (Responsive Design), Suchmaschinen (SEO) und Conversion — damit aus Besuchern echte Anfragen werden.",
   },
   {
     step: "05",
-    title: "Launch",
-    desc: "Ihre Website geht live. Wir kümmern uns um Domain, Hosting und stehen 30 Tage kostenlos für Anpassungen zur Verfügung.",
+    title: "Launch & Betreuung",
+    desc: "Nach dem finalen Feinschliff veröffentlichen wir Ihre Website, kümmern uns um Domain & Hosting und unterstützen Sie 30 Tage lang kostenlos bei Anpassungen — damit alles reibungslos läuft.",
   },
 ];
 
@@ -730,17 +730,17 @@ export default function WebdesignPage() {
         <div className="max-w-4xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Wie es funktioniert</span>
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Unser Ablauf</span>
               <h2
                 id="ablauf-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
                 style={{ fontFamily: "var(--font-plus-jakarta)" }}
               >
-                Von der Anfrage zur<br />
-                <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">fertigen Website</span>
+                So entsteht<br />
+                <span className="bg-gradient-to-r from-[#2563EB] to-[#93C5FD] bg-clip-text text-transparent">Ihre neue Website</span>
               </h2>
               <p className="mt-5 text-white/60 text-base max-w-xl mx-auto leading-relaxed">
-                Strukturiert, transparent und ohne böse Überraschungen — von der ersten Analyse bis zum Launch.
+                Ein klar strukturierter Prozess — von der ersten Analyse bis zum erfolgreichen Livegang.
               </p>
             </div>
           </AnimatedSection>

@@ -13,6 +13,7 @@ interface SectionWithMockupProps {
   primaryImageSrc: string;
   secondaryImageSrc: string;
   carouselImages?: string[];
+  singleImage?: boolean;
   reverseLayout?: boolean;
   tag?: string;
   accentColor?: string;
@@ -27,6 +28,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
   primaryImageSrc,
   secondaryImageSrc,
   carouselImages,
+  singleImage = false,
   reverseLayout = false,
   tag,
   accentColor = "rgba(37,99,235,0.5)",
@@ -128,6 +130,30 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
           >
             {carouselImages && carouselImages.length > 0 ? (
               <MockupCarousel images={carouselImages} accentColor={accentColor} />
+            ) : singleImage ? (
+              /* Single image — no secondary card */
+              <motion.div
+                className="relative rounded-3xl overflow-hidden border border-white/[0.09] z-10"
+                style={{
+                  width: "100%",
+                  height: "480px",
+                  background: "rgba(255,255,255,0.03)",
+                  boxShadow: `0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)`,
+                }}
+                initial={{ y: 0 }}
+                whileInView={{ y: 12 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 1.3, ease: "easeOut" }}
+              >
+                <Image
+                  src={primaryImageSrc}
+                  alt=""
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={90}
+                />
+              </motion.div>
             ) : (
               <>
                 {/* Secondary card — drifts up */}

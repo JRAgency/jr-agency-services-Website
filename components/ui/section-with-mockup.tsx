@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import MockupCarousel from "@/components/ui/MockupCarousel";
 
 interface SectionWithMockupProps {
   title: string | React.ReactNode;
@@ -11,6 +12,7 @@ interface SectionWithMockupProps {
   features?: string[];
   primaryImageSrc: string;
   secondaryImageSrc: string;
+  carouselImages?: string[];
   reverseLayout?: boolean;
   tag?: string;
   accentColor?: string;
@@ -24,6 +26,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
   features,
   primaryImageSrc,
   secondaryImageSrc,
+  carouselImages,
   reverseLayout = false,
   tag,
   accentColor = "rgba(37,99,235,0.5)",
@@ -114,7 +117,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
             )}
           </motion.div>
 
-          {/* ── Mockup stack ──────────────────────── */}
+          {/* ── Mockup / Carousel ─────────────────── */}
           <motion.div
             className="w-full md:w-1/2 relative"
             style={{ order: reverseLayout ? 1 : 2, minHeight: "420px" }}
@@ -123,58 +126,64 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8, ease, delay: 0.1 }}
           >
-            {/* Secondary card — drifts up */}
-            <motion.div
-              className="absolute rounded-3xl overflow-hidden border border-white/[0.06] z-0"
-              style={{
-                width: "75%",
-                height: "85%",
-                top: "8%",
-                [reverseLayout ? "right" : "left"]: "-8%",
-                background: "#080e1a",
-                filter: "blur(1.5px)",
-              }}
-              initial={{ y: 0 }}
-              whileInView={{ y: -22 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 1.3, ease: "easeOut" }}
-            >
-              <Image
-                src={secondaryImageSrc}
-                alt=""
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 75vw, 40vw"
-                quality={90}
-              />
-            </motion.div>
+            {carouselImages && carouselImages.length > 0 ? (
+              <MockupCarousel images={carouselImages} accentColor={accentColor} />
+            ) : (
+              <>
+                {/* Secondary card — drifts up */}
+                <motion.div
+                  className="absolute rounded-3xl overflow-hidden border border-white/[0.06] z-0"
+                  style={{
+                    width: "75%",
+                    height: "85%",
+                    top: "8%",
+                    [reverseLayout ? "right" : "left"]: "-8%",
+                    background: "#080e1a",
+                    filter: "blur(1.5px)",
+                  }}
+                  initial={{ y: 0 }}
+                  whileInView={{ y: -22 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 1.3, ease: "easeOut" }}
+                >
+                  <Image
+                    src={secondaryImageSrc}
+                    alt=""
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 75vw, 40vw"
+                    quality={90}
+                  />
+                </motion.div>
 
-            {/* Primary card — drifts down */}
-            <motion.div
-              className="relative rounded-3xl overflow-hidden border border-white/[0.09] z-10 ml-auto"
-              style={{
-                width: "85%",
-                height: "480px",
-                marginLeft: reverseLayout ? "0" : "auto",
-                marginRight: reverseLayout ? "auto" : "0",
-                background: "rgba(255,255,255,0.03)",
-                backdropFilter: "blur(12px)",
-                boxShadow: `0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)`,
-              }}
-              initial={{ y: 0 }}
-              whileInView={{ y: 22 }}
-              viewport={{ once: true, amount: 0.4 }}
-              transition={{ duration: 1.3, ease: "easeOut", delay: 0.1 }}
-            >
-              <Image
-                src={primaryImageSrc}
-                alt=""
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                quality={90}
-              />
-            </motion.div>
+                {/* Primary card — drifts down */}
+                <motion.div
+                  className="relative rounded-3xl overflow-hidden border border-white/[0.09] z-10 ml-auto"
+                  style={{
+                    width: "85%",
+                    height: "480px",
+                    marginLeft: reverseLayout ? "0" : "auto",
+                    marginRight: reverseLayout ? "auto" : "0",
+                    background: "rgba(255,255,255,0.03)",
+                    backdropFilter: "blur(12px)",
+                    boxShadow: `0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)`,
+                  }}
+                  initial={{ y: 0 }}
+                  whileInView={{ y: 22 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 1.3, ease: "easeOut", delay: 0.1 }}
+                >
+                  <Image
+                    src={primaryImageSrc}
+                    alt=""
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    quality={90}
+                  />
+                </motion.div>
+              </>
+            )}
           </motion.div>
 
         </div>

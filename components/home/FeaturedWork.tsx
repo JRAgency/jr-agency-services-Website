@@ -22,6 +22,14 @@ const services = [
     ],
     primaryImageSrc: "/images/mockup 14 inch mana.png",
     secondaryImageSrc: "/images/M001T1427 I iPhone Mockup 19Jul25.png",
+    carouselImages: [
+      "/images/mockup 14 inch mana.png",
+      "/images/mockup 14 inch.png",
+      "/images/01 - Apple Devices Mockup lombare.png",
+      "/images/01 - Apple Devices Mockup Peter schmid GMBH.png",
+      "/images/01 - Apple Devices Mockup Mana.png",
+      "/images/M001T1427 I iPhone Mockup 19Jul25.png",
+    ],
     reverseLayout: false,
     accentColor: "rgba(37,99,235,0.55)",
     href: "/webdesign",
@@ -89,6 +97,7 @@ export default function FeaturedWork() {
           features={service.features}
           primaryImageSrc={service.primaryImageSrc}
           secondaryImageSrc={service.secondaryImageSrc}
+          carouselImages={(service as any).carouselImages}
           reverseLayout={service.reverseLayout}
           accentColor={service.accentColor}
           href={service.href}

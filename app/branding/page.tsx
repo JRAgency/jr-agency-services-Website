@@ -297,7 +297,7 @@ export default function BrandingPage() {
               <div className="relative flex justify-center items-center">
                 <div className="absolute -inset-8 bg-gradient-to-br from-[#15803D]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
-                  src="/images/branding/branding-icon-3d.png"
+                  src="/images/branding/icon-jr-logo.png"
                   alt="Branding & Logo Design"
                   width={480}
                   height={480}

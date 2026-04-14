@@ -11,7 +11,7 @@ const projects = [
   },
   {
     img: "01 - Apple Devices Mockup kimchi.png",
-    name: "Kimchi Korean Kitchen",
+    name: "Restaurant-Referenz",
     category: "Restaurant Website",
     tags: ["Responsive", "SEO"],
   },
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     img: "01 - Apple Devices Mockup Peter schmid GMBH.png",
-    name: "Peter Schmid GmbH",
+    name: "Unternehmens-Referenz",
     category: "Unternehmenswebsite",
     tags: ["B2B", "Corporate"],
   },

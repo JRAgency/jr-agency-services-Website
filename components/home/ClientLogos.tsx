@@ -1,10 +1,10 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const clients = [
-  "Kimchi Korean Kitchen",
+  "Restaurant-Referenz",
   "Lombare Parfum",
   "Mana Café",
-  "Peter Schmid GmbH",
+  "Unternehmens-Referenz",
   "YAMYAM",
   "Business Class",
 ];

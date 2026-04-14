@@ -17,7 +17,7 @@ const animatedTexts = [
 
 const proofItems = [
   { img: "/images/01 - Apple Devices Mockup lombare.png", name: "Lombare Parfum", label: "E-Commerce +340% Traffic" },
-  { img: "/images/01 - Apple Devices Mockup kimchi.png", name: "Kimchi Kitchen", label: "Restaurant +180% Anfragen" },
+  { img: "/images/01 - Apple Devices Mockup kimchi.png", name: "Restaurant-Referenz", label: "Restaurant +180% Anfragen" },
   { img: "/images/01 - Apple Devices Mockup Mana.png", name: "Mana Café", label: "Gastronomie neue Kunden" },
 ];
 
@@ -208,7 +208,7 @@ export default function TypewriterSection() {
                 <p className="text-[#64748B] text-[13px] leading-relaxed italic">
                   &ldquo;In 48 Stunden haben wir unsere erste Demo gesehen — innerhalb von 2 Wochen waren wir live. Beste Entscheidung!&rdquo;
                 </p>
-                <p className="text-white/40 text-[11px] mt-2 font-medium">— Kimchi Korean Kitchen, Stuttgart</p>
+                <p className="text-white/40 text-[11px] mt-2 font-medium">— Zufriedener Kunde, Stuttgart</p>
               </div>
             </motion.div>
 

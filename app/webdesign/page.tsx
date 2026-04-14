@@ -104,7 +104,7 @@ const leistungen = [
 const referenzen = [
   {
     img: "01 - Apple Devices Mockup Peter schmid GMBH.png",
-    name: "Peter Schmid GmbH",
+    name: "Unternehmens-Referenz",
     branche: "Maschinenbau & Fertigung",
     problem: "Veraltete Website ohne klare Leistungsdarstellung. Potenzielle Geschäftskunden wurden digital nicht erreicht.",
     ergebnis: "Moderne B2B-Website mit strukturierter Produktübersicht, Kontaktformular und technischer SEO-Optimierung.",
@@ -120,7 +120,7 @@ const referenzen = [
   },
   {
     img: "01 - Apple Devices Mockup kimchi.png",
-    name: "Kimchi Korean Kitchen",
+    name: "Restaurant-Referenz",
     branche: "Gastronomie",
     problem: "Keine Web-Präsenz, kaum Google-Sichtbarkeit. Neukunden kamen fast ausschließlich über Empfehlung.",
     ergebnis: "Restaurant-Website mit Speisekarte, Google-Präsenz und Reservierungsmöglichkeit — in unter 2 Wochen live.",
@@ -130,7 +130,7 @@ const referenzen = [
 
 const projekte = [
   { img: "01 - Apple Devices Mockup lombare.png",           name: "Lombare Parfum",        cat: "Webdesign & Branding",  tags: ["E-Commerce", "Branding"] },
-  { img: "01 - Apple Devices Mockup kimchi.png",            name: "Kimchi Korean Kitchen", cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
+  { img: "01 - Apple Devices Mockup kimchi.png",            name: "Restaurant-Referenz", cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
   { img: "01 - Apple Devices Mockup Mana.png",              name: "Mana Café",             cat: "Gastronomie",           tags: ["Webdesign", "CMS"] },
   { img: "01 - Apple Devices Mockup Peter schmid GMBH.png", name: "Peter Schmid GmbH",     cat: "Unternehmenswebsite",   tags: ["B2B", "Corporate"] },
   { img: "02 - Apple Devices Mockup.png",                   name: "Business Class",        cat: "Webdesign",             tags: ["Landing Page", "Conversion"] },

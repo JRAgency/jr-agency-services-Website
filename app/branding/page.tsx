@@ -218,11 +218,11 @@ function SectionDivider() {
     <div className="relative h-px mx-auto max-w-4xl px-6">
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(90deg, transparent 0%, rgba(21,128,61,0.25) 30%, rgba(74,222,128,0.35) 50%, rgba(21,128,61,0.25) 70%, transparent 100%)" }}
+        style={{ background: "linear-gradient(90deg, transparent 0%, rgba(14,165,233,0.25) 30%, rgba(125,211,252,0.35) 50%, rgba(14,165,233,0.25) 70%, transparent 100%)" }}
       />
       <div
         className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-[6px] h-[6px] rounded-full"
-        style={{ background: "rgba(74,222,128,0.55)", boxShadow: "0 0 8px 2px rgba(21,128,61,0.45)" }}
+        style={{ background: "rgba(125,211,252,0.55)", boxShadow: "0 0 8px 2px rgba(14,165,233,0.45)" }}
       />
     </div>
   );
@@ -239,14 +239,14 @@ export default function BrandingPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20" aria-label="Hero">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#15803D]/10 rounded-full blur-[150px]" />
+          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#0EA5E9]/10 rounded-full blur-[150px]" />
           <div className="absolute bottom-1/4 left-[10%] w-80 h-80 bg-[#C9A96E]/05 rounded-full blur-[110px]" />
         </div>
         <div className="page-container py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
-                <span className="inline-block text-[#86EFAC] text-sm font-semibold uppercase tracking-widest mb-4">
+                <span className="inline-block text-[#BAE6FD] text-sm font-semibold uppercase tracking-widest mb-4">
                   Branding & Corporate Identity
                 </span>
               </AnimatedSection>
@@ -256,7 +256,7 @@ export default function BrandingPage() {
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
                   Branding —<br />
-                  <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">
                     Ihre Marke
                   </span>{" "}
                   die bleibt.
@@ -273,7 +273,7 @@ export default function BrandingPage() {
                 <div className="mt-9 flex gap-4 flex-wrap">
                   <Link
                     href="/anfragen/branding"
-                    className="inline-flex items-center gap-2 bg-[#15803D] hover:bg-[#14532D] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(21,128,61,0.5)] text-base"
+                    className="inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0369A1] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(14,165,233,0.5)] text-base"
                   >
                     Kostenloses Marken-Briefing
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
@@ -295,7 +295,7 @@ export default function BrandingPage() {
 
             <AnimatedSection delay={0.2} direction="right">
               <div className="relative flex justify-center items-center">
-                <div className="absolute -inset-8 bg-gradient-to-br from-[#15803D]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
+                <div className="absolute -inset-8 bg-gradient-to-br from-[#0EA5E9]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
                   src="/images/branding/icon-jr-logo.png"
                   alt="Branding & Logo Design"
@@ -317,8 +317,8 @@ export default function BrandingPage() {
           <div
             className="rounded-2xl px-10 py-9"
             style={{
-              background: "linear-gradient(135deg, rgba(21,128,61,0.08) 0%, rgba(15,23,42,0.5) 100%)",
-              border: "1px solid rgba(21,128,61,0.14)",
+              background: "linear-gradient(135deg, rgba(14,165,233,0.08) 0%, rgba(15,23,42,0.5) 100%)",
+              border: "1px solid rgba(14,165,233,0.14)",
             }}
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -392,12 +392,12 @@ export default function BrandingPage() {
           3. LÖSUNG
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="loesung-heading">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#15803D]/06 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#0EA5E9]/06 rounded-full blur-[130px] pointer-events-none" />
         <div className="page-container relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <AnimatedSection>
               <div className="relative flex justify-center">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#15803D]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#0EA5E9]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
                 <Image
                   src="/images/branding/icon-mockup-blue.png"
                   alt="Branding Icon Mockup"
@@ -411,7 +411,7 @@ export default function BrandingPage() {
             </AnimatedSection>
             <div>
               <AnimatedSection delay={0.05}>
-                <span className="inline-block text-[#86EFAC] text-sm font-semibold uppercase tracking-widest mb-3">
+                <span className="inline-block text-[#BAE6FD] text-sm font-semibold uppercase tracking-widest mb-3">
                   Unser Ansatz
                 </span>
               </AnimatedSection>
@@ -422,7 +422,7 @@ export default function BrandingPage() {
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
                   Branding das<br />
-                  <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">in Erinnerung bleibt</span>
+                  <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">in Erinnerung bleibt</span>
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -435,9 +435,9 @@ export default function BrandingPage() {
                 <div className="mt-8 space-y-4">
                   {loesungPunkte.map((item) => (
                     <div key={item.t} className="flex gap-4">
-                      <span className="mt-1 w-5 h-5 rounded-full bg-[#15803D]/15 border border-[#15803D]/30 flex items-center justify-center shrink-0">
+                      <span className="mt-1 w-5 h-5 rounded-full bg-[#0EA5E9]/15 border border-[#0EA5E9]/30 flex items-center justify-center shrink-0">
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                          <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#4ADE80" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#7DD3FC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
                       <div>
@@ -460,20 +460,20 @@ export default function BrandingPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="angebot-heading">
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(21,128,61,0.07) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(14,165,233,0.07) 0%, transparent 70%)" }} />
         <div className="page-container relative">
           <div
             className="rounded-3xl p-10 md:p-14 relative overflow-hidden"
             style={{
-              background: "linear-gradient(135deg, rgba(21,128,61,0.1) 0%, rgba(8,17,30,0.9) 60%)",
-              border: "1px solid rgba(21,128,61,0.2)",
+              background: "linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(8,17,30,0.9) 60%)",
+              border: "1px solid rgba(14,165,233,0.2)",
             }}
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#15803D]/08 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#0EA5E9]/08 rounded-full blur-[80px] pointer-events-none" />
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <AnimatedSection>
-                  <span className="inline-flex items-center gap-2 text-[#86EFAC] text-xs font-bold uppercase tracking-[0.22em] mb-4">
+                  <span className="inline-flex items-center gap-2 text-[#BAE6FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
                     Unser stärkstes Angebot
                   </span>
@@ -485,7 +485,7 @@ export default function BrandingPage() {
                     style={{ fontFamily: "var(--font-plus-jakarta)" }}
                   >
                     Kostenloses Marken-Briefing —<br />
-                    <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">
                       unverbindlich & konkret
                     </span>
                   </h2>
@@ -499,7 +499,7 @@ export default function BrandingPage() {
                 <AnimatedSection delay={0.15}>
                   <Link
                     href="/anfragen/branding"
-                    className="mt-8 inline-flex items-center gap-2 bg-[#15803D] hover:bg-[#14532D] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(21,128,61,0.55)] text-base"
+                    className="mt-8 inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0369A1] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(14,165,233,0.55)] text-base"
                   >
                     Jetzt Briefing anfragen — kostenlos
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
@@ -522,8 +522,8 @@ export default function BrandingPage() {
                       className="flex gap-4 p-5 rounded-2xl"
                       style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}
                     >
-                      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#15803D]/20 border border-[#15803D]/30 flex items-center justify-center">
-                        <span className="text-[#4ADE80] font-bold text-xs">{item.n}</span>
+                      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#0EA5E9]/20 border border-[#0EA5E9]/30 flex items-center justify-center">
+                        <span className="text-[#7DD3FC] font-bold text-xs">{item.n}</span>
                       </div>
                       <div>
                         <p className="text-white font-semibold text-sm mb-1">{item.t}</p>
@@ -544,11 +544,11 @@ export default function BrandingPage() {
           5. LEISTUNGEN
       ══════════════════════════════════════════════════════════════ */}
       <section id="leistungen" className="py-28 relative overflow-hidden" aria-labelledby="leistungen-heading">
-        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#15803D]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#0EA5E9]/05 rounded-full blur-[120px] pointer-events-none" />
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#15803D] text-xs font-bold uppercase tracking-[0.22em] mb-4">Was wir bieten</span>
+              <span className="inline-block text-[#0EA5E9] text-xs font-bold uppercase tracking-[0.22em] mb-4">Was wir bieten</span>
               <h2
                 id="leistungen-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
@@ -581,14 +581,14 @@ export default function BrandingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
               <AnimatedSection>
-                <span className="inline-block text-[#15803D] text-xs font-bold uppercase tracking-[0.22em] mb-4">Im Lieferumfang</span>
+                <span className="inline-block text-[#0EA5E9] text-xs font-bold uppercase tracking-[0.22em] mb-4">Im Lieferumfang</span>
                 <h2
                   id="inbegriffen-heading"
                   className="text-4xl md:text-5xl font-bold text-white leading-tight"
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
                   Alles was Sie für Ihre{" "}
-                  <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">
                     neue Marke brauchen
                   </span>
                 </h2>
@@ -605,13 +605,13 @@ export default function BrandingPage() {
                     key={item}
                     className="flex items-center gap-3 p-4 rounded-xl"
                     style={{
-                      background: "linear-gradient(135deg, rgba(21,128,61,0.07) 0%, rgba(255,255,255,0.02) 100%)",
-                      border: "1px solid rgba(21,128,61,0.12)",
+                      background: "linear-gradient(135deg, rgba(14,165,233,0.07) 0%, rgba(255,255,255,0.02) 100%)",
+                      border: "1px solid rgba(14,165,233,0.12)",
                     }}
                   >
-                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#15803D]/15 border border-[#15803D]/30 flex items-center justify-center">
+                    <span className="shrink-0 w-6 h-6 rounded-full bg-[#0EA5E9]/15 border border-[#0EA5E9]/30 flex items-center justify-center">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d="M2 5l2.2 2.2 3.8-4.2" stroke="#4ADE80" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M2 5l2.2 2.2 3.8-4.2" stroke="#7DD3FC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     <span className="text-white/80 text-sm font-medium">{item}</span>
@@ -631,15 +631,15 @@ export default function BrandingPage() {
       <section id="prozess" className="py-28 relative overflow-hidden" aria-labelledby="prozess-heading">
         <div
           className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[800px] pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(21,128,61,0.055) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(14,165,233,0.055) 0%, transparent 70%)" }}
         />
         <div className="max-w-5xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-24">
-              <span className="inline-block text-[#15803D] text-xs font-bold uppercase tracking-[0.22em] mb-5">Unser Ablauf</span>
+              <span className="inline-block text-[#0EA5E9] text-xs font-bold uppercase tracking-[0.22em] mb-5">Unser Ablauf</span>
               <h2 id="prozess-heading" className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 So entsteht{" "}
-                <span className="bg-gradient-to-r from-[#15803D] via-[#4ADE80] to-[#86EFAC] bg-clip-text text-transparent">Ihre Marke</span>
+                <span className="bg-gradient-to-r from-[#0EA5E9] via-[#7DD3FC] to-[#BAE6FD] bg-clip-text text-transparent">Ihre Marke</span>
               </h2>
               <p className="text-white/60 text-base leading-relaxed max-w-xl mx-auto">
                 Von der ersten Idee bis zur fertigen Markenidentität — transparent, strukturiert und ohne Überraschungen.
@@ -648,11 +648,11 @@ export default function BrandingPage() {
           </AnimatedSection>
           <div className="relative">
             <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(21,128,61,0.9) 6%, rgba(74,222,128,0.55) 40%, rgba(21,128,61,0.55) 60%, rgba(74,222,128,0.3) 94%, transparent 100%)", boxShadow: "0 0 16px 2px rgba(21,128,61,0.3), 0 0 40px 4px rgba(21,128,61,0.1)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(14,165,233,0.9) 6%, rgba(125,211,252,0.55) 40%, rgba(14,165,233,0.55) 60%, rgba(125,211,252,0.3) 94%, transparent 100%)", boxShadow: "0 0 16px 2px rgba(14,165,233,0.3), 0 0 40px 4px rgba(14,165,233,0.1)" }} />
             <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[30px] bottom-[30px] w-[24px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(21,128,61,0.12) 10%, rgba(21,128,61,0.07) 90%, transparent)", filter: "blur(8px)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(14,165,233,0.12) 10%, rgba(14,165,233,0.07) 90%, transparent)", filter: "blur(8px)" }} />
             <div className="lg:hidden absolute left-[27px] top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(21,128,61,0.85) 5%, rgba(21,128,61,0.4) 95%, transparent)", boxShadow: "0 0 10px rgba(21,128,61,0.3)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(14,165,233,0.85) 5%, rgba(14,165,233,0.4) 95%, transparent)", boxShadow: "0 0 10px rgba(14,165,233,0.3)" }} />
             <div className="space-y-0">
               {prozess.map((item, i) => {
                 const isLeft = i % 2 === 0;
@@ -661,23 +661,23 @@ export default function BrandingPage() {
                     {/* Mobile */}
                     <div className="lg:hidden flex items-start gap-5 pb-10 last:pb-0">
                       <div className="relative shrink-0 z-10 mt-1">
-                        <div className="absolute inset-0 rounded-full bg-[#15803D]/20 blur-lg scale-[2.2]" />
-                        <div className="absolute inset-[-5px] rounded-full border border-[#15803D]/15" />
+                        <div className="absolute inset-0 rounded-full bg-[#0EA5E9]/20 blur-lg scale-[2.2]" />
+                        <div className="absolute inset-[-5px] rounded-full border border-[#0EA5E9]/15" />
                         <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
-                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #08111E 100%)", border: "1.5px solid rgba(21,128,61,0.65)", boxShadow: "0 0 20px rgba(21,128,61,0.45), inset 0 0 12px rgba(21,128,61,0.08)" }}>
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #08111E 100%)", border: "1.5px solid rgba(14,165,233,0.65)", boxShadow: "0 0 20px rgba(14,165,233,0.45), inset 0 0 12px rgba(14,165,233,0.08)" }}>
                           <span className="text-white font-black text-base" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
                         </div>
                       </div>
-                      <div className="flex-1 rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(21,128,61,0.28) 0%, rgba(21,128,61,0.05) 60%, rgba(74,222,128,0.1) 100%)" }}>
+                      <div className="flex-1 rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(14,165,233,0.28) 0%, rgba(14,165,233,0.05) 60%, rgba(125,211,252,0.1) 100%)" }}>
                         <div className="relative bg-[#08111E] rounded-2xl p-6 overflow-hidden">
-                          <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(21,128,61,0.06)" }}>{item.step}</span>
+                          <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(14,165,233,0.06)" }}>{item.step}</span>
                           <h3 className="text-white font-bold text-lg mb-2.5 relative" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                           <p className="text-white/60 text-sm leading-relaxed mb-5 relative">{item.desc}</p>
                           <div className="relative border-t border-white/[0.05] pt-4">
                             <ul className="space-y-2">
                               {item.deliverables.map((d) => (
                                 <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#15803D]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#0EA5E9]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                   {d}
                                 </li>
                               ))}
@@ -690,9 +690,9 @@ export default function BrandingPage() {
                     <div className="hidden lg:grid grid-cols-[1fr_96px_1fr] items-center pb-10 last:pb-0">
                       <div className={`flex justify-end pr-8 ${isLeft ? "" : "opacity-0 pointer-events-none"}`}>
                         {isLeft && (
-                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(21,128,61,0.35) 0%, rgba(21,128,61,0.06) 60%, rgba(74,222,128,0.12) 100%)" }}>
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(14,165,233,0.35) 0%, rgba(14,165,233,0.06) 60%, rgba(125,211,252,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
-                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(21,128,61,0.065)" }}>{item.step}</span>
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(14,165,233,0.065)" }}>{item.step}</span>
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                                 <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
@@ -701,7 +701,7 @@ export default function BrandingPage() {
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#15803D]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#0EA5E9]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
@@ -713,17 +713,17 @@ export default function BrandingPage() {
                         )}
                       </div>
                       <div className="flex justify-center items-center relative z-10">
-                        <div className="absolute w-16 h-16 rounded-full bg-[#15803D]/10 blur-xl" />
+                        <div className="absolute w-16 h-16 rounded-full bg-[#0EA5E9]/10 blur-xl" />
                         <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
-                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(21,128,61,0.7)", boxShadow: "0 0 24px rgba(21,128,61,0.5)" }}>
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(14,165,233,0.7)", boxShadow: "0 0 24px rgba(14,165,233,0.5)" }}>
                           <span className="text-white font-black text-sm" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
                         </div>
                       </div>
                       <div className={`flex justify-start pl-8 ${!isLeft ? "" : "opacity-0 pointer-events-none"}`}>
                         {!isLeft && (
-                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(225deg, rgba(21,128,61,0.35) 0%, rgba(21,128,61,0.06) 60%, rgba(74,222,128,0.12) 100%)" }}>
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(225deg, rgba(14,165,233,0.35) 0%, rgba(14,165,233,0.06) 60%, rgba(125,211,252,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
-                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(21,128,61,0.065)" }}>{item.step}</span>
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(14,165,233,0.065)" }}>{item.step}</span>
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                                 <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
@@ -732,7 +732,7 @@ export default function BrandingPage() {
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#15803D]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#0EA5E9]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
@@ -758,18 +758,18 @@ export default function BrandingPage() {
           8. ZIELGRUPPE
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="zielgruppe-heading">
-        <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-[#15803D]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-[#0EA5E9]/05 rounded-full blur-[120px] pointer-events-none" />
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#15803D] text-xs font-bold uppercase tracking-[0.22em] mb-4">Zielgruppe</span>
+              <span className="inline-block text-[#0EA5E9] text-xs font-bold uppercase tracking-[0.22em] mb-4">Zielgruppe</span>
               <h2
                 id="zielgruppe-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
                 style={{ fontFamily: "var(--font-plus-jakarta)" }}
               >
                 Für welche Unternehmen<br />
-                <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">
                   ist professionelles Branding geeignet?
                 </span>
               </h2>
@@ -785,18 +785,18 @@ export default function BrandingPage() {
                   className="flex gap-5 p-6 rounded-2xl h-full"
                   style={{
                     background: z.highlight
-                      ? "linear-gradient(135deg, rgba(21,128,61,0.1) 0%, rgba(15,23,42,0.5) 100%)"
+                      ? "linear-gradient(135deg, rgba(14,165,233,0.1) 0%, rgba(15,23,42,0.5) 100%)"
                       : "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
                     border: z.highlight
-                      ? "1px solid rgba(21,128,61,0.22)"
+                      ? "1px solid rgba(14,165,233,0.22)"
                       : "1px solid rgba(255,255,255,0.06)",
                   }}
                 >
                   <div
-                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#4ADE80]"
+                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#7DD3FC]"
                     style={{
-                      background: z.highlight ? "rgba(21,128,61,0.15)" : "rgba(255,255,255,0.05)",
-                      border: z.highlight ? "1px solid rgba(21,128,61,0.25)" : "1px solid rgba(255,255,255,0.08)",
+                      background: z.highlight ? "rgba(14,165,233,0.15)" : "rgba(255,255,255,0.05)",
+                      border: z.highlight ? "1px solid rgba(14,165,233,0.25)" : "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
                     {z.icon}
@@ -805,7 +805,7 @@ export default function BrandingPage() {
                     <h3 className="text-white font-semibold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                       {z.title}
                       {z.highlight && (
-                        <span className="ml-2 text-[10px] font-bold text-[#4ADE80] bg-[#15803D]/15 border border-[#15803D]/25 rounded-full px-2 py-0.5 uppercase tracking-wider">
+                        <span className="ml-2 text-[10px] font-bold text-[#7DD3FC] bg-[#0EA5E9]/15 border border-[#0EA5E9]/25 rounded-full px-2 py-0.5 uppercase tracking-wider">
                           Schwerpunkt
                         </span>
                       )}
@@ -825,11 +825,11 @@ export default function BrandingPage() {
           9. FAQ
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="faq-heading">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#15803D]/04 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#0EA5E9]/04 rounded-full blur-[130px] pointer-events-none" />
         <div className="max-w-3xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#15803D] text-xs font-bold uppercase tracking-[0.22em] mb-4">FAQ</span>
+              <span className="inline-block text-[#0EA5E9] text-xs font-bold uppercase tracking-[0.22em] mb-4">FAQ</span>
               <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 Häufige Fragen
               </h2>
@@ -860,16 +860,16 @@ export default function BrandingPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-label="Call to Action">
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(21,128,61,0.08) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(14,165,233,0.08) 0%, transparent 70%)" }} />
         <div className="page-container relative text-center">
           <AnimatedSection>
-            <span className="inline-block text-[#86EFAC] text-xs font-bold uppercase tracking-[0.22em] mb-4">Jetzt starten</span>
+            <span className="inline-block text-[#BAE6FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">Jetzt starten</span>
             <h2
               className="text-4xl md:text-5xl font-bold text-white mb-6"
               style={{ fontFamily: "var(--font-plus-jakarta)" }}
             >
               Bereit für eine Marke die{" "}
-              <span className="bg-gradient-to-r from-[#15803D] to-[#86EFAC] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#0EA5E9] to-[#BAE6FD] bg-clip-text text-transparent">
                 in Erinnerung bleibt?
               </span>
             </h2>
@@ -880,7 +880,7 @@ export default function BrandingPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/anfragen/branding"
-                className="inline-flex items-center gap-2 bg-[#15803D] hover:bg-[#14532D] text-white font-semibold px-10 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(21,128,61,0.55)] text-base"
+                className="inline-flex items-center gap-2 bg-[#0EA5E9] hover:bg-[#0369A1] text-white font-semibold px-10 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(14,165,233,0.55)] text-base"
               >
                 Kostenloses Marken-Briefing anfragen
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>

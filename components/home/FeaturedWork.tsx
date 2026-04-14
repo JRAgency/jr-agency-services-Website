@@ -5,9 +5,9 @@ const services = [
     tag: "Leistung 01 — Webdesign",
     title: (
       <>
-        Websites, die Kunden
+        Websites, die Anfragen
         <br />
-        überzeugen — nicht nur
+        generieren — nicht nur
         <br />
         beeindrucken
       </>
@@ -24,6 +24,8 @@ const services = [
     secondaryImageSrc: "/images/01 - Apple Devices Mockup lombare.png",
     reverseLayout: false,
     accentColor: "rgba(37,99,235,0.55)",
+    href: "/webdesign",
+    ctaLabel: "Webdesign entdecken",
   },
   {
     tag: "Leistung 02 — Social Media",
@@ -46,6 +48,8 @@ const services = [
     secondaryImageSrc: "/images/M001T1427 K iPhone Mockup 19Jul25 Kimchi.png",
     reverseLayout: true,
     accentColor: "rgba(139,92,246,0.45)",
+    href: "/social-media",
+    ctaLabel: "Social Media entdecken",
   },
   {
     tag: "Leistung 03 — Branding",
@@ -68,6 +72,8 @@ const services = [
     secondaryImageSrc: "/images/Lombare.png",
     reverseLayout: false,
     accentColor: "rgba(245,158,11,0.35)",
+    href: "/branding",
+    ctaLabel: "Branding entdecken",
   },
 ];
 
@@ -85,6 +91,8 @@ export default function FeaturedWork() {
           secondaryImageSrc={service.secondaryImageSrc}
           reverseLayout={service.reverseLayout}
           accentColor={service.accentColor}
+          href={service.href}
+          ctaLabel={service.ctaLabel}
         />
       ))}
     </div>

@@ -139,7 +139,7 @@ const leistungen = [
   {
     title: "Content-Erstellung",
     desc: "Professionelle Grafiken, Texte, Reels und Stories — visuell auf Ihre Marke abgestimmt, konsistent und ansprechend.",
-    color: "#F97316",
+    color: "#7C3AED",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>,
   },
   {
@@ -258,11 +258,11 @@ function SectionDivider() {
     <div className="relative h-px mx-auto max-w-4xl px-6">
       <div
         className="absolute inset-0"
-        style={{ background: "linear-gradient(90deg, transparent 0%, rgba(249,115,22,0.25) 30%, rgba(251,146,60,0.35) 50%, rgba(249,115,22,0.25) 70%, transparent 100%)" }}
+        style={{ background: "linear-gradient(90deg, transparent 0%, rgba(124,58,237,0.25) 30%, rgba(167,139,250,0.35) 50%, rgba(124,58,237,0.25) 70%, transparent 100%)" }}
       />
       <div
         className="absolute left-1/2 -translate-x-1/2 -top-[3px] w-[6px] h-[6px] rounded-full"
-        style={{ background: "rgba(251,146,60,0.55)", boxShadow: "0 0 8px 2px rgba(249,115,22,0.45)" }}
+        style={{ background: "rgba(167,139,250,0.55)", boxShadow: "0 0 8px 2px rgba(124,58,237,0.45)" }}
       />
     </div>
   );
@@ -279,14 +279,14 @@ export default function SocialMediaPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20" aria-label="Hero">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#F97316]/10 rounded-full blur-[150px]" />
+          <div className="absolute top-1/3 right-1/4 w-[520px] h-[520px] bg-[#7C3AED]/10 rounded-full blur-[150px]" />
           <div className="absolute bottom-1/4 left-[10%] w-80 h-80 bg-[#7C3AED]/07 rounded-full blur-[110px]" />
         </div>
         <div className="page-container py-24 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-20 items-center">
             <div>
               <AnimatedSection>
-                <span className="inline-block text-[#FED7AA] text-sm font-semibold uppercase tracking-widest mb-4">
+                <span className="inline-block text-[#C4B5FD] text-sm font-semibold uppercase tracking-widest mb-4">
                   Social Media Management
                 </span>
               </AnimatedSection>
@@ -296,7 +296,7 @@ export default function SocialMediaPage() {
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
                   Social Media<br />
-                  <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">
                     Mehr Reichweite
                   </span>{" "}
                   für Ihr Unternehmen
@@ -312,7 +312,7 @@ export default function SocialMediaPage() {
                 <div className="mt-9 flex gap-4 flex-wrap">
                   <Link
                     href="/anfragen/social-media"
-                    className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#C2410C] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(249,115,22,0.5)] text-base"
+                    className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#5B21B6] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_32px_rgba(124,58,237,0.5)] text-base"
                   >
                     Kostenloses Erstgespräch
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
@@ -334,7 +334,7 @@ export default function SocialMediaPage() {
 
             <AnimatedSection delay={0.2} direction="right">
               <div className="relative flex justify-center">
-                <div className="absolute -inset-8 bg-gradient-to-br from-[#F97316]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
+                <div className="absolute -inset-8 bg-gradient-to-br from-[#7C3AED]/15 via-transparent to-[#7C3AED]/10 rounded-full blur-3xl" />
                 <Image
                   src="/images/social-media/social-instagram-showcase.png"
                   alt="Social Media Management"
@@ -356,8 +356,8 @@ export default function SocialMediaPage() {
           <div
             className="rounded-2xl px-10 py-9"
             style={{
-              background: "linear-gradient(135deg, rgba(249,115,22,0.08) 0%, rgba(15,23,42,0.5) 100%)",
-              border: "1px solid rgba(249,115,22,0.14)",
+              background: "linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(15,23,42,0.5) 100%)",
+              border: "1px solid rgba(124,58,237,0.14)",
             }}
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -384,14 +384,14 @@ export default function SocialMediaPage() {
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-16">
-              <span className="inline-block text-[#F87171] text-xs font-bold uppercase tracking-[0.22em] mb-4">Das kennen viele</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-4">Das kennen viele</span>
               <h2
                 id="problem-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
                 style={{ fontFamily: "var(--font-plus-jakarta)" }}
               >
                 Kostet Social Media mehr{" "}
-                <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">Zeit als Ergebnisse?</span>
+                <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">Zeit als Ergebnisse?</span>
               </h2>
               <p className="mt-5 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
                 Viele Unternehmen investieren täglich Zeit in Social Media — und sehen kaum Rücklauf. Das muss nicht so sein.
@@ -409,7 +409,7 @@ export default function SocialMediaPage() {
                   }}
                 >
                   <div
-                    className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-[#F87171]"
+                    className="shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-[#7C3AED]"
                     style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.2)" }}
                   >
                     {p.icon}
@@ -431,12 +431,12 @@ export default function SocialMediaPage() {
           3. LÖSUNG
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="loesung-heading">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#F97316]/06 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[480px] h-[480px] bg-[#7C3AED]/06 rounded-full blur-[130px] pointer-events-none" />
         <div className="page-container relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <AnimatedSection>
               <div className="relative flex justify-center">
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#F97316]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-[#7C3AED]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
                 <Image
                   src="/images/social-media/social-carousel-phones.png"
                   alt="Social Media Content Erstellung"
@@ -450,7 +450,7 @@ export default function SocialMediaPage() {
             </AnimatedSection>
             <div>
               <AnimatedSection delay={0.05}>
-                <span className="inline-block text-[#FED7AA] text-sm font-semibold uppercase tracking-widest mb-3">
+                <span className="inline-block text-[#C4B5FD] text-sm font-semibold uppercase tracking-widest mb-3">
                   Unser Ansatz
                 </span>
               </AnimatedSection>
@@ -461,7 +461,7 @@ export default function SocialMediaPage() {
                   style={{ fontFamily: "var(--font-plus-jakarta)" }}
                 >
                   Social Media das<br />
-                  <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">Ergebnisse liefert</span>
+                  <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">Ergebnisse liefert</span>
                 </h2>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -474,9 +474,9 @@ export default function SocialMediaPage() {
                 <div className="mt-8 space-y-4">
                   {loesungPunkte.map((item) => (
                     <div key={item.t} className="flex gap-4">
-                      <span className="mt-1 w-5 h-5 rounded-full bg-[#F97316]/15 border border-[#F97316]/30 flex items-center justify-center shrink-0">
+                      <span className="mt-1 w-5 h-5 rounded-full bg-[#7C3AED]/15 border border-[#7C3AED]/30 flex items-center justify-center shrink-0">
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                          <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#FB923C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          <path d="M1.5 4L3.2 5.8L6.5 2.2" stroke="#A78BFA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </span>
                       <div>
@@ -499,20 +499,20 @@ export default function SocialMediaPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="angebot-heading">
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(249,115,22,0.07) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(124,58,237,0.07) 0%, transparent 70%)" }} />
         <div className="page-container relative">
           <div
             className="rounded-3xl p-10 md:p-14 relative overflow-hidden"
             style={{
-              background: "linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(8,17,30,0.9) 60%)",
-              border: "1px solid rgba(249,115,22,0.2)",
+              background: "linear-gradient(135deg, rgba(124,58,237,0.1) 0%, rgba(8,17,30,0.9) 60%)",
+              border: "1px solid rgba(124,58,237,0.2)",
             }}
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#F97316]/08 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[200px] bg-[#7C3AED]/08 rounded-full blur-[80px] pointer-events-none" />
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <AnimatedSection>
-                  <span className="inline-flex items-center gap-2 text-[#FED7AA] text-xs font-bold uppercase tracking-[0.22em] mb-4">
+                  <span className="inline-flex items-center gap-2 text-[#C4B5FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="6"/></svg>
                     Unser stärkstes Angebot
                   </span>
@@ -524,7 +524,7 @@ export default function SocialMediaPage() {
                     style={{ fontFamily: "var(--font-plus-jakarta)" }}
                   >
                     Kostenloses Erstgespräch —<br />
-                    <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">
                       unverbindlich & konkret
                     </span>
                   </h2>
@@ -538,7 +538,7 @@ export default function SocialMediaPage() {
                 <AnimatedSection delay={0.15}>
                   <Link
                     href="/anfragen/social-media"
-                    className="mt-8 inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#C2410C] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(249,115,22,0.55)] text-base"
+                    className="mt-8 inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#5B21B6] text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(124,58,237,0.55)] text-base"
                   >
                     Jetzt Gespräch anfragen — kostenlos
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
@@ -561,8 +561,8 @@ export default function SocialMediaPage() {
                       className="flex gap-4 p-5 rounded-2xl"
                       style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}
                     >
-                      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#F97316]/20 border border-[#F97316]/30 flex items-center justify-center">
-                        <span className="text-[#FB923C] font-bold text-xs">{item.n}</span>
+                      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#7C3AED]/20 border border-[#7C3AED]/30 flex items-center justify-center">
+                        <span className="text-[#A78BFA] font-bold text-xs">{item.n}</span>
                       </div>
                       <div>
                         <p className="text-white font-semibold text-sm mb-1">{item.t}</p>
@@ -583,11 +583,11 @@ export default function SocialMediaPage() {
           5. LEISTUNGEN
       ══════════════════════════════════════════════════════════════ */}
       <section id="leistungen" className="py-28 relative overflow-hidden" aria-labelledby="leistungen-heading">
-        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#F97316]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute right-1/4 top-0 w-[400px] h-[400px] bg-[#7C3AED]/05 rounded-full blur-[120px] pointer-events-none" />
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#F97316] text-xs font-bold uppercase tracking-[0.22em] mb-4">Was wir bieten</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-4">Was wir bieten</span>
               <h2
                 id="leistungen-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
@@ -619,7 +619,7 @@ export default function SocialMediaPage() {
         <div className="page-container">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#F97316] text-xs font-bold uppercase tracking-[0.22em] mb-4">Überall präsent</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-4">Überall präsent</span>
               <h2
                 id="plattformen-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
@@ -664,15 +664,15 @@ export default function SocialMediaPage() {
       <section id="prozess" className="py-28 relative overflow-hidden" aria-labelledby="prozess-heading">
         <div
           className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[800px] pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(249,115,22,0.055) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 400px 100% at 50% 50%, rgba(124,58,237,0.055) 0%, transparent 70%)" }}
         />
         <div className="max-w-5xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-24">
-              <span className="inline-block text-[#F97316] text-xs font-bold uppercase tracking-[0.22em] mb-5">Unser Ablauf</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-5">Unser Ablauf</span>
               <h2 id="prozess-heading" className="text-4xl md:text-5xl font-bold text-white leading-tight mb-5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 So arbeiten{" "}
-                <span className="bg-gradient-to-r from-[#F87171] via-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">wir zusammen</span>
+                <span className="bg-gradient-to-r from-[#7C3AED] via-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">wir zusammen</span>
               </h2>
               <p className="text-white/60 text-base leading-relaxed max-w-xl mx-auto">
                 Vom ersten Gespräch bis zum laufenden Betrieb — transparent, strukturiert und ohne Überraschungen.
@@ -681,11 +681,11 @@ export default function SocialMediaPage() {
           </AnimatedSection>
           <div className="relative">
             <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(249,115,22,0.9) 6%, rgba(251,146,60,0.55) 40%, rgba(249,115,22,0.55) 60%, rgba(251,146,60,0.3) 94%, transparent 100%)", boxShadow: "0 0 16px 2px rgba(249,115,22,0.3), 0 0 40px 4px rgba(249,115,22,0.1)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(124,58,237,0.9) 6%, rgba(167,139,250,0.55) 40%, rgba(124,58,237,0.55) 60%, rgba(167,139,250,0.3) 94%, transparent 100%)", boxShadow: "0 0 16px 2px rgba(124,58,237,0.3), 0 0 40px 4px rgba(124,58,237,0.1)" }} />
             <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-[30px] bottom-[30px] w-[24px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(249,115,22,0.12) 10%, rgba(249,115,22,0.07) 90%, transparent)", filter: "blur(8px)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(124,58,237,0.12) 10%, rgba(124,58,237,0.07) 90%, transparent)", filter: "blur(8px)" }} />
             <div className="lg:hidden absolute left-[27px] top-[30px] bottom-[30px] w-[2px] rounded-full pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(249,115,22,0.85) 5%, rgba(249,115,22,0.4) 95%, transparent)", boxShadow: "0 0 10px rgba(249,115,22,0.3)" }} />
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(124,58,237,0.85) 5%, rgba(124,58,237,0.4) 95%, transparent)", boxShadow: "0 0 10px rgba(124,58,237,0.3)" }} />
             <div className="space-y-0">
               {prozess.map((item, i) => {
                 const isLeft = i % 2 === 0;
@@ -694,23 +694,23 @@ export default function SocialMediaPage() {
                     {/* Mobile */}
                     <div className="lg:hidden flex items-start gap-5 pb-10 last:pb-0">
                       <div className="relative shrink-0 z-10 mt-1">
-                        <div className="absolute inset-0 rounded-full bg-[#F97316]/20 blur-lg scale-[2.2]" />
-                        <div className="absolute inset-[-5px] rounded-full border border-[#F97316]/15" />
+                        <div className="absolute inset-0 rounded-full bg-[#7C3AED]/20 blur-lg scale-[2.2]" />
+                        <div className="absolute inset-[-5px] rounded-full border border-[#7C3AED]/15" />
                         <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
-                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #08111E 100%)", border: "1.5px solid rgba(249,115,22,0.65)", boxShadow: "0 0 20px rgba(249,115,22,0.45), inset 0 0 12px rgba(249,115,22,0.08)" }}>
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #08111E 100%)", border: "1.5px solid rgba(124,58,237,0.65)", boxShadow: "0 0 20px rgba(124,58,237,0.45), inset 0 0 12px rgba(124,58,237,0.08)" }}>
                           <span className="text-white font-black text-base" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
                         </div>
                       </div>
-                      <div className="flex-1 rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(249,115,22,0.28) 0%, rgba(249,115,22,0.05) 60%, rgba(251,146,60,0.1) 100%)" }}>
+                      <div className="flex-1 rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.28) 0%, rgba(124,58,237,0.05) 60%, rgba(167,139,250,0.1) 100%)" }}>
                         <div className="relative bg-[#08111E] rounded-2xl p-6 overflow-hidden">
-                          <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(249,115,22,0.06)" }}>{item.step}</span>
+                          <span className="absolute -bottom-5 -right-2 text-[5.5rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(124,58,237,0.06)" }}>{item.step}</span>
                           <h3 className="text-white font-bold text-lg mb-2.5 relative" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                           <p className="text-white/60 text-sm leading-relaxed mb-5 relative">{item.desc}</p>
                           <div className="relative border-t border-white/[0.05] pt-4">
                             <ul className="space-y-2">
                               {item.deliverables.map((d) => (
                                 <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#F97316]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#7C3AED]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                   {d}
                                 </li>
                               ))}
@@ -723,9 +723,9 @@ export default function SocialMediaPage() {
                     <div className="hidden lg:grid grid-cols-[1fr_96px_1fr] items-center pb-10 last:pb-0">
                       <div className={`flex justify-end pr-8 ${isLeft ? "" : "opacity-0 pointer-events-none"}`}>
                         {isLeft && (
-                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(249,115,22,0.35) 0%, rgba(249,115,22,0.06) 60%, rgba(251,146,60,0.12) 100%)" }}>
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(135deg, rgba(124,58,237,0.35) 0%, rgba(124,58,237,0.06) 60%, rgba(167,139,250,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
-                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(249,115,22,0.065)" }}>{item.step}</span>
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(124,58,237,0.065)" }}>{item.step}</span>
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                                 <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
@@ -734,7 +734,7 @@ export default function SocialMediaPage() {
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#F97316]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#7C3AED]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
@@ -746,17 +746,17 @@ export default function SocialMediaPage() {
                         )}
                       </div>
                       <div className="flex justify-center items-center relative z-10">
-                        <div className="absolute w-16 h-16 rounded-full bg-[#F97316]/10 blur-xl" />
+                        <div className="absolute w-16 h-16 rounded-full bg-[#7C3AED]/10 blur-xl" />
                         <div className="relative w-[54px] h-[54px] rounded-full flex items-center justify-center"
-                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(249,115,22,0.7)", boxShadow: "0 0 24px rgba(249,115,22,0.5)" }}>
+                          style={{ background: "linear-gradient(135deg, #0D1F3C 0%, #080F1E 100%)", border: "2px solid rgba(124,58,237,0.7)", boxShadow: "0 0 24px rgba(124,58,237,0.5)" }}>
                           <span className="text-white font-black text-sm" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.step}</span>
                         </div>
                       </div>
                       <div className={`flex justify-start pl-8 ${!isLeft ? "" : "opacity-0 pointer-events-none"}`}>
                         {!isLeft && (
-                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(225deg, rgba(249,115,22,0.35) 0%, rgba(249,115,22,0.06) 60%, rgba(251,146,60,0.12) 100%)" }}>
+                          <div className="relative w-full max-w-[360px] rounded-2xl p-px" style={{ background: "linear-gradient(225deg, rgba(124,58,237,0.35) 0%, rgba(124,58,237,0.06) 60%, rgba(167,139,250,0.12) 100%)" }}>
                             <div className="relative bg-[#08111E] rounded-2xl p-7 overflow-hidden">
-                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(249,115,22,0.065)" }}>{item.step}</span>
+                              <span className="absolute -bottom-6 -right-1 text-[8rem] font-black leading-none select-none pointer-events-none" style={{ fontFamily: "var(--font-plus-jakarta)", color: "rgba(124,58,237,0.065)" }}>{item.step}</span>
                               <div className="relative">
                                 <h3 className="text-white font-bold text-xl mb-3" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{item.title}</h3>
                                 <p className="text-white/60 text-sm leading-relaxed mb-6">{item.desc}</p>
@@ -765,7 +765,7 @@ export default function SocialMediaPage() {
                                   <ul className="space-y-2">
                                     {item.deliverables.map((d) => (
                                       <li key={d} className="flex items-center gap-2.5 text-white/60 text-sm">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#F97316]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 text-[#7C3AED]"><circle cx="7" cy="7" r="6.5" stroke="currentColor" strokeOpacity="0.35" /><path d="M4.5 7l2 2 3-3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                         {d}
                                       </li>
                                     ))}
@@ -791,18 +791,18 @@ export default function SocialMediaPage() {
           8. ZIELGRUPPE
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="zielgruppe-heading">
-        <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-[#F97316]/05 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute left-1/4 top-0 w-[400px] h-[400px] bg-[#7C3AED]/05 rounded-full blur-[120px] pointer-events-none" />
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#F97316] text-xs font-bold uppercase tracking-[0.22em] mb-4">Zielgruppe</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-4">Zielgruppe</span>
               <h2
                 id="zielgruppe-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
                 style={{ fontFamily: "var(--font-plus-jakarta)" }}
               >
                 Für welche Unternehmen<br />
-                <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">
                   ist Social Media Management geeignet?
                 </span>
               </h2>
@@ -818,18 +818,18 @@ export default function SocialMediaPage() {
                   className="flex gap-5 p-6 rounded-2xl h-full"
                   style={{
                     background: z.highlight
-                      ? "linear-gradient(135deg, rgba(249,115,22,0.1) 0%, rgba(15,23,42,0.5) 100%)"
+                      ? "linear-gradient(135deg, rgba(124,58,237,0.1) 0%, rgba(15,23,42,0.5) 100%)"
                       : "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
                     border: z.highlight
-                      ? "1px solid rgba(249,115,22,0.22)"
+                      ? "1px solid rgba(124,58,237,0.22)"
                       : "1px solid rgba(255,255,255,0.06)",
                   }}
                 >
                   <div
-                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#FB923C]"
+                    className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-[#A78BFA]"
                     style={{
-                      background: z.highlight ? "rgba(249,115,22,0.15)" : "rgba(255,255,255,0.05)",
-                      border: z.highlight ? "1px solid rgba(249,115,22,0.25)" : "1px solid rgba(255,255,255,0.08)",
+                      background: z.highlight ? "rgba(124,58,237,0.15)" : "rgba(255,255,255,0.05)",
+                      border: z.highlight ? "1px solid rgba(124,58,237,0.25)" : "1px solid rgba(255,255,255,0.08)",
                     }}
                   >
                     {z.icon}
@@ -838,7 +838,7 @@ export default function SocialMediaPage() {
                     <h3 className="text-white font-semibold text-base mb-1.5" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                       {z.title}
                       {z.highlight && (
-                        <span className="ml-2 text-[10px] font-bold text-[#FB923C] bg-[#F97316]/15 border border-[#F97316]/25 rounded-full px-2 py-0.5 uppercase tracking-wider">
+                        <span className="ml-2 text-[10px] font-bold text-[#A78BFA] bg-[#7C3AED]/15 border border-[#7C3AED]/25 rounded-full px-2 py-0.5 uppercase tracking-wider">
                           Schwerpunkt
                         </span>
                       )}
@@ -858,11 +858,11 @@ export default function SocialMediaPage() {
           9. FAQ
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-labelledby="faq-heading">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#F97316]/04 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#7C3AED]/04 rounded-full blur-[130px] pointer-events-none" />
         <div className="max-w-3xl mx-auto px-6 relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#F97316] text-xs font-bold uppercase tracking-[0.22em] mb-4">FAQ</span>
+              <span className="inline-block text-[#7C3AED] text-xs font-bold uppercase tracking-[0.22em] mb-4">FAQ</span>
               <h2 id="faq-heading" className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
                 Häufige Fragen
               </h2>
@@ -893,16 +893,16 @@ export default function SocialMediaPage() {
       ══════════════════════════════════════════════════════════════ */}
       <section className="py-28 relative overflow-hidden" aria-label="Call to Action">
         <div className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(249,115,22,0.08) 0%, transparent 70%)" }} />
+          style={{ background: "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(124,58,237,0.08) 0%, transparent 70%)" }} />
         <div className="page-container relative text-center">
           <AnimatedSection>
-            <span className="inline-block text-[#FED7AA] text-xs font-bold uppercase tracking-[0.22em] mb-4">Jetzt starten</span>
+            <span className="inline-block text-[#C4B5FD] text-xs font-bold uppercase tracking-[0.22em] mb-4">Jetzt starten</span>
             <h2
               className="text-4xl md:text-5xl font-bold text-white mb-6"
               style={{ fontFamily: "var(--font-plus-jakarta)" }}
             >
               Bereit für mehr{" "}
-              <span className="bg-gradient-to-r from-[#F87171] to-[#FBBF24] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#7C3AED] to-[#C4B5FD] bg-clip-text text-transparent">
                 Reichweite & Kunden?
               </span>
             </h2>
@@ -913,7 +913,7 @@ export default function SocialMediaPage() {
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 href="/anfragen/social-media"
-                className="inline-flex items-center gap-2 bg-[#F97316] hover:bg-[#C2410C] text-white font-semibold px-10 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(249,115,22,0.5)] text-base"
+                className="inline-flex items-center gap-2 bg-[#7C3AED] hover:bg-[#5B21B6] text-white font-semibold px-10 py-4 rounded-full transition-all duration-200 hover:shadow-[0_0_40px_rgba(124,58,237,0.5)] text-base"
               >
                 Kostenloses Erstgespräch anfragen
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>

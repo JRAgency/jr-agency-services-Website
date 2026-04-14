@@ -67,16 +67,16 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="page-container h-20 flex items-center justify-between">
+      <nav className="page-container h-24 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"
-            width={56}
-            height={56}
-            className="w-14 h-14 object-contain"
+            width={104}
+            height={104}
+            className="w-[104px] h-[104px] object-contain"
           />
           <span
             className="font-extrabold text-white text-base tracking-wider uppercase"

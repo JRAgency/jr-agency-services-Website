@@ -8,6 +8,7 @@ interface Project {
   name: string;
   cat?: string;
   category?: string;
+  result?: string;
   tags?: string[];
 }
 
@@ -158,6 +159,14 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
                 <h3 className="text-white font-extrabold text-2xl md:text-3xl" style={{ fontFamily: "var(--font-plus-jakarta)", letterSpacing: "-0.02em" }}>
                   {projekte[current].name}
                 </h3>
+                {projekte[current].result && (
+                  <p className="mt-1.5 inline-flex items-center gap-1.5 text-[#4ADE80] text-xs font-semibold">
+                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 12 L7 5 L10 9 L14 3" />
+                    </svg>
+                    {projekte[current].result}
+                  </p>
+                )}
               </div>
 
               {/* Arrows */}

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface SectionWithMockupProps {
@@ -13,6 +14,8 @@ interface SectionWithMockupProps {
   reverseLayout?: boolean;
   tag?: string;
   accentColor?: string;
+  href?: string;
+  ctaLabel?: string;
 }
 
 const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
@@ -24,6 +27,8 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
   reverseLayout = false,
   tag,
   accentColor = "rgba(37,99,235,0.5)",
+  href,
+  ctaLabel = "Mehr erfahren",
 }) => {
   const ease: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
@@ -91,6 +96,21 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                   </li>
                 ))}
               </ul>
+            )}
+
+            {href && (
+              <div className="mt-2">
+                <Link
+                  href={href}
+                  className="inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full text-sm transition-all duration-200 hover:opacity-90 hover:shadow-[0_0_28px_rgba(37,99,235,0.45)]"
+                  style={{ background: "#2563EB" }}
+                >
+                  {ctaLabel}
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 8h10M9 4l4 4-4 4" />
+                  </svg>
+                </Link>
+              </div>
             )}
           </motion.div>
 

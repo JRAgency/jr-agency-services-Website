@@ -1,29 +1,29 @@
 import Hero from "@/components/home/Hero";
 import Marquee from "@/components/home/Marquee";
-import StatsBar from "@/components/home/StatsBar";
-import Services from "@/components/home/Services";
-import Portfolio from "@/components/home/Portfolio";
+import ServiceCards from "@/components/home/ServiceCards";
+import FreeDemo from "@/components/home/FreeDemo";
 import FeaturedWork from "@/components/home/FeaturedWork";
+import Portfolio from "@/components/home/Portfolio";
 import ProcessSteps from "@/components/home/ProcessSteps";
 import Testimonials from "@/components/home/Testimonials";
-import FreeDemo from "@/components/home/FreeDemo";
 import AboutUs from "@/components/home/AboutUs";
 import FAQ from "@/components/home/FAQ";
+import FinalCTA from "@/components/home/FinalCTA";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Marquee />
-      <StatsBar />
-      <Services />
-      <Portfolio />
+      <ServiceCards />
+      <FreeDemo />
       <FeaturedWork />
+      <Portfolio />
       <ProcessSteps />
       <Testimonials />
-      <FreeDemo />
       <AboutUs />
       <FAQ />
+      <FinalCTA />
     </>
   );
 }

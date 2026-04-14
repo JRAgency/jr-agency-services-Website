@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const stats = [
   { value: "50+",  label: "Projekte abgeschlossen" },
-  { value: "Ø 14", label: "Tage bis Launch" },
+  { value: "100%", label: "Fokus auf Ergebnisse" },
   { value: "5.0★", label: "Kundenbewertung" },
   { value: "48h",  label: "Demo-Lieferzeit" },
 ];

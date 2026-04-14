@@ -70,7 +70,7 @@ export default function Nav() {
       <nav className="page-container h-24 grid grid-cols-3 items-center">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
+        <Link href="/" className="flex items-center gap-1 shrink-0">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"

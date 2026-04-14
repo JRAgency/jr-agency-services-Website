@@ -399,8 +399,8 @@ export default function BrandingPage() {
               <div className="relative flex justify-center">
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#15803D]/15 to-[#7C3AED]/10 rounded-3xl blur-2xl" />
                 <Image
-                  src="/images/branding/branding-colors.png"
-                  alt="Branding Farbsystem & Corporate Identity"
+                  src="/images/branding/icon-mockup-blue.png"
+                  alt="Branding Icon Mockup"
                   width={600}
                   height={440}
                   className="relative w-full rounded-2xl drop-shadow-2xl"
@@ -600,7 +600,7 @@ export default function BrandingPage() {
             </div>
             <AnimatedSection delay={0.1}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {inbegriffen.map((item, i) => (
+                {inbegriffen.map((item) => (
                   <div
                     key={item}
                     className="flex items-center gap-3 p-4 rounded-xl"

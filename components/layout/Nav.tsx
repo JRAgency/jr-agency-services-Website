@@ -67,19 +67,19 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="page-container h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3">
+      <nav className="relative page-container h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3">
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-0.5 shrink-0">
+        {/* Logo — centered on mobile, left on desktop */}
+        <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0 flex items-center gap-1 shrink-0">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"
             width={88}
             height={88}
-            className="w-[56px] h-[56px] md:w-[88px] md:h-[88px] object-contain"
+            className="w-[64px] h-[64px] md:w-[88px] md:h-[88px] object-contain"
           />
           <span
-            className="font-extrabold text-white text-[13px] md:text-sm tracking-wider uppercase leading-none whitespace-nowrap"
+            className="font-extrabold text-white text-sm md:text-sm tracking-wider uppercase leading-none whitespace-nowrap"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
             JR Agency Services

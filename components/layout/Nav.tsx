@@ -67,10 +67,13 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="relative page-container h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3">
+      <nav className="page-container h-20 md:h-24 flex items-center md:grid md:grid-cols-3">
 
-        {/* Logo — centered on mobile, left on desktop */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0 flex items-center gap-1 shrink-0">
+        {/* Mobile left spacer / Desktop: empty (logo takes col 1 via grid) */}
+        <div className="flex-1 md:hidden" />
+
+        {/* Logo — naturally centered on mobile (between two flex-1 spacers), left on desktop */}
+        <Link href="/" className="flex items-center gap-1 shrink-0 md:justify-start justify-center">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"
@@ -79,7 +82,7 @@ export default function Nav() {
             className="w-[64px] h-[64px] md:w-[88px] md:h-[88px] object-contain"
           />
           <span
-            className="font-extrabold text-white text-sm md:text-sm tracking-wider uppercase leading-none whitespace-nowrap"
+            className="font-extrabold text-white text-sm tracking-wider uppercase leading-none whitespace-nowrap"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
             JR Agency Services
@@ -103,7 +106,7 @@ export default function Nav() {
         </ul>
 
         {/* Right side */}
-        <div className="flex items-center justify-end gap-5">
+        <div className="flex-1 md:flex-none flex items-center justify-end gap-5">
           <NeonButton href="/anfragen" variant="default" size="default" className="hidden md:inline-flex font-bold">
             Projekt starten
           </NeonButton>

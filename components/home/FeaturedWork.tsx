@@ -46,7 +46,7 @@ const services = [
       "Monatliches Reporting & Analyse",
     ],
     primaryImageSrc: "/images/social-media/M001T1621 Carousel Mockup 14Sep25.png",
-    secondaryImageSrc: "/images/social-media/M001T1637 Glass Instagram Showcase 21Sep25.png",
+    secondaryImageSrc: "/images/REPLACE THIS SCREEN1111211171111111.png",
     reverseLayout: true,
     accentColor: "rgba(139,92,246,0.45)",
     href: "/social-media",

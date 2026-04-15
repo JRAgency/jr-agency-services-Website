@@ -67,13 +67,10 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="page-container h-20 md:h-24 flex items-center md:grid md:grid-cols-3">
+      <nav className="page-container h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3">
 
-        {/* Mobile left spacer / Desktop: empty (logo takes col 1 via grid) */}
-        <div className="flex-1 md:hidden" />
-
-        {/* Logo — naturally centered on mobile (between two flex-1 spacers), left on desktop */}
-        <Link href="/" className="flex items-center gap-1 shrink-0 md:justify-start justify-center">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-1 shrink-0">
           <Image
             src="/images/JR Logo (glow effekt) PNG.png"
             alt="JR Agency"
@@ -106,7 +103,7 @@ export default function Nav() {
         </ul>
 
         {/* Right side */}
-        <div className="flex-1 md:flex-none flex items-center justify-end gap-5">
+        <div className="flex items-center justify-end gap-5">
           <NeonButton href="/anfragen" variant="default" size="default" className="hidden md:inline-flex font-bold">
             Projekt starten
           </NeonButton>

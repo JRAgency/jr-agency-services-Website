@@ -122,7 +122,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
           {/* ── Mockup / Carousel ─────────────────── */}
           <motion.div
             className="w-full md:w-1/2 relative"
-            style={{ order: reverseLayout ? 1 : 2, minHeight: "420px" }}
+            style={{ order: reverseLayout ? 1 : 2, minHeight: "clamp(280px, 55vw, 420px)" }}
             initial={{ opacity: 0, x: reverseLayout ? -40 : 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -136,7 +136,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                 className="relative rounded-3xl overflow-hidden border border-white/[0.09] z-10"
                 style={{
                   width: "100%",
-                  height: "480px",
+                  height: "clamp(280px, 55vw, 480px)",
                   background: "rgba(255,255,255,0.03)",
                   boxShadow: `0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05)`,
                 }}
@@ -187,7 +187,7 @@ const SectionWithMockup: React.FC<SectionWithMockupProps> = ({
                   className="relative rounded-3xl overflow-hidden border border-white/[0.09] z-10 ml-auto"
                   style={{
                     width: "85%",
-                    height: "480px",
+                    height: "clamp(280px, 55vw, 480px)",
                     marginLeft: reverseLayout ? "0" : "auto",
                     marginRight: reverseLayout ? "auto" : "0",
                     background: "rgba(255,255,255,0.03)",

@@ -67,7 +67,7 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <nav className="page-container h-24 grid grid-cols-3 items-center">
+      <nav className="page-container h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-1 shrink-0">
@@ -76,10 +76,10 @@ export default function Nav() {
             alt="JR Agency"
             width={88}
             height={88}
-            className="w-[88px] h-[88px] object-contain"
+            className="w-[56px] h-[56px] md:w-[88px] md:h-[88px] object-contain"
           />
           <span
-            className="font-extrabold text-white text-base tracking-wider uppercase leading-none"
+            className="font-extrabold text-white text-[11px] md:text-sm tracking-wider uppercase leading-none whitespace-nowrap"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
             JR Agency Services

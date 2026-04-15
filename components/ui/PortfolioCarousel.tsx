@@ -101,7 +101,7 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
         onMouseLeave={() => setPaused(false)}
       >
         {/* Main card */}
-        <div className="relative rounded-3xl overflow-hidden bg-[#0A0F1E]" style={{ aspectRatio: "16/9" }}>
+        <div className="relative rounded-3xl overflow-hidden bg-[#0A0F1E] aspect-[4/3] md:aspect-[16/9]">
 
           {/* Exiting slide */}
           {prev !== null && (
@@ -115,7 +115,7 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
                 quality={90}
                 style={{ animation: "none" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             </div>
           )}
 
@@ -131,73 +131,60 @@ export default function PortfolioCarousel({ projekte }: { projekte: Project[] })
               quality={90}
               style={{ animation: !animating ? "kenburns 6s ease-in-out alternate infinite" : "none" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           </div>
 
-          {/* Overlay content */}
-          <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
-            {/* Top: slide counter */}
-            <div className="flex justify-end">
-              <span className="text-white/40 text-xs font-mono tabular-nums">
+          {/* Overlay: only counter + arrows, NO text on image */}
+          <div className="absolute inset-0 flex flex-col justify-between p-5 md:p-10">
+            <div className="flex justify-between items-start">
+              {/* Tags top-left */}
+              <div className="flex gap-2 flex-wrap">
+                {(projekte[current].tags?.length ?? 0) > 0 && projekte[current].tags!.map(tag => (
+                  <span key={tag} className="text-[#93C5FD] text-[10px] font-bold uppercase tracking-widest bg-[#2563EB]/20 border border-[#2563EB]/30 px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {/* Counter top-right */}
+              <span className="text-white/40 text-xs font-mono tabular-nums shrink-0">
                 {String(current + 1).padStart(2, "0")} / {String(projekte.length).padStart(2, "0")}
               </span>
             </div>
 
-            {/* Bottom: project info */}
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                {(projekte[current].tags?.length ?? 0) > 0 && (
-                  <div className="flex gap-2 mb-3">
-                    {projekte[current].tags!.map(tag => (
-                      <span key={tag} className="text-[#93C5FD] text-[10px] font-bold uppercase tracking-widest bg-[#2563EB]/20 border border-[#2563EB]/30 px-2.5 py-1 rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                <p className="text-white/50 text-xs uppercase tracking-[0.18em] mb-1">{projekte[current].cat ?? projekte[current].category}</p>
-                <h3 className="text-white font-extrabold text-2xl md:text-3xl" style={{ fontFamily: "var(--font-plus-jakarta)", letterSpacing: "-0.02em" }}>
-                  {projekte[current].name}
-                </h3>
-                {projekte[current].result && (
-                  <p className="mt-1.5 inline-flex items-center gap-1.5 text-[#4ADE80] text-xs font-semibold">
-                    <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 12 L7 5 L10 9 L14 3" />
-                    </svg>
-                    {projekte[current].result}
-                  </p>
-                )}
-              </div>
-
-              {/* Arrows */}
-              <div className="flex gap-2 shrink-0">
-                <button
-                  onClick={prev_}
-                  className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/30 flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
-                >
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M10 3L5 8l5 5" />
-                  </svg>
-                </button>
-                <button
-                  onClick={next}
-                  className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/30 flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
-                >
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M6 3l5 5-5 5" />
-                  </svg>
-                </button>
-              </div>
+            {/* Arrows bottom-right only */}
+            <div className="flex justify-end gap-2">
+              <button onClick={prev_} className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center transition-all duration-200 backdrop-blur-sm">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 3L5 8l5 5" /></svg>
+              </button>
+              <button onClick={next} className="w-10 h-10 md:w-11 md:h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center transition-all duration-200 backdrop-blur-sm">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 3l5 5-5 5" /></svg>
+              </button>
             </div>
           </div>
 
           {/* Progress bar */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-white/10">
             <div
-              className="h-full bg-gradient-to-r from-[#2563EB] to-[#93C5FD] transition-none"
+              className="h-full bg-gradient-to-r from-[#2563EB] to-[#93C5FD]"
               style={{ width: `${progress}%`, transition: paused ? "none" : "width 0.05s linear" }}
             />
           </div>
+        </div>
+
+        {/* Project info BELOW image on all screens */}
+        <div className="mt-4 px-1">
+          <p className="text-white/45 text-xs uppercase tracking-[0.18em] mb-1">{projekte[current].cat ?? projekte[current].category}</p>
+          <h3 className="text-white font-extrabold text-xl md:text-2xl" style={{ fontFamily: "var(--font-plus-jakarta)", letterSpacing: "-0.02em" }}>
+            {projekte[current].name}
+          </h3>
+          {projekte[current].result && (
+            <p className="mt-1 inline-flex items-center gap-1.5 text-[#4ADE80] text-xs font-semibold">
+              <svg width="10" height="10" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 12 L7 5 L10 9 L14 3" />
+              </svg>
+              {projekte[current].result}
+            </p>
+          )}
         </div>
 
         {/* Dot indicators */}

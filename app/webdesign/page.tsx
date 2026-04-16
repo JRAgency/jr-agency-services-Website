@@ -9,9 +9,16 @@ import { FaqAccordion, FaqAccordionItem, FaqAccordionTrigger, FaqAccordionConten
 // ─── Metadata (SEO) ───────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Webdesign Agentur – Professionelle Websites | JR Agency",
+  title: "Webdesign Agentur – Professionelle Websites die Anfragen generieren",
   description:
-    "Webdesign Agentur für B2B & Maschinenbau. Kostenlose Demo-Website in 48h. Professionelle Websites die Anfragen generieren.",
+    "Individuelle Websites für Unternehmen — kein Template, kein Copy-Paste. Mobile-first, blitzschnell, SEO-optimiert. Kostenlose Demo in 48 Stunden.",
+  alternates: { canonical: "https://www.jragencyservices.com/webdesign" },
+  openGraph: {
+    title: "Webdesign Agentur – Professionelle Websites | JR Agency Services",
+    description: "Individuelle Websites die Besucher in Anfragen verwandeln. Kostenlose Demo in 48 Stunden.",
+    url: "https://www.jragencyservices.com/webdesign",
+    type: "website",
+  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

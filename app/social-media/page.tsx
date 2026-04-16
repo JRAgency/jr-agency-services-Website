@@ -6,9 +6,16 @@ import LeistungenCard from "@/components/ui/LeistungenCard";
 import { FaqAccordion, FaqAccordionItem, FaqAccordionTrigger, FaqAccordionContent } from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Social Media Management – JR Agency Services",
+  title: "Social Media Management – Content der performt",
   description:
-    "Professionelles Social Media Management für Instagram, TikTok, Facebook & LinkedIn. Strategisch, konsistent, messbar.",
+    "Professionelles Social Media Management für Instagram, TikTok & LinkedIn. Content-Erstellung, Community Management und Werbeanzeigen mit messbarem ROI.",
+  alternates: { canonical: "https://www.jragencyservices.com/social-media" },
+  openGraph: {
+    title: "Social Media Management – JR Agency Services",
+    description: "Social Media das performt — Content, Community und Ads aus einer Hand.",
+    url: "https://www.jragencyservices.com/social-media",
+    type: "website",
+  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

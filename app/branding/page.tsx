@@ -6,9 +6,16 @@ import LeistungenCard from "@/components/ui/LeistungenCard";
 import { FaqAccordion, FaqAccordionItem, FaqAccordionTrigger, FaqAccordionContent } from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Branding – JR Agency Services",
+  title: "Branding & Corporate Identity – Ihre Marke die bleibt",
   description:
-    "Einzigartige Markenidentitäten die in Erinnerung bleiben. Logo-Design, Corporate Identity, Visitenkarten und mehr.",
+    "Logo-Design, Corporate Identity und Brand Guidelines für Unternehmen. Eine starke Marke die sofort Vertrauen schafft und aus der Masse heraussticht.",
+  alternates: { canonical: "https://www.jragencyservices.com/branding" },
+  openGraph: {
+    title: "Branding & Corporate Identity – JR Agency Services",
+    description: "Logo, Farben, Typografie — eine Markenidentität die professionell wirkt und in Erinnerung bleibt.",
+    url: "https://www.jragencyservices.com/branding",
+    type: "website",
+  },
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────

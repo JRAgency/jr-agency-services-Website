@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Fingerprint } from "lucide-react";
 
 type ConsentState = {
   necessary: true;
@@ -83,18 +84,7 @@ export default function CookieBanner() {
           boxShadow: "0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06)",
         }}
       >
-        {/* Fingerprint icon */}
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
-          <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
-          <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
-          <path d="M2 12a10 10 0 0 1 18-6" />
-          <path d="M2 17c1 .5 2.5 1 4 1" />
-          <path d="M20 12a10 10 0 0 1-.25 2.25" />
-          <path d="M6 10a6 6 0 0 1 11.8-1.27" />
-          <path d="M7 16.3c.3-1.3.3-2.6.3-4.3" />
-          <path d="M9.7 6.46A6 6 0 0 1 17.85 13" />
-        </svg>
+        <Fingerprint size={22} color="#60A5FA" strokeWidth={1.5} />
       </button>
     ) : null;
   }

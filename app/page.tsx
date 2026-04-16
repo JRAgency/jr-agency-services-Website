@@ -5,7 +5,6 @@ import FreeDemo from "@/components/home/FreeDemo";
 import FeaturedWork from "@/components/home/FeaturedWork";
 import Portfolio from "@/components/home/Portfolio";
 import ProcessSteps from "@/components/home/ProcessSteps";
-import Testimonials from "@/components/home/Testimonials";
 import AboutUs from "@/components/home/AboutUs";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -20,7 +19,6 @@ export default function Home() {
       <FeaturedWork />
       <Portfolio />
       <ProcessSteps />
-      <Testimonials />
       <AboutUs />
       <FAQ />
       <FinalCTA />

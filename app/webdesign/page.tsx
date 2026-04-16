@@ -319,12 +319,6 @@ export default function WebdesignPage() {
                     Kostenlose Demo anfordern
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
                   </Link>
-                  <Link
-                    href="/kontakt"
-                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
-                  >
-                    Gespräch buchen
-                  </Link>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
@@ -999,12 +993,6 @@ export default function WebdesignPage() {
                   >
                     Demo anfordern — kostenlos
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
-                  </Link>
-                  <Link
-                    href="/termin"
-                    className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-[#94A3B8]/15 transition-all duration-200 text-base"
-                  >
-                    Gespräch buchen
                   </Link>
                 </div>
                 <p className="mt-4 text-white/60/60 text-sm">

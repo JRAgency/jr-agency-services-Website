@@ -925,12 +925,6 @@ export default function SocialMediaPage() {
                 Kostenloses Erstgespräch anfragen
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4" /></svg>
               </Link>
-              <Link
-                href="/termin"
-                className="inline-flex items-center gap-2 bg-white/[0.06] hover:bg-white/[0.1] text-white font-semibold px-8 py-4 rounded-full border border-white/10 transition-all duration-200 text-base"
-              >
-                Termin buchen
-              </Link>
             </div>
             <p className="mt-5 text-white/40 text-sm">Kein Risiko · Keine Vertragsbindung · Antwort in 24h</p>
           </AnimatedSection>

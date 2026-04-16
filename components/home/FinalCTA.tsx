@@ -71,12 +71,6 @@ export default function FinalCTA() {
                     <path d="M3 8h10M9 4l4 4-4 4" />
                   </svg>
                 </Link>
-                <Link
-                  href="/termin"
-                  className="inline-flex items-center gap-2 text-white/50 hover:text-white font-medium px-7 py-3.5 rounded-full border border-white/[0.1] hover:border-white/[0.2] bg-white/[0.03] transition-all duration-200 text-sm"
-                >
-                  Gespräch buchen
-                </Link>
               </div>
 
             </div>

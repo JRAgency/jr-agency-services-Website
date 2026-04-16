@@ -41,10 +41,14 @@ export default function CookieBanner() {
     marketing: false,
   });
 
+  const [hasConsented, setHasConsented] = useState(false);
+
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (!stored) {
       setTimeout(() => setVisible(true), 800);
+    } else {
+      setHasConsented(true);
     }
   }, []);
 
@@ -54,9 +58,46 @@ export default function CookieBanner() {
       : { necessary: true, analytics: consent.analytics, marketing: consent.marketing };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(result));
     setVisible(false);
+    setHasConsented(true);
+    setExpanded(false);
   };
 
-  if (!visible) return null;
+  const reopen = () => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored) as ConsentState;
+      setConsent(parsed);
+    }
+    setVisible(true);
+  };
+
+  if (!visible) {
+    return hasConsented ? (
+      <button
+        onClick={reopen}
+        aria-label="Cookie-Einstellungen öffnen"
+        className="fixed bottom-5 left-5 z-[999] w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110 hover:shadow-[0_0_24px_rgba(37,99,235,0.5)]"
+        style={{
+          background: "linear-gradient(135deg, rgba(8,17,30,0.98) 0%, rgba(5,10,20,0.98) 100%)",
+          border: "1px solid rgba(255,255,255,0.12)",
+          boxShadow: "0 4px 20px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06)",
+        }}
+      >
+        {/* Fingerprint icon */}
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
+          <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
+          <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
+          <path d="M2 12a10 10 0 0 1 18-6" />
+          <path d="M2 17c1 .5 2.5 1 4 1" />
+          <path d="M20 12a10 10 0 0 1-.25 2.25" />
+          <path d="M6 10a6 6 0 0 1 11.8-1.27" />
+          <path d="M7 16.3c.3-1.3.3-2.6.3-4.3" />
+          <path d="M9.7 6.46A6 6 0 0 1 17.85 13" />
+        </svg>
+      </button>
+    ) : null;
+  }
 
   return (
     <>

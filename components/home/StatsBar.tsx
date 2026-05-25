@@ -1,10 +1,10 @@
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const stats = [
-  { value: "50+",  label: "Projekte abgeschlossen" },
-  { value: "100%", label: "Fokus auf Ergebnisse" },
-  { value: "5.0★", label: "Kundenbewertung" },
   { value: "48h",  label: "Demo-Lieferzeit" },
+  { value: "100%", label: "Individuell, kein Template" },
+  { value: "1:1",  label: "Direktkontakt zum Gründer" },
+  { value: "0 €",  label: "Demo kostenlos" },
 ];
 
 export default function StatsBar() {

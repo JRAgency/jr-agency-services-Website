@@ -16,9 +16,9 @@ const animatedTexts = [
 ];
 
 const proofItems = [
-  { img: "/images/01 - Apple Devices Mockup lombare.png", name: "Lombare Parfum", label: "E-Commerce +340% Traffic" },
-  { img: "/images/01 - Apple Devices Mockup kimchi.png", name: "Restaurant-Referenz", label: "Restaurant +180% Anfragen" },
-  { img: "/images/01 - Apple Devices Mockup Mana.png", name: "Mana Café", label: "Gastronomie neue Kunden" },
+  { img: "/images/01 - Apple Devices Mockup lombare.png", name: "E-Commerce-Konzept", label: "Webdesign & Branding" },
+  { img: "/images/01 - Apple Devices Mockup kimchi.png", name: "Restaurant-Konzept",  label: "Responsive & SEO" },
+  { img: "/images/01 - Apple Devices Mockup Mana.png",   name: "Café-Konzept",        label: "Gastronomie-Webdesign" },
 ];
 
 const reasons = [
@@ -172,7 +172,7 @@ export default function TypewriterSection() {
 
           {/* Right — social proof cards */}
           <div className="space-y-4">
-            {/* Big social proof number */}
+            {/* Highlight-Karte: Demo-Versprechen */}
             <motion.div
               initial={{ opacity: 0, x: 20 }} animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.15 }}
@@ -181,34 +181,20 @@ export default function TypewriterSection() {
             >
               <div className="absolute top-0 left-0 right-0 h-[1px]" style={{ background: `linear-gradient(90deg, transparent, ${C}50, transparent)` }} />
               <div className="absolute top-1/2 right-0 -translate-y-1/2 w-48 h-48 rounded-full pointer-events-none" style={{ background: `radial-gradient(ellipse, ${C}10 0%, transparent 65%)`, transform: "translate(30%, -50%)" }} />
-              <div className="relative flex items-center gap-6">
-                {/* Stacked client thumbnails */}
-                <div className="flex -space-x-3 shrink-0">
-                  {proofItems.map((p, i) => (
-                    <div key={i} className="w-10 h-10 rounded-full overflow-hidden border-2 border-[#0a1628]" style={{ zIndex: proofItems.length - i }}>
-                      <Image src={p.img} alt={p.name} width={40} height={40} className="w-full h-full object-cover" />
-                    </div>
-                  ))}
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center border-2 border-[#0a1628] text-[10px] font-bold text-white" style={{ background: C, zIndex: 0 }}>
-                    +27
-                  </div>
-                </div>
-                <div>
-                  <p className="text-white font-extrabold text-2xl" style={{ fontFamily: "var(--font-plus-jakarta)" }}>30+</p>
-                  <p className="text-[#4E6080] text-xs mt-0.5">zufriedene Kunden vertrauen JR Agency</p>
-                </div>
+              <div className="relative">
+                <p className="text-[#93C5FD] text-[11px] font-bold uppercase tracking-[0.18em] mb-3">Unser Versprechen</p>
+                <p className="text-white font-extrabold text-2xl leading-tight" style={{ fontFamily: "var(--font-plus-jakarta)" }}>
+                  Erste Demo in 48 Stunden
+                </p>
+                <p className="text-[#4E6080] text-sm mt-2 leading-relaxed">
+                  Kostenlos, unverbindlich und individuell — Sie sehen Ihre neue Website, bevor Sie sich entscheiden.
+                </p>
               </div>
               <div className="relative mt-5 pt-5 border-t border-white/[0.05]">
-                <div className="flex gap-1 mb-2">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-                  ))}
-                  <span className="text-[#F59E0B] text-[11px] font-bold ml-1">5.0</span>
-                </div>
-                <p className="text-[#64748B] text-[13px] leading-relaxed italic">
-                  &ldquo;In 48 Stunden haben wir unsere erste Demo gesehen — innerhalb von 2 Wochen waren wir live. Beste Entscheidung!&rdquo;
+                <p className="text-[#64748B] text-[13px] leading-relaxed">
+                  Kein Risiko · Keine Vorauszahlung · Kein Vertrag.
+                  Wir investieren zuerst — Sie überzeugen sich vom Ergebnis.
                 </p>
-                <p className="text-white/40 text-[11px] mt-2 font-medium">— Zufriedener Kunde, Stuttgart</p>
               </div>
             </motion.div>
 

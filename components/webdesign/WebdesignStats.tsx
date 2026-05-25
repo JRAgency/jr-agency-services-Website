@@ -4,10 +4,10 @@ import { useRef, useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [
-  { value: 30,  suffix: "+",  label: "Projekte abgeschlossen" },
-  { value: 95,  suffix: "+",  label: "Lighthouse Score" },
-  { value: 100, suffix: "%",  label: "Kundenzufriedenheit" },
   { value: 48,  suffix: "h",  label: "Erste Demo live" },
+  { value: 95,  suffix: "+",  label: "Lighthouse Score (Ziel)" },
+  { value: 100, suffix: "%",  label: "Individuell, kein Template" },
+  { value: 0,   suffix: " €", label: "Demo kostenlos" },
 ];
 
 function useCountUp(target: number, active: boolean, duration = 1600) {

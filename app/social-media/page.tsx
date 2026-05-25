@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "Ø +340%", label: "Follower-Wachstum" },
-  { value: "30+", label: "Posts pro Monat" },
-  { value: "3–5×", label: "Mehr Reichweite" },
+  { value: "1:1",  label: "Direktkontakt zum Gründer" },
+  { value: "100%", label: "Inhouse — kein Outsourcing" },
+  { value: "Mtl.", label: "Monatlich kündbar" },
   { value: "100%", label: "Transparentes Reporting" },
 ];
 
@@ -238,7 +238,7 @@ const zielgruppen = [
 const faq = [
   {
     frage: "Wann sind erste Ergebnisse sichtbar?",
-    antwort: "In den ersten 4–6 Wochen sehen Sie erste Verbesserungen in Reichweite und Engagement. Nachhaltiges Follower-Wachstum und messbare Anfragen entstehen typischerweise ab Monat 2–3. Social Media ist ein langfristiger Kanal — aber mit unserer Strategie deutlich schneller.",
+    antwort: "Social Media ist ein langfristiger Kanal. Erste Bewegungen bei Reichweite und Engagement sind in der Regel nach einigen Wochen sichtbar, nachhaltiges Follower-Wachstum und messbare Anfragen entstehen typischerweise über mehrere Monate hinweg. Die genaue Geschwindigkeit hängt stark von Branche, Ausgangslage und Budget ab — wir geben Ihnen vorab eine realistische Einschätzung.",
   },
   {
     frage: "Was muss ich selbst liefern?",

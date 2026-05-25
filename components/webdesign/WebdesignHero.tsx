@@ -190,9 +190,9 @@ export default function WebdesignHero() {
             className="mt-10 flex justify-center gap-8 flex-wrap"
           >
             {[
-              { val: "30+", txt: "Projekte" },
-              { val: "95+", txt: "Lighthouse Score" },
               { val: "48h", txt: "Erste Demo" },
+              { val: "95+", txt: "Lighthouse Score (Ziel)" },
+              { val: "0 €", txt: "Demo kostenlos" },
             ].map((s) => (
               <div key={s.txt} className="text-center">
                 <p

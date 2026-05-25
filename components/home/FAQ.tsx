@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "Kümmern Sie sich auch um die Website nach dem Launch?",
-    a: "Ja. Wir bleiben langfristiger Ansprechpartner für technischen Support, Updates und Weiterentwicklungen. Kunden, die wachsen, kommen immer wieder zu uns.",
+    a: "Ja. Auf Wunsch übernehmen wir auch nach dem Launch technischen Support, Updates und Weiterentwicklungen — als langfristiger Ansprechpartner.",
   },
   {
     q: "Kann ich auch nur Social Media oder nur Branding beauftragen?",

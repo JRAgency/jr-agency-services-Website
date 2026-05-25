@@ -197,7 +197,7 @@ export default function AnfragenPage() {
                   </motion.p>
                   <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.34 }}
                     className="flex items-center justify-center gap-8 mb-12">
-                    {[["48h", "Lieferzeit"], ["100%", "Kostenlos"], ["30+", "Projekte"]].map(([val, label]) => (
+                    {[["48h", "Lieferzeit"], ["100%", "Kostenlos"], ["0 €", "Unverbindlich"]].map(([val, label]) => (
                       <div key={label} className="text-center">
                         <p className="text-white font-black text-2xl" style={{ fontFamily: "var(--font-plus-jakarta)" }}>{val}</p>
                         <p className="text-white/30 text-xs mt-0.5">{label}</p>

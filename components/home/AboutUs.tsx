@@ -21,16 +21,6 @@ export default function AboutUs() {
                   className="w-full"
                 />
               </div>
-              {/* Badge */}
-              <div className="absolute -bottom-5 -right-5 bg-[#0A0F1E] border border-white/[0.1] rounded-2xl px-6 py-4 shadow-2xl">
-                <p
-                  className="text-3xl font-extrabold text-white"
-                  style={{ fontFamily: "var(--font-plus-jakarta)" }}
-                >
-                  50+
-                </p>
-                <p className="text-white/35 text-xs">Projekte abgeschlossen</p>
-              </div>
             </div>
           </AnimatedSection>
 

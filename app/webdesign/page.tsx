@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { value: "30+",  label: "Projekte umgesetzt" },
   { value: "48h",  label: "Erste Demo live" },
-  { value: "95+",  label: "Lighthouse Score" },
-  { value: "100%", label: "Kundenzufriedenheit" },
+  { value: "95+",  label: "Lighthouse Score (Ziel)" },
+  { value: "100%", label: "Individuell, kein Template" },
+  { value: "0 €",  label: "Demo kostenlos" },
 ];
 
 const probleme = [
@@ -111,37 +111,37 @@ const leistungen = [
 const referenzen = [
   {
     img: "01 - Apple Devices Mockup Peter schmid GMBH.png",
-    name: "Unternehmens-Referenz",
+    name: "B2B-Konzept",
     branche: "Maschinenbau & Fertigung",
-    problem: "Veraltete Website ohne klare Leistungsdarstellung. Potenzielle Geschäftskunden wurden digital nicht erreicht.",
-    ergebnis: "Moderne B2B-Website mit strukturierter Produktübersicht, Kontaktformular und technischer SEO-Optimierung.",
+    ansatz: "Strukturierte Produktübersicht, klares Kontaktformular und technische SEO-Grundoptimierung für B2B-Industriebetriebe.",
+    fokus: "Vertrauensaufbau und sauber gegliederte Leistungsdarstellung — typische Anforderungen im Maschinenbau-Umfeld.",
     tags: ["B2B", "Maschinenbau"],
   },
   {
     img: "01 - Apple Devices Mockup lombare.png",
-    name: "Lombare Parfum",
+    name: "E-Commerce-Konzept",
     branche: "E-Commerce & Einzelhandel",
-    problem: "Kein Online-Auftritt, kein Shop. Der gesamte Umsatz hing am stationären Geschäft ohne digitale Reichweite.",
-    ergebnis: "Vollständiger Online-Shop mit Zahlungsintegration, mobilem Design und SEO-Grundoptimierung.",
+    ansatz: "Shop-Design mit Zahlungsintegration, mobilem Layout und SEO-Grundoptimierung — passend für Marken im Einzelhandel.",
+    fokus: "Produktinszenierung und reibungsloser Kaufprozess vom ersten Eindruck bis zum Checkout.",
     tags: ["E-Commerce", "B2C"],
   },
   {
     img: "01 - Apple Devices Mockup kimchi.png",
-    name: "Restaurant-Referenz",
+    name: "Gastronomie-Konzept",
     branche: "Gastronomie",
-    problem: "Keine Web-Präsenz, kaum Google-Sichtbarkeit. Neukunden kamen fast ausschließlich über Empfehlung.",
-    ergebnis: "Restaurant-Website mit Speisekarte, Google-Präsenz und Reservierungsmöglichkeit — in unter 2 Wochen live.",
+    ansatz: "Restaurant-Website mit Speisekarte, mobiloptimierter Darstellung und Anbindung an Google-Präsenz.",
+    fokus: "Schneller Zugriff auf Karte, Öffnungszeiten und Reservierung — die wichtigsten Touchpoints für Gastronomie-Besucher.",
     tags: ["Restaurant", "B2C"],
   },
 ];
 
 const projekte = [
-  { img: "01 - Apple Devices Mockup lombare.png",           name: "Lombare Parfum",        cat: "Webdesign & Branding",  tags: ["E-Commerce", "Branding"] },
-  { img: "01 - Apple Devices Mockup kimchi.png",            name: "Restaurant-Referenz", cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
-  { img: "01 - Apple Devices Mockup Mana.png",              name: "Mana Café",             cat: "Gastronomie",           tags: ["Webdesign", "CMS"] },
-  { img: "01 - Apple Devices Mockup Peter schmid GMBH.png", name: "Peter Schmid GmbH",     cat: "Unternehmenswebsite",   tags: ["B2B", "Corporate"] },
-  { img: "02 - Apple Devices Mockup.png",                   name: "Business Class",        cat: "Webdesign",             tags: ["Landing Page", "Conversion"] },
-  { img: "03 - Apple Devices Mockup.png",                   name: "YAMYAM",                cat: "Food & Gastronomie",    tags: ["Responsive", "Webdesign"] },
+  { img: "01 - Apple Devices Mockup lombare.png",           name: "E-Commerce-Konzept",     cat: "Webdesign & Branding",  tags: ["E-Commerce", "Branding"] },
+  { img: "01 - Apple Devices Mockup kimchi.png",            name: "Restaurant-Konzept",     cat: "Restaurant Website",    tags: ["Responsive", "SEO"] },
+  { img: "01 - Apple Devices Mockup Mana.png",              name: "Café-Konzept",           cat: "Gastronomie",           tags: ["Webdesign", "CMS"] },
+  { img: "01 - Apple Devices Mockup Peter schmid GMBH.png", name: "Industrie-Konzept",      cat: "Unternehmenswebsite",   tags: ["B2B", "Corporate"] },
+  { img: "02 - Apple Devices Mockup.png",                   name: "Landing-Page-Konzept",   cat: "Webdesign",             tags: ["Landing Page", "Conversion"] },
+  { img: "03 - Apple Devices Mockup.png",                   name: "Food-Konzept",           cat: "Food & Gastronomie",    tags: ["Responsive", "Webdesign"] },
 ];
 
 const prozess = [
@@ -649,16 +649,16 @@ export default function WebdesignPage() {
         <div className="page-container relative">
           <AnimatedSection>
             <div className="text-center mb-14">
-              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Referenzen</span>
+              <span className="inline-block text-[#2563EB] text-xs font-bold uppercase tracking-[0.22em] mb-4">Beispielkonzepte</span>
               <h2
                 id="referenzen-heading"
                 className="text-4xl md:text-5xl font-bold text-white"
                 style={{ fontFamily: "var(--font-plus-jakarta)" }}
               >
-                Projekte die überzeugen
+                Designs für verschiedene Branchen
               </h2>
               <p className="mt-4 text-white/60 text-base max-w-lg mx-auto leading-relaxed">
-                Konkrete Ergebnisse für echte Unternehmen — von B2B-Maschinenbau bis Gastronomie.
+                Beispielhafte Konzepte und Designansätze — von B2B-Industrie bis Gastronomie.
               </p>
             </div>
           </AnimatedSection>
@@ -693,12 +693,12 @@ export default function WebdesignPage() {
                       {ref.name}
                     </h3>
                     <div>
-                      <p className="text-[#F87171] text-xs font-semibold uppercase tracking-widest mb-1">Problem</p>
-                      <p className="text-white/60 text-sm leading-relaxed">{ref.problem}</p>
+                      <p className="text-[#93C5FD] text-xs font-semibold uppercase tracking-widest mb-1">Ansatz</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{ref.ansatz}</p>
                     </div>
                     <div>
-                      <p className="text-[#34D399] text-xs font-semibold uppercase tracking-widest mb-1">Ergebnis</p>
-                      <p className="text-white/60 text-sm leading-relaxed">{ref.ergebnis}</p>
+                      <p className="text-[#34D399] text-xs font-semibold uppercase tracking-widest mb-1">Fokus</p>
+                      <p className="text-white/60 text-sm leading-relaxed">{ref.fokus}</p>
                     </div>
                     <div className="mt-auto flex gap-2 flex-wrap">
                       {ref.tags.map((t) => (

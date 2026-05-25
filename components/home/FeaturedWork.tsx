@@ -13,12 +13,12 @@ const services = [
       </>
     ),
     description:
-      "Jede Website entsteht individuell für Ihr Unternehmen. Kein Template, kein Copy-Paste. Wir bauen schnelle, moderne Auftritte die Besucher zu Anfragen machen — fertig in Ø 14 Tagen.",
+      "Jede Website entsteht individuell für Ihr Unternehmen. Kein Template, kein Copy-Paste. Wir bauen schnelle, moderne Auftritte, die Besucher zu Anfragen machen.",
     features: [
       "Individuelles Design — kein Template",
       "Mobile-first & blitzschnell",
       "SEO-optimiert von Anfang an",
-      "Fertig in durchschnittlich 14 Tagen",
+      "Klare Zeitschätzung nach Erstgespräch",
     ],
     primaryImageSrc: "/images/mockup 14 inch mana.png",
     secondaryImageSrc: "/images/M001T1427 I iPhone Mockup 19Jul25.png",

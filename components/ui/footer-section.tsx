@@ -21,6 +21,7 @@ interface FooterLink {
   title: string;
   href: string;
   icon?: React.ComponentType<{ className?: string }>;
+  external?: boolean;
 }
 
 interface FooterSection {
@@ -51,7 +52,7 @@ const footerLinks: FooterSection[] = [
     label: 'Rechtliches',
     links: [
       { title: 'Impressum', href: '/impressum' },
-      { title: 'Datenschutz', href: '/datenschutz' },
+      { title: 'Datenschutz', href: 'https://itrk.legal/WwX.8V.Trv.html', external: true },
     ],
   },
   {
@@ -155,6 +156,7 @@ export function FooterSection() {
                       <li key={link.title}>
                         <Link
                           href={link.href}
+                          {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                           className="text-white/35 hover:text-white inline-flex items-center gap-1.5 text-sm transition-colors duration-200"
                         >
                           {link.icon && <link.icon className="w-3.5 h-3.5 shrink-0" />}

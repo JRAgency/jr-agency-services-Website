@@ -148,7 +148,7 @@ export default function CookieBanner() {
             <p className="text-white/45 text-xs leading-relaxed mb-5">
               Wir nutzen Cookies, um Ihnen die bestmögliche Nutzererfahrung zu bieten. Notwendige Cookies werden
               immer gesetzt. Für alle anderen Kategorien können Sie selbst entscheiden.{" "}
-              <Link href="/datenschutz" className="text-[#60A5FA] hover:text-white transition-colors underline underline-offset-2">
+              <Link href="https://itrk.legal/WwX.8V.Trv.html" target="_blank" rel="noopener noreferrer" className="text-[#60A5FA] hover:text-white transition-colors underline underline-offset-2">
                 Datenschutzerklärung
               </Link>
             </p>
@@ -271,7 +271,7 @@ export default function CookieBanner() {
             {/* Footer links */}
             <div className="flex items-center gap-4 mt-4 pt-4 border-t border-white/[0.06]">
               <Link href="/impressum" className="text-white/25 hover:text-white/50 text-xs transition-colors">Impressum</Link>
-              <Link href="/datenschutz" className="text-white/25 hover:text-white/50 text-xs transition-colors">Datenschutz</Link>
+              <Link href="https://itrk.legal/WwX.8V.Trv.html" target="_blank" rel="noopener noreferrer" className="text-white/25 hover:text-white/50 text-xs transition-colors">Datenschutz</Link>
               <span className="text-white/15 text-xs ml-auto">Powered by JR Agency</span>
             </div>
 

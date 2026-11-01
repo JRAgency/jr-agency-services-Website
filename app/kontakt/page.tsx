@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { sendAnfrage } from "@/lib/sendAnfrage";
 
 export default function KontaktPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -26,19 +27,11 @@ export default function KontaktPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    try {
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", phone: "", message: "", demo: false });
-      } else {
-        setStatus("error");
-      }
-    } catch {
+    const ok = await sendAnfrage({ formType: "kontakt", ...formData });
+    if (ok) {
+      setStatus("success");
+      setFormData({ name: "", email: "", phone: "", message: "", demo: false });
+    } else {
       setStatus("error");
     }
   };

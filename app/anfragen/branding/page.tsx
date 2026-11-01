@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import BookingCalendar, { formatDate } from "@/components/ui/BookingCalendar";
+import { sendAnfrage } from "@/lib/sendAnfrage";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 const TOTAL_STEPS = 5; // 0=Unternehmen, 1=Leistungen, 2=Stil, 3=Kontakt, 4=Termin
@@ -62,6 +63,7 @@ export default function BrandingAnfragePage() {
   const [step, setStep] = useState(-1);
   const [dir, setDir] = useState(1);
   const [submitting, setSubmitting] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
@@ -82,33 +84,21 @@ export default function BrandingAnfragePage() {
     setLeistungen(prev => prev.includes(v) ? prev.filter(x => x !== v) : [...prev, v]);
 
   const submit = async (date: Date, time: string) => {
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 9000);
-      await fetch("/api/submit-anfrage", {
-        method: "POST",
-        signal: controller.signal,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          formType: "branding",
-          name: contactPerson || companyName,
-          email, phone,
-          companyName, contactPerson, industry,
-          projectType: "branding",
-          projectTypeLabel: "Branding",
-          goal: leistungen.join(", "),
-          goalLabel: leistungen.map(l => LEISTUNGEN.find(x => x.value === l)?.label ?? l).join(", "),
-          pages: STILE.find(s => s.value === stil)?.label ?? stil,
-          firstNotes: notizen,
-          timelineLabel: "",
-          appointmentDate: formatDate(date),
-          appointmentTime: time,
-        }),
-      });
-      clearTimeout(timeout);
-    } catch (err) {
-      console.error("Webhook Fehler:", err);
-    }
+    return sendAnfrage({
+      formType: "branding",
+      name: contactPerson || companyName,
+      email, phone,
+      companyName, contactPerson, industry,
+      projectType: "branding",
+      projectTypeLabel: "Branding",
+      goal: leistungen.join(", "),
+      goalLabel: leistungen.map(l => LEISTUNGEN.find(x => x.value === l)?.label ?? l).join(", "),
+      pages: STILE.find(s => s.value === stil)?.label ?? stil,
+      firstNotes: notizen,
+      timelineLabel: "",
+      appointmentDate: formatDate(date),
+      appointmentTime: time,
+    });
   };
 
   return (
@@ -304,9 +294,11 @@ export default function BrandingAnfragePage() {
                         setSelectedDate(date);
                         setSelectedTime(time);
                         setSubmitting(true);
-                        await submit(date, time);
+                        setSendError(false);
+                        const ok = await submit(date, time);
                         setSubmitting(false);
-                        go(TOTAL_STEPS);
+                        if (ok) go(TOTAL_STEPS);
+                        else setSendError(true);
                       }}
                     />
                     {submitting && (
@@ -314,8 +306,15 @@ export default function BrandingAnfragePage() {
                         <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
                           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeDasharray="32" strokeDashoffset="12"/>
                         </svg>
-                        Anfrage wird gespeichert…
+                        Anfrage wird gesendet…
                       </div>
+                    )}
+                    {sendError && !submitting && (
+                      <p className="mt-6 text-center text-sm text-red-400/90">
+                        Die Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut, rufen Sie uns an unter{" "}
+                        <a href="tel:+4915225992009" className="underline">+49 152 25992009</a> oder schreiben Sie an{" "}
+                        <a href="mailto:info@jragencyservices.com" className="underline">info@jragencyservices.com</a>.
+                      </p>
                     )}
                   </div>
                 </Shell>

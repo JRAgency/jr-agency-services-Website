@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import BookingCalendar, { formatDate } from "@/components/ui/BookingCalendar";
+import { sendAnfrage } from "@/lib/sendAnfrage";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 const TOTAL_STEPS = 6; // 0=Unternehmen, 1=Projekttyp, 2=Ziel, 3=Seiten+Hinweise, 4=Kontakt, 5=Termin
@@ -82,10 +83,11 @@ export default function AnfragenPage() {
   const [step, setStep] = useState(-1);
   const [dir, setDir] = useState(1);
   const [submitting, setSubmitting] = useState(false);
+  const [sendError, setSendError] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
-  // Formular-Daten (spiegeln Vecturo Wizard)
+  // Formular-Daten
   const [companyName, setCompanyName] = useState("");
   const [contactPerson, setContactPerson] = useState("");
   const [industry, setIndustry] = useState("");
@@ -107,36 +109,28 @@ export default function AnfragenPage() {
   const togglePage = (v: string) =>
     setPages(prev => prev.includes(v) ? prev.filter(x => x !== v) : [...prev, v]);
 
-  const submitToVecturo = async (date: Date, time: string) => {
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 9000);
-      await fetch("/api/submit-anfrage", {
-        method: "POST",
-        signal: controller.signal,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: contactPerson || companyName,
-          email,
-          phone,
-          companyName,
-          contactPerson,
-          industry,
-          hasWebsite: hasWebsite === true ? "Ja" : hasWebsite === false ? "Nein" : "",
-          websiteUrl: websiteUrl || "",
-          projectType,
-          goal,
-          pages,
-          firstNotes,
-          timelineLabel: TIMELINE_OPTIONS.find(t => t.value === timeline)?.label ?? timeline,
-          appointmentDate: formatDate(date),
-          appointmentTime: time,
-        }),
-      });
-      clearTimeout(timeout);
-    } catch (err) {
-      console.error("Vecturo Webhook Fehler:", err);
-    }
+  const submitAnfrage = async (date: Date, time: string) => {
+    return sendAnfrage({
+      formType: "webdesign",
+      name: contactPerson || companyName,
+      email,
+      phone,
+      companyName,
+      contactPerson,
+      industry,
+      hasWebsite: hasWebsite === true ? "Ja" : hasWebsite === false ? "Nein" : "",
+      websiteUrl: websiteUrl || "",
+      projectType,
+      projectTypeLabel: PROJECT_TYPES.find(t => t.value === projectType)?.label ?? projectType,
+      goal,
+      goalLabel: GOALS.find(g => g.value === goal)?.label ?? goal,
+      pages,
+      pagesLabel: pages.map(p => COMMON_PAGES.find(x => x.value === p)?.label ?? p).join(", "),
+      firstNotes,
+      timelineLabel: TIMELINE_OPTIONS.find(t => t.value === timeline)?.label ?? timeline,
+      appointmentDate: formatDate(date),
+      appointmentTime: time,
+    });
   };
 
   return (
@@ -426,9 +420,11 @@ export default function AnfragenPage() {
                         setSelectedDate(date);
                         setSelectedTime(time);
                         setSubmitting(true);
-                        await submitToVecturo(date, time);
+                        setSendError(false);
+                        const ok = await submitAnfrage(date, time);
                         setSubmitting(false);
-                        go(TOTAL_STEPS);
+                        if (ok) go(TOTAL_STEPS);
+                        else setSendError(true);
                       }}
                     />
                     {submitting && (
@@ -436,8 +432,15 @@ export default function AnfragenPage() {
                         <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
                           <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" strokeDasharray="32" strokeDashoffset="12"/>
                         </svg>
-                        Anfrage wird gespeichert…
+                        Anfrage wird gesendet…
                       </div>
+                    )}
+                    {sendError && !submitting && (
+                      <p className="mt-6 text-center text-sm text-red-400/90">
+                        Die Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut, rufen Sie uns an unter{" "}
+                        <a href="tel:+4915225992009" className="underline">+49 152 25992009</a> oder schreiben Sie an{" "}
+                        <a href="mailto:info@jragencyservices.com" className="underline">info@jragencyservices.com</a>.
+                      </p>
                     )}
                   </div>
                 </Shell>

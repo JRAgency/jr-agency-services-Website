@@ -2,14 +2,16 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.jragencyservices.com";
+  const leistungen = ["design", "mobile", "seo", "datenschutz", "betreuung"];
 
   return [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/webdesign`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/social-media`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/branding`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/anfragen`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/kontakt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    ...leistungen.map((slug) => ({
+      url: `${base}/leistungen/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
     { url: `${base}/impressum`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.2 },
   ];
 }

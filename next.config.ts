@@ -22,6 +22,31 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: false,
   },
+  // Silber-Website: statische Seiten aus public/s (erzeugt mit scripts/export-silber.py)
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/", destination: "/s/index.html" },
+        { source: "/leistungen/:slug(design|mobile|seo|datenschutz|betreuung)", destination: "/s/:slug.html" },
+        { source: "/impressum", destination: "/s/impressum.html" },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
+  // Alte Seiten dauerhaft auf die neue Seite umleiten
+  async redirects() {
+    return [
+      { source: "/webdesign", destination: "/", permanent: true },
+      { source: "/branding", destination: "/", permanent: true },
+      { source: "/social-media", destination: "/", permanent: true },
+      { source: "/anfragen", destination: "/#demo", permanent: true },
+      { source: "/anfragen/:path*", destination: "/#demo", permanent: true },
+      { source: "/kontakt", destination: "/#demo", permanent: true },
+      { source: "/termin", destination: "/#demo", permanent: true },
+      { source: "/leistungen", destination: "/#leistung", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

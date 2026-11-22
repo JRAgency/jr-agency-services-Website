@@ -25,10 +25,10 @@ export default function Impressum() {
         <div className="space-y-10 text-white/55 text-sm leading-relaxed">
 
           <section>
-            <h2 className="text-white font-semibold text-base mb-3">Angaben gemäß § 5 TMG</h2>
+            <h2 className="text-white font-semibold text-base mb-3">Angaben gemäß § 5 DDG</h2>
             <p>
-              Ruben Lichdi<br />
-              JR Agency Services<br />
+              JR Agency Services GbR<br />
+              vertreten durch die Gesellschafter Jonas Voll und Ruben Lichdi<br />
               Im Eselsberg 17<br />
               74193 Schwaigern<br />
               Deutschland

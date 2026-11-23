@@ -568,6 +568,45 @@ body.menu-open{overflow:hidden}
   .foot-grid > *{min-width:0;overflow-wrap:anywhere}
   .stickycta{display:flex}
 }
+
+/* ── v37 · Feinschliff ─────────────────────────── */
+/* Geräte-Abschnitt: Luft unter den Geräten, bevor die Silberfläche beginnt */
+.lap{padding-bottom:clamp(80px,10vw,180px)}
+/* Leistung: „Webdesign“ richtet sich nach der eigenen Spalte statt nach der Fensterbreite
+   (lief vorher zwischen 600 und 1280 px bis zu 113 px in die Liste hinein) */
+.offer > div:first-child{container-type:inline-size}
+.offer .disp{font-size:min(var(--fs-xxl),15.5cqi)}
+@media (max-width:900px){
+  .offer{grid-template-columns:minmax(0,1fr);gap:clamp(36px,6vw,56px)}
+  .offer > div:first-child{position:static}
+  .offer .s{max-width:44ch}
+}
+/* Formular: Felder dürfen schmaler werden als ihre Standardbreite (vorher abgeschnitten im Tablet) */
+.fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+.field{min-width:0}
+.field input{width:100%;min-width:0}
+@media (max-width:900px){
+  /* Tablet: Text oben, Formular darunter in voller Breite statt zwei gequetschter Spalten */
+  .demo{grid-template-columns:minmax(0,1fr);gap:clamp(44px,7vw,72px)}
+  .demo .s,.who{max-width:56ch}
+  .fcard{width:100%}
+}
+@media (max-width:600px){
+  .fcard{padding:26px 20px 22px;border-radius:18px}
+  .f-prog{margin:14px 0 30px}
+  .f-step legend{margin-bottom:22px}
+  .f-hint{margin:-12px 0 20px}
+  .opts{gap:10px}
+  .opt span{padding:.85em 1.25em .78em}
+  .fields{grid-template-columns:minmax(0,1fr);gap:24px}
+  .f-nav{flex-direction:column-reverse;align-items:stretch;gap:14px;margin-top:32px}
+  .f-nav .pill{width:100%;padding-block:1em .9em}
+  .f-safe{text-align:center}
+  /* „Darum wir“-Kacheln: zwei Spalten ohne Überbreite (vorher 10 px breiter als das Handy) */
+  .why{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .why li{padding:20px 18px;gap:28px}
+  .why b{hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}
 </style>
 </head>
@@ -646,7 +685,7 @@ body.menu-open{overflow:hidden}
     <p class="lab">Desktop · Laptop · Tablet · Smartphone</p>
   </div>
   <figure class="dev wrap" id="lapImg">
-    <img class="on" src="/s/img/geraete-restaurant.webp" alt="Website Restaurant auf iMac, MacBook, iPad und iPhone" width="2200" height="1057" loading="lazy" decoding="async">
+    <img class="on" src="/s/img/geraete-linde.webp" alt="Website Landgasthof Linde auf iMac, MacBook, iPad und iPhone" width="2200" height="1057" loading="lazy" decoding="async">
     <img src="/s/img/geraete-parfum.webp" alt="Website Parfum auf iMac, MacBook, iPad und iPhone" width="2200" height="1057" loading="lazy" decoding="async">
     <img src="/s/img/geraete-cafe.webp" alt="Website Café auf iMac, MacBook, iPad und iPhone" width="2200" height="1057" loading="lazy" decoding="async">
     <img src="/s/img/geraete-fahrschule.webp" alt="Website Fahrschule auf iMac, MacBook, iPad und iPhone" width="2200" height="1057" loading="lazy" decoding="async">
